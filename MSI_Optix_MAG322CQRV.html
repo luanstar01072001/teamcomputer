@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logoCPT.png">
+    <link rel="stylesheet" href="css/style_home.css">
+    <link rel="stylesheet" href="css/style_detail_screen.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/e06076012c.js" crossorigin="anonymous"></script>
+    <title>Màn hình máy tính MSI Optix MAG322CQRV Cong 2K 144Hz</title>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn"><i class="fas fa-angle-up"></i></button>
+    <section class="header-i-out">
+        <div class="header-inner" id="hideInner">
+            <a href="#"><i class="fas fa-dollar-sign"></i> Cam kết giá tốt</a>
+            <a href="#"><i class="fas fa-truck"></i> Miễn phí vận chuyển</a>
+            <a href="#"><i class="fas fa-handshake"></i> Thanh toán khi nhận hàng</a>
+            <a href="#"><i class="fas fa-history"></i> Bảo hành tận nơi</a>
+            <span class="sp-h-in-r" id="boxrighttop">
+                <a href="login.html" id="i"><i class="fas fa-user"></i> Đăng nhập</a>
+                <a href="signup.html" id="i"><i class="fas fa-user-plus"></i> Đăng ký</a>
+            </span>
+            <div class="box-right-top-KH" id="boxrighttopKH">
+                <a id="i">Xin chào, <span id="tenkhachhang">Nguyễn Văn A</span></a>
+                <div class="box-login-bottom" id="box-b">
+                    <button onclick="TTTaiKhoan()"><i class="fas fa-user-alt"></i> Tài khoản</button>
+                    <button onclick="DSDonHang()"><i class="fas fa-file-invoice-dollar"></i> Đơn hàng</button>
+                    <button onclick="logOut()"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="header-m-out">
+        <div class="header-mid" id="hideMid">
+            <a href="index.html" id="m"><img src="img/logo.png"></a>
+            <a href="GioHang.html" class="cart" title="Giỏ hàng"><i class="fas fas fa-shopping-cart"></i><span
+                    class="count" id="soluong">0</span></a>
+            <form class="search" action="#" id="m">
+                <input type="text" placeholder="Tìm kiếm sản phẩm..." name="search_prod">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="mid-small" id="lg">
+                <a href="index.html"><img src="img/logo.png"></a>
+            </div>
+            <a href="javascript:void(0);" class="icon-mid" onclick="openNavMid()" id="lg"><i
+                    class="fas fa-bars"></i></a>
+            <script src="js/hide_menu.js"></script>
+        </div>
+        <div class="sidenavMid" id="mySidenavMid">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNavMid()"><i
+                    class="far fa-window-close"></i></a>
+            <form class="search" action="#">
+                <input type="text" placeholder="Tìm kiếm sản phẩm..." name="search_prod">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <hr>
+            <div id="boxLogin">
+                <a href="signup.html" class="text-res"><i class="far fa-user-circle"></i> Đăng ký</a>
+                <a href="login.html" class="text-res"><i class="far fa-user-circle"></i> Đăng nhập</a>
+            </div>
+            <div id="boxLoginHide">
+                <a href="javascript:TTTaiKhoan();" class="text-res"><i class="fas fa-user-alt"></i> <span
+                        id="tenkhachhang1">Nguyễn Văn A</span></a>
+                <a href="javascript:DSDonHang();" class="text-res"><i class="fas fa-file-invoice-dollar"></i> Đơn
+                    hàng</a>
+                <a href="javascript:logOut();" class="text-res"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+            </div>
+            <hr>
+            <ul>
+                <li><a href="CuaHang.html"><i class="fas fa-phone-volume"></i> Bán hàng trực tuyến</a></li>
+                <li><a href="MuaTraGop.html"><i class="fas fa-money-check-alt"></i> Mua trả góp</a></li>
+                <li><a href="#"><i class="fas fa-cart-arrow-down"></i> Khuyến mại</a></li>
+                <li><a href="TinTuc.html"><i class="far fa-newspaper"></i> Tin tức</a></li>
+            </ul>
+        </div>
+        <script src="js/hide_menu.js"></script>
+    </section>
+    <section class="header-b-out">
+        <div class="header-bottom" id="hideBottom">
+            <ul>
+                <li><a href="#"><b><span class="sp-h-bot category"><i class="fas fa-bars"></i> Danh mục sản
+                                phẩm</span></b></a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fas fa-desktop"></i> PC Đồ Họa - WORKSTATION</a></li>
+                        <li><a href="#"><i class="fas fa-desktop"></i> PC Gaming, Streaming</a></li>
+                        <li><a href="#"><i class="fas fa-desktop"></i> PC Văn Phòng, AIO, Mini PC</a></li>
+                        <li><a href="DM_Laptop.html"><i class="fas fa-laptop"></i> Laptop, Máy Tính Xách Tay</a></li>
+                        <li><a href="DM_ManHinh.html"><i class="fas fa-desktop"></i> Màn Hình</a></li>
+                        <li><a href="#"><i class="fas fa-memory"></i> Linh Kiện Máy Tính<span class="sp-right"><i
+                                        class="fas fa-caret-right"></i></span></a>
+                            <ul class="submenu1">
+                                <li><a href="#">CPU - Bộ Vi Xử Lý</a></li>
+                                <li><a href="#">Mainboard - Bo Mạch Chủ</a></li>
+                                <li><a href="#">RAM - Bộ Nhớ Trong</a></li>
+                                <li><a href="#">Ổ Cứng HDD</a></li>
+                                <li><a href="#">Ổ Cứng SSD</a></li>
+                                <li><a href="#">ODD - Ổ đĩa quang</a></li>
+                                <li><a href="#">VGA - Card Màn Hình</a></li>
+                                <li><a href="#">Case - Vỏ Máy Tính</a></li>
+                                <li><a href="#">PSU - Nguồn Máy Tính</a></li>
+                                <li><a href="#">Tản Nhiệt PC, Cooling</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fas fa-keyboard"></i> Gaming Gear<span class="sp-right"><i
+                                        class="fas fa-caret-right"></i></span></a>
+                            <ul class="submenu1">
+                                <li><a href="#">Bàn Phím, Chuột</a></li>
+                                <li><a href="#">Bộ Bàn Phím Chuột</a></li>
+                                <li><a href="#">Lót Chuột, Bàn Di Chuột</a></li>
+                                <li><a href="#">Tai Nghe</a></li>
+                                <li><a href="#">Phụ Kiện Gaming</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fas fa-headphones"></i> Phụ Kiện Laptop, PC, Khác<span
+                                    class="sp-right"><i class="fas fa-caret-right"></i></span></a>
+                            <ul class="submenu1">
+                                <li><a href="#">Dây Cáp Các Loại</a></li>
+                                <li><a href="#">Thiết Bị Chuyển Đổi</a></li>
+                                <li><a href="#">Bộ Chia Tín Hiệu</a></li>
+                                <li><a href="#">Linh Kiện Laptop</a></li>
+                                <li><a href="#">Phụ Kiện Khác</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="CuaHang.html"><b><i class="fas fa-phone-volume"></i><span class="sp-h-bot"> Bán hàng trực
+                                tuyến</span></b></a></li>
+                <li><a href="MuaTraGop.html"><b><i class="fas fa-money-check-alt"></i><span class="sp-h-bot"> Mua trả
+                                góp</span></b></a></li>
+                <li><a href="#"><b><i class="fas fa-cart-arrow-down"></i><span class="sp-h-bot"> Khuyến
+                                mại</span></b></a></li>
+                <li><a href="TinTuc.html"><b><i class="far fa-newspaper"></i><span class="sp-h-bot"> Tin
+                                tức</span></b></a>
+                </li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="openNav()">
+                <i class="fas fa-bars"></i>
+            </a>
+            <script src="js/hide_menu.js"></script>
+        </div>
+        <div class="sidenav" id="mySidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="far fa-window-close"></i></a>
+            <ul>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Đồ Họa - WORKSTATION</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Gaming, Streaming</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Văn Phòng, AIO, Mini PC</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Đồ Họa - WORKSTATION</a></li>
+                <li><a href="DM_Laptop.html"><i class="fas fa-laptop"></i> Laptop, Máy Tính Xách Tay</a></li>
+                <li><a href="DM_ManHinh.html"><i class="fas fa-desktop"></i> Màn Hình</a></li>
+                <li><a href="#"><i class="fas fa-memory"></i> Linh Kiện Máy Tính<span><i
+                                class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub">
+                        <li><a href="#">CPU - Bộ Vi Xử Lý</a></li>
+                        <li><a href="#">Mainboard - Bo Mạch Chủ</a></li>
+                        <li><a href="#">RAM - Bộ Nhớ Trong</a></li>
+                        <li><a href="#">Ổ Cứng HDD</a></li>
+                        <li><a href="#">Ổ Cứng SSD</a></li>
+                        <li><a href="#">ODD - Ổ đĩa quang</a></li>
+                        <li><a href="#">VGA - Card Màn Hình</a></li>
+                        <li><a href="#">Case - Vỏ Máy Tính</a></li>
+                        <li><a href="#">PSU - Nguồn Máy Tính</a></li>
+                        <li><a href="#">Tản Nhiệt PC, Cooling</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-keyboard"></i> Gaming Gear<span><i
+                                class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub">
+                        <li><a href="#">Bàn Phím, Chuột</a></li>
+                        <li><a href="#">Bộ Bàn Phím Chuột</a></li>
+                        <li><a href="#">Lót Chuột, Bàn Di Chuột</a></li>
+                        <li><a href="#">Tai Nghe</a></li>
+                        <li><a href="#">Phụ Kiện Gaming</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-headphones"></i> Phụ Kiện Laptop, PC, Khác<span><i
+                                class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub">
+                        <li><a href="#">Dây Cáp Các Loại</a></li>
+                        <li><a href="#">Thiết Bị Chuyển Đổi</a></li>
+                        <li><a href="#">Bộ Chia Tín Hiệu</a></li>
+                        <li><a href="#">Linh Kiện Laptop</a></li>
+                        <li><a href="#">Phụ Kiện Khác</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <script src="js/hide_menu.js"></script>
+    </section>
+    <div class="link-out">
+        <div class="link">
+            <a href="index.html">Trang chủ</a> <i class="fas fa-caret-right"></i><a href="DM_ManHinh.html">Màn hình</a>
+            <i class="fas fa-caret-right"></i> Màn hình máy tính MSI Optix MAG322CQRV Cong 2K 144Hz
+        </div>
+    </div>
+    <section class="content-inner">
+        <div class="row">
+            <div class="colc-4 colc-s-6 content">
+                <div class="container">
+                    <div class="mySlides">
+                        <img src="img/MANHINH/MSI_Optix_MAG322CQRV.png">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="img/MANHINH/MSI_Optix_MAG322CQRV_v1.png">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="img/MANHINH/MSI_Optix_MAG322CQRV_v2.png">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="img/MANHINH/MSI_Optix_MAG322CQRV_v3.png">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="img/MANHINH/MSI_Optix_MAG322CQRV_v1.png">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="img/MANHINH/MSI_Optix_MAG322CQRV_v2.png">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+
+                    <div class="row">
+                        <div class="column">
+                            <img class="demo cursor" src="img/MANHINH/MSI_Optix_MAG322CQRV.png"
+                                onclick="currentSlide(1)">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="img/MANHINH/MSI_Optix_MAG322CQRV_v1.png"
+                                onclick="currentSlide(2)">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="img/MANHINH/MSI_Optix_MAG322CQRV_v2.png"
+                                onclick="currentSlide(3)">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="img/MANHINH/MSI_Optix_MAG322CQRV_v3.png"
+                                onclick="currentSlide(4)">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="img/MANHINH/MSI_Optix_MAG322CQRV_v1.png"
+                                onclick="currentSlide(5)">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="img/MANHINH/MSI_Optix_MAG322CQRV_v2.png"
+                                onclick="currentSlide(6)">
+                        </div>
+                    </div>
+                </div>
+                <script src="js/image_product.js"></script>
+            </div>
+            <div class="colc-5 colc-s-6 content padding-le">
+                <div class="name">Màn hình máy tính MSI Optix MAG322CQRV Cong 2K 144Hz</div>
+                <div class="evaluate"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span
+                        class="sp-eval"><a href="#cont-cmt">(1 đánh giá của khách hàng)</a></span></div>
+                <div class="price"><span class="up">12.500.000₫</span><span class="down">12.150.000₫</span></div>
+                <button type="button" class="btnAdd"
+                    onclick="addToCart({id:'000001', image:'img/MANHINH/MSI_Optix_MAG322CQRV.png', price:12150000, name:'Màn hình máy tính MSI Optix MAG322CQRV Cong 2K 144Hz', link:'MSI_Optix_MAG322CQRV.html'})"><i
+                        class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                <script src="js/cart.js"></script>
+                <div class="gift">
+                    <div class="title"><i class="fas fa-gift"></i> QUÀ TẶNG / KHUYẾN MẠI</div>
+                    <div class="content">NHẬN NGAY BỘ QUÀ TẶNG LÊN TỚI 600.000Đ (Từ ngày 10/05 - 10/06/2021) bao
+                        gồm:<br>- Bàn phím Logitech K120<br>- Chuột Rapoo V16 Black</div>
+                </div>
+            </div>
+            <div class="colc-3 content" id="r">
+                <div class="commitment">
+                    <div class="title">CAM KẾT BÁN HÀNG</div>
+                    <div class="content">
+                        <li>Sản phẩm 100% chính hãng</li>
+                        <li>Sản phẩm mới 100%</li>
+                        <li>Hoàn tiền 120% khi phát hiện hàng giả</li>
+                        <li>Hỗ trợ nhanh khi cần</li>
+                        <li>Mua hàng nhanh: 0948098195</li>
+                    </div>
+                </div>
+                <div class="commitment1">
+                    <div class="title">GIAO HÀNG</div>
+                    <div class="content">
+                        <li>Nội thành HD 30 đến 120 phút</li>
+                        <li>Tỉnh thành khác - Từ 1 - 3 ngày</li>
+                        <li>Thanh toán khi nhận hàng</li>
+                        <li>Xem hàng trước khi thanh toán</li>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <div class="tab">
+        <div class="tab1"><a href="#MoTa">Đặc điểm nổi bật</a></div>
+        <div class="tab1"><a href="#BinhLuan">Đánh giá</a></div>
+        <div class="tab1"><a href="#TuVan">Tư vấn & bán hàng qua Facebook</a></div>
+    </div>
+    <section class="describe">
+        <div class="title padding_title" id="MoTa">MÔ TẢ</div>
+        <div class="title1">Thông số kỹ thuật:</div>
+        <div class="parameter">
+            <table>
+                <tr>
+                    <td>Hãng sản xuất</td>
+                    <td>MSI</td>
+                </tr>
+                <tr>
+                    <td>Model</td>
+                    <td>Optix MAG322CQRV</td>
+                </tr>
+                <tr>
+                    <td>Màu vỏ</td>
+                    <td>Đen</td>
+                </tr>
+                <tr>
+                    <td>Phân khúc</td>
+                    <td>Game</td>
+                </tr>
+                <tr>
+                    <td>Kích thước màn hình</td>
+                    <td>31.5 inch</td>
+                </tr>
+                <tr>
+                    <td>Phủ bề mặt</td>
+                    <td>Chống lóa</td>
+                </tr>
+                <tr>
+                    <td>Đèn nền</td>
+                    <td>W-LED</td>
+                </tr>
+                <tr>
+                    <td>Độ phân giải</td>
+                    <td>2560 x 1440</td>
+                </tr>
+                <tr>
+                    <td>Tần số quét</td>
+                    <td>144 Hz</td>
+                </tr>
+                <tr>
+                    <td>Góc nhìn</td>
+                    <td>178° (H) / 178° (V)</td>
+                </tr>
+                <tr>
+                    <td>Màu màn hình</td>
+                    <td>16.7 triệu</td>
+                </tr>
+                <tr>
+                    <td>Độ sáng</td>
+                    <td>300 cd/m2</td>
+                </tr>
+                <tr>
+                    <td>Độ tương phản</td>
+                    <td>3000:1</td>
+                </tr>
+                <tr>
+                    <td>Tỉ lệ màn hình</td>
+                    <td>16:9</td>
+                </tr>
+                <tr>
+                    <td>Thời gian phản ứng</td>
+                    <td>1 ms (GTG)</td>
+                </tr>
+                <tr>
+                    <td>Tấm nền</td>
+                    <td>VA (sRGB 99,6%)</td>
+                </tr>
+                <tr>
+                    <td>Độ cong</td>
+                    <td>1500R</td>
+                </tr>
+                <tr>
+                    <td>Loại màn hình</td>
+                    <td>QHD, Cong</td>
+                </tr>
+                <tr>
+                    <td>Công nghệ khác</td>
+                    <td>FreeSync</td>
+                </tr>
+                <tr>
+                    <td>D-Sub</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>HDMI</td>
+                    <td>2 x HDMI 2.0</td>
+                </tr>
+                <tr>
+                    <td>DisplayPort</td>
+                    <td>1 x DP 1.2</td>
+                </tr>
+                <tr>
+                    <td>USB</td>
+                    <td>2 x USB 2.0</td>
+                </tr>
+                <tr>
+                    <td>Dòng điện</td>
+                    <td>100 – 240 VAC, 50/60Hz</td>
+                </tr>
+                <tr>
+                    <td>Công suất</td>
+                    <td>0.5 W (chế độ tắt)<br>50 W (tối đa)</td>
+                </tr>
+                <tr>
+                    <td>Điều chỉnh chân đế</td>
+                    <td>Chiều cao lớn nhất 130mm<br>Ngả (-5° đến 20°)<br>Xoay ngang (0°đến 0°)<br>Xoay dọc (0° đến 0°)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tương thích VESA</td>
+                    <td>100 x 100mm</td>
+                </tr>
+                <tr>
+                    <td>Loa tích hợp</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Kích thước<br>(Cao x rộng x dầy)</td>
+                    <td>710 x 510 x 262 mm (bao gồm chân)<br>710 x 464 x 49.3mm (không gồm chân)</td>
+                </tr>
+                <tr>
+                    <td class="td-last">Trọng lượng</td>
+                    <td class="td-last">7.3 kg</td>
+                </tr>
+            </table>
+        </div>
+        <div class="title1">Giới thiệu sản phẩm:</div>
+        <div class="title2">Màn hình cong cho trải nghiệm nhìn tốt hơn</div>
+        <p>Màn hình chơi game MSI sử dụng tấm nền cong có độ cong 1500R, thoải mái nhất và phù hợp với nhiều ứng dụng từ
+            điện toán thông thường đến chơi game. Các tấm nền cong cũng giúp cho việc nhập vai vào trò chơi, khiến bạn
+            cảm thấy kết nối nhiều hơn với toàn bộ trải nghiệm.</p>
+        <img src="img/MANHINH/MSI_Optix_MAG322CQRV_c1.jpg">
+        <div class="title2">Tần số quét 144hz</div>
+        <p>MSI sử dụng tấm nền VA, tần số quét 144hz + thời gian đáp ứng nhanh 1ms có lợi nhất trong các thể loại trò
+            chơi chuyển động nhanh như game bắn súng góc nhìn thứ nhất, máy bay chiến đấu, đua xe, chiến lược thời gian
+            thực và thể thao. Những loại trò chơi này đòi hỏi những chuyển động rất nhanh và chính xác, tốc độ làm mới
+            cực cao và thời gian phản hồi nhanh sẽ đưa bạn vượt lên trước đối thủ cạnh tranh.</p>
+        <img src="img/MANHINH/MSI_Optix_MAG322CQRV_c2.jpg">
+        <div class="title2">Ưu điểm ứng dụng của OSD</div>
+        <p>Với ứng dụng Gaming OSD (trên màn hình hiển thị), rất dễ dàng để thiết lập màn hình chơi game của bạn. Bạn
+            không cần sử dụng các nút trên màn hình và đi qua tất cả các menu, chỉ cần sử dụng Bàn phím và Chuột để cấu
+            hình màn hình của bạn. Ứng dụng thậm chí còn cung cấp cho bạn các tùy chọn phím nóng để bạn có thể chuyển
+            đổi cài đặt giữa các trò chơi khác nhau một cách dễ dàng.<br>Tính cá nhân hóa cao. Tùy chỉnh và thiết lập
+            bảng màu của riêng bạn thông qua Ứng dụng MSI GAMING. Với MSI Mystic Light, đèn RGB của Optix MAG322CQRV
+            cung cấp ánh sáng xung quanh có thể dễ dàng đồng bộ hóa với bất kỳ sản phẩm chơi game hỗ trợ nào khác.Chọn
+            bất kỳ màu nào trong bảng màu bằng điện thoại thông minh hoặc ứng dụng Mystic Light để đồng bộ với hệ
+            thốngtheo sở thích của bạn. Hoặc chỉ cần bật tiếng vang khi chơi trò chơi, để màn hình của bạn nhảy theo
+            điệu nhạc.</p>
+        <img src="img/MANHINH/MSI_Optix_MAG322CQRV_c3.jpg">
+        <div class="title2">Dễ dàng quan sát trong bóng tối</div>
+        <p>Night Vision có thể tự động phát hiện vùng tối trên màn hình và cải thiện các chi tiết của nó, mang lại cho
+            game thủ lợi thế trong bóng tối mà không cần tiếp xúc quá nhiều với các khu vực khác.</p>
+        <img src="img/MANHINH/MSI_Optix_MAG322CQRV_c4.jpg">
+        <div class="title2">Thiết kế chân đế công thái học</div>
+        <p>Màn hình MSI Optix Gaming được xây dựng để nâng cao trải nghiệm chơi game của bạn thoải mái nhất có thể. Với
+            các điều chỉnh về độ nghiêng và chiều cao, dễ dàng thay đổi vị trí của màn hình chơi game để có được công
+            thái học tối đa và trải nghiệm xem tối ưu.</p>
+        <img src="img/MANHINH/MSI_Optix_MAG322CQRV_c5.jpg">
+        <div class="title2">Từ khung viền đến khung viền</div>
+        <p>Với khung viền siêu hẹp, hãy tận hưởng sự hòa nhập tốt nhất có thể trong các trò chơi mới nhất với thiết lập
+            đa màn hình 180 độ. Tận hưởng sự liên tục tốt hơn giữa các màn hình trong khi chơi game, làm việc.</p>
+        <img src="img/MANHINH/MSI_Optix_MAG322CQRV_c6.jpg">
+        <div class="title2">AMD® FREESYNC</div>
+        <p>Màn hình MSI Gaming được tích hợp công nghệ AMD® FreeSync để tạo ra hình ảnh mượt mà nhất cho trò chơi của
+            bạn. Để thực hiện việc này, AMD® FreeSync sẽ đồng bộ hóa tốc độ làm mới màn hình của bạn với GPU AMD®, giúp
+            loại bỏ hiện tượng rách màn hình. Thưởng thức trò chơi theo cách nó được thưởng thức với hình ảnh cực kỳ
+            mượt mà, không bị lag.</p>
+        <img src="img/MANHINH/MSI_Optix_MAG322CQRV_c7.jpg">
+        <div class="title2">Góc nhìn 178 độ</div>
+        <p>Bạn có góc nhìn lớn, màu sắc và chi tiết sẽ giữ được sắc nét ở nhiều góc độ hơn so với các màn hình khác có
+            góc nhìn hẹp hơn.</p>
+        <img src="img/MANHINH/MSI_Optix_MAG322CQRV_c8.jpg">
+    </section>
+    <section class="comment">
+        <div class="title padding_title" id="BinhLuan">BÌNH LUẬN</div>
+        <div class="title1 padding_title" id="cont-cmt">1 đánh giá cho Màn hình máy tính MSI Optix MAG322CQRV Cong 2K
+            144Hz</div>
+        <div class="box">
+            <span class="point">5.00 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                    class="fas fa-star"></i><i class="fas fa-star"></i></span>
+            <span class="count"><a href="#cont-cmt">1 đánh giá của khách hàng</a></span>
+            <div class="ratio">
+                <div class="level">5<i class="fas fa-star"></i></div>
+                <div class="progressBar">
+                    <div class="percentage"></div>
+                </div>
+                <div class="status"><span class="sp-status">100%</span> | 1 đánh giá</div>
+            </div>
+            <div class="ratio">
+                <div class="level">4<i class="fas fa-star"></i></div>
+                <div class="progressBar"></div>
+                <div class="status"><span class="sp-status">0%</span> | 0 đánh giá</div>
+            </div>
+            <div class="ratio">
+                <div class="level">3<i class="fas fa-star"></i></div>
+                <div class="progressBar"></div>
+                <div class="status"><span class="sp-status">0%</span> | 0 đánh giá</div>
+            </div>
+            <div class="ratio">
+                <div class="level">2<i class="fas fa-star"></i></div>
+                <div class="progressBar"></div>
+                <div class="status"><span class="sp-status">0%</span> | 0 đánh giá</div>
+            </div>
+            <div class="ratio">
+                <div class="level">1<i class="fas fa-star"></i></div>
+                <div class="progressBar"></div>
+                <div class="status"><span class="sp-status">0%</span> | 0 đánh giá</div>
+            </div>
+            <button type="button" class="btn-right" id="ri">ĐÁNH GIÁ NGAY</button>
+            <button type="button" class="btn-bottom" id="bo">ĐÁNH GIÁ NGAY</button>
+        </div>
+        <div class="cmt">
+            <div class="nameUser">Thuan Nguyen</div>
+            <div class="content-cmt">
+                <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i></span>Quá tốt trong tầm giá
+            </div>
+            <div class="time">
+                <a href="#">Thảo luận</a> <span>• 14/05/2021</span>
+            </div>
+            <hr>
+        </div>
+        <div class="box2">
+            <textarea name="mota" rows="4" cols="167"
+                placeholder="Mời bạn tham gia thảo luận, vui lòng nhập Tiếng Việt có dấu"></textarea>
+            <div class="content">
+                <form method="POST">
+                    <input type="text" name="name" id="name" value="" placeholder="Họ tên (bắt buộc)" class="txtbox">
+                    <input type="text" name="mail" id="mail" value="" placeholder="Email" class="txtbox">
+                    <input type="button" name="send" id="send" value="Gửi" class="btn-send">
+                </form>
+            </div>
+        </div>
+        <div class="content-cmt1">Chưa có bình luận nào</div>
+    </section>
+    <section class="advisory">
+        <div class="title padding_title" id="TuVan">TƯ VẤN BÁN HÀNG QUA FACEBOOK</div>
+        <div class="count">0 bình luận <span class="sp-sort">Sắp xếp theo
+                <select id="sort" name="sort">
+                    <option value="old">Cũ nhất</option>
+                    <option value="new">Mới nhất</option>
+                </select>
+            </span>
+        </div>
+        <div class="add-comment" style="position: relative;">
+            <div class="avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="content">
+                <textarea name="mota" rows="3" cols="156" placeholder="Thêm bình luận..."></textarea>
+                <div class="content-bot">
+                    <input type="checkbox" id="uptofb" name="uptofb">
+                    <label for="uptofb">Cũng đang lên Facebook</label>
+                    <input type="button" value="Đăng" class="btn-up">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="public-fb">
+            <i class="fab fa-facebook-square"> <a
+                    href="https://developers.facebook.com/products/social-plugins/comments/?utm_campaign=social_plugins&utm_medium=offsite_pages&utm_source=comments_plugin"
+                    target="_blank">Plugin bình luận trên Facebook</a></i>
+        </div>
+    </section>
+    <section class="module_products">
+        <div class="product_title">
+            <a href="DM_ManHinh.html"><b>SẢN PHẨM TƯƠNG TỰ</b></a>
+        </div>
+        <div class="row">
+            <div class="col-2 col-s-3 content">
+                <a href="#" title="Màn hình thông minh Samsung LS32AM700UEXXV 32 inch 4K"><img
+                        src="img/MANHINH/Samsung_LS32AM700UEXXV_32.png"></a>
+                <div class="text_product_1"><a href="#"
+                        title="Màn hình thông minh Samsung LS32AM700UEXXV 32 inch 4K">Màn hình thông minh Samsung
+                        LS32AM700UEX...</a><br>
+                    <span class="span_price_up">10.990.000₫</span><span
+                        class="span_price_down"><b>10.888.000đ</b></span>
+                </div>
+            </div>
+            <div class="col-2 col-s-3 content">
+                <a href="Dell_Monitor_S2421HN.html"
+                    title="Màn hình máy tính Dell Monitor S2421HN 23.8 Wide LED, Full HD 1920 x 1080, 2 x HDMI 1.4, 1 x 3.5mm Audio Out"><img
+                        src="img/MANHINH/Dell_Monitor_S2421HN_23.8_Wide_LED.png"></a>
+                <div class="text_product_1"><a href="Dell_Monitor_S2421HN.html"
+                        title="Màn hình máy tính Dell Monitor S2421HN 23.8 Wide LED, Full HD 1920 x 1080, 2 x HDMI 1.4, 1 x 3.5mm Audio Out">Màn
+                        hình máy tính Dell Monitor S2421HN 23.8...</a><br>
+                    <span class="span_price_up">3.908.000₫</span><span class="span_price_down"><b>3.750.000₫</b></span>
+                </div>
+            </div>
+            <div class="col-2 col-s-3 content">
+                <a href="#" title="Màn hình LCD LG 29 inch Ultrawide 29WN600-W.ATV (2560 x 1080/IPS/75Hz"><img
+                        src="img/MANHINH/LG_29_inch_Ultrawide_29WN600-W.ATV.png"></a>
+                <div class="text_product_1"><a href="#"
+                        title="Màn hình LCD LG 29 inch Ultrawide 29WN600-W.ATV (2560 x 1080/IPS/75Hz">Màn hình LCD LG 29
+                        inch Ultrawide 29WN600-W...</a><br>
+                    <span class="span_price_up">6.490.000₫</span><span class="span_price_down"><b>6.190.000₫</b></span>
+                </div>
+            </div>
+            <div class="col-2 col-s-3 content">
+                <a href="#" title="Màn hình máy tính ASUS ProArt PA278QV 27 inch 2K IPS - Chuyên đồ họa"><img
+                        src="img/MANHINH/ASUS_ProArt_PA278QV_27.png"></a>
+                <div class="text_product_1"><a href="#"
+                        title="Màn hình máy tính ASUS ProArt PA278QV 27 inch 2K IPS - Chuyên đồ họa">Màn hình ASUS
+                        ProArt PA278QV 27 inch 2K IPS</a><br>
+                    <span class="span_price_up">9.490.000₫</span><span class="span_price_down"><b>8.990.000₫</b></span>
+                </div>
+            </div>
+            <div class="col-2 col-s-3 content">
+                <a href="MSI_Optix_MAG322CQRV.html" title="Màn hình máy tính MSI Optix MAG322CQRV Cong 2K 144Hz"><img
+                        src="img/MANHINH/MSI_Optix_MAG322CQRV.png"></a>
+                <div class="text_product_1"><a href="MSI_Optix_MAG322CQRV.html"
+                        title="Màn hình máy tính MSI Optix MAG322CQRV Cong 2K 144Hz">Màn
+                        hình máy tính MSI Optix MAG322CQRV Cong 2K...</a><br>
+                    <span class="span_price_up">12.500.000₫</span><span
+                        class="span_price_down"><b>12.150.000₫</b></span>
+                </div>
+            </div>
+            <div class="col-2 col-s-3 content">
+                <a href="#" title="Màn hình thông minh Samsung LS32AM700UEXXV 32 inch 4K"><img
+                        src="img/MANHINH/Samsung_LS32AM700UEXXV_32.png"></a>
+                <div class="text_product_1"><a href="#"
+                        title="Màn hình thông minh Samsung LS32AM700UEXXV 32 inch 4K">Màn hình thông minh Samsung
+                        LS32AM700UEX...</a><br>
+                    <span class="span_price_up">10.990.000₫</span><span
+                        class="span_price_down"><b>10.888.000đ</b></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="footer-in">
+            <div class="row">
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>THÔNG TIN CHUNG</b></li>
+                        <hr>
+                        <li><a href="#">Giới thiệu về Team Computer</a></li>
+                        <li><a href="#">Thông tin liên hệ</a></li>
+                        <li><a href="#">Thông tin tuyển dụng</a></li>
+                        <li><a href="TinTuc.html">Tin tức</a></li>
+                    </ul>
+                </div>
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>CHÍNH SÁCH MUA HÀNG</b></li>
+                        <hr>
+                        <li><a href="ChinhSachBaoHanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="#">Chính sách đổi trả hàng, hoàn tiền</a></li>
+                        <li><a href="#">Phương thức thanh toán</a></li>
+                        <li><a href="#">Vận chuyển, lắp đặt</a></li>
+                    </ul>
+                </div>
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>HỖ TRỢ KHÁCH HÀNG</b></li>
+                        <hr>
+                        <li><a href="#">Hướng dẫn mua hàng online</a></li>
+                        <li><a href="#">Thông tin khuyến mại</a></li>
+                        <li><a href="#">Gửi yêu cầu bảo hành</a></li>
+                        <li><a href="#">Góp ý, khiếu nại</a></li>
+                    </ul>
+                </div>
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>CỘNG ĐỒNGTeamCOMPUTER</b></li>
+                        <hr>
+                        <li><a href="https://www.facebook.com/nguyenchien.it" target="_blank"><i
+                                    class="fab fa-facebook-square" style="color: blue;"></i>TeamComputer
+                                Fanpage</a></li>
+                        <li><a href="https://www.youtube.com/c/ChiếnNguyễn" target="_blank"><i class="fab fa-youtube"
+                                    style="color: red;"></i>TeamComputer</a></li>
+                        <li><a href="https://www.facebook.com/messages/t/nguyenchien.it" target="_blank"><i
+                                    class="fab fa-facebook-messenger" style="color: white;"></i> Chat với tư vấn
+                                viên</a></li>
+                        <li><a href="https://goo.gl/maps/xbtQDEA3cmrggSNt5" target="_blank"><i
+                                    class="fas fa-map-marked-alt" style="color: white;"></i> Vị trí cửa hàng</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        LoadUserKH();
+        LoadTaiKhoan();
+        LoadSL();
+    </script>
+</body>
+
+</html>

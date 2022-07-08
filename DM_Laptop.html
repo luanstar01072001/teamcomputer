@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logoCPT.png">
+    <link rel="stylesheet" href="css/style_home.css">
+    <link rel="stylesheet" href="css/style_category.css">
+    <script src="https://kit.fontawesome.com/e06076012c.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <title>Laptop, Máy Tính Xách Tay</title>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn"><i class="fas fa-angle-up"></i></button>
+    <script src="js/hide_menu.js"></script>
+    <section class="header-i-out">
+        <div class="header-inner" id="hideInner">
+            <a href="#"><i class="fas fa-dollar-sign"></i> Cam kết giá tốt</a>
+            <a href="#"><i class="fas fa-truck"></i> Miễn phí vận chuyển</a>
+            <a href="#"><i class="fas fa-handshake"></i> Thanh toán khi nhận hàng</a>
+            <a href="#"><i class="fas fa-history"></i> Bảo hành tận nơi</a>
+            <span class="sp-h-in-r" id="boxrighttop">
+                <a href="login.html" id="i"><i class="fas fa-user"></i> Đăng nhập</a>
+                <a href="signup.html" id="i"><i class="fas fa-user-plus"></i> Đăng ký</a>
+            </span>
+            <div class="box-right-top-KH" id="boxrighttopKH">
+                <a id="i">Xin chào, <span id="tenkhachhang">Nguyễn Văn A</span></a>
+                <div class="box-login-bottom" id="box-b">
+                    <button onclick="TTTaiKhoan()"><i class="fas fa-user-alt"></i> Tài khoản</button>
+                    <button onclick="DSDonHang()"><i class="fas fa-file-invoice-dollar"></i> Đơn hàng</button>
+                    <button onclick="logOut()"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="header-m-out">
+        <div class="header-mid" id="hideMid">
+            <a href="index.html" id="m"><img src="img/logo.png"></a>
+            <a href="GioHang.html" class="cart" title="Giỏ hàng"><i class="fas fas fa-shopping-cart"></i><span
+                    class="count" id="soluong">0</span></a>
+            <form class="search" action="#" id="m">
+                <input type="text" placeholder="Tìm kiếm sản phẩm..." name="search_prod">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="mid-small" id="lg">
+                <a href="index.html"><img src="img/logo.png"></a>
+            </div>
+            <a href="javascript:void(0);" class="icon-mid" onclick="openNavMid()" id="lg"><i
+                    class="fas fa-bars"></i></a>
+            <script src="js/hide_menu.js"></script>
+        </div>
+        <div class="sidenavMid" id="mySidenavMid">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNavMid()"><i
+                    class="far fa-window-close"></i></a>
+            <form class="search" action="#">
+                <input type="text" placeholder="Tìm kiếm sản phẩm..." name="search_prod">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <hr>
+            <div id="boxLogin">
+                <a href="signup.html" class="text-res"><i class="far fa-user-circle"></i> Đăng ký</a>
+                <a href="login.html" class="text-res"><i class="far fa-user-circle"></i> Đăng nhập</a>
+            </div>
+            <div id="boxLoginHide">
+                <a href="javascript:TTTaiKhoan();" class="text-res"><i class="fas fa-user-alt"></i> <span
+                        id="tenkhachhang1">Nguyễn Văn A</span></a>
+                <a href="javascript:DSDonHang();" class="text-res"><i class="fas fa-file-invoice-dollar"></i> Đơn
+                    hàng</a>
+                <a href="javascript:logOut();" class="text-res"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+            </div>
+            <hr>
+            <ul>
+                <li><a href="CuaHang.html"><i class="fas fa-phone-volume"></i> Bán hàng trực tuyến</a></li>
+                <li><a href="MuaTraGop.html"><i class="fas fa-money-check-alt"></i> Mua trả góp</a></li>
+                <li><a href="#"><i class="fas fa-cart-arrow-down"></i> Khuyến mại</a></li>
+                <li><a href="TinTuc.html"><i class="far fa-newspaper"></i> Tin tức</a></li>
+            </ul>
+        </div>
+        <script src="js/hide_menu.js"></script>
+    </section>
+    <section class="header-b-out">
+        <div class="header-bottom" id="hideBottom">
+            <ul>
+                <li><a href="#"><b><span class="sp-h-bot category"><i class="fas fa-bars"></i> Danh mục sản
+                                phẩm</span></b></a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fas fa-desktop"></i> PC Đồ Họa - WORKSTATION</a></li>
+                        <li><a href="#"><i class="fas fa-desktop"></i> PC Gaming, Streaming</a></li>
+                        <li><a href="#"><i class="fas fa-desktop"></i> PC Văn Phòng, AIO, Mini PC</a></li>
+                        <li><a href="DM_Laptop.html"><i class="fas fa-laptop"></i> Laptop, Máy Tính Xách Tay</a></li>
+                        <li><a href="DM_ManHinh.html"><i class="fas fa-desktop"></i> Màn Hình</a></li>
+                        <li><a href="#"><i class="fas fa-memory"></i> Linh Kiện Máy Tính<span class="sp-right"><i
+                                        class="fas fa-caret-right"></i></span></a>
+                            <ul class="submenu1">
+                                <li><a href="#">CPU - Bộ Vi Xử Lý</a></li>
+                                <li><a href="#">Mainboard - Bo Mạch Chủ</a></li>
+                                <li><a href="#">RAM - Bộ Nhớ Trong</a></li>
+                                <li><a href="#">Ổ Cứng HDD</a></li>
+                                <li><a href="#">Ổ Cứng SSD</a></li>
+                                <li><a href="#">ODD - Ổ đĩa quang</a></li>
+                                <li><a href="#">VGA - Card Màn Hình</a></li>
+                                <li><a href="#">Case - Vỏ Máy Tính</a></li>
+                                <li><a href="#">PSU - Nguồn Máy Tính</a></li>
+                                <li><a href="#">Tản Nhiệt PC, Cooling</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fas fa-keyboard"></i> Gaming Gear<span class="sp-right"><i
+                                        class="fas fa-caret-right"></i></span></a>
+                            <ul class="submenu1">
+                                <li><a href="#">Bàn Phím, Chuột</a></li>
+                                <li><a href="#">Bộ Bàn Phím Chuột</a></li>
+                                <li><a href="#">Lót Chuột, Bàn Di Chuột</a></li>
+                                <li><a href="#">Tai Nghe</a></li>
+                                <li><a href="#">Phụ Kiện Gaming</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fas fa-headphones"></i> Phụ Kiện Laptop, PC, Khác<span
+                                    class="sp-right"><i class="fas fa-caret-right"></i></span></a>
+                            <ul class="submenu1">
+                                <li><a href="#">Dây Cáp Các Loại</a></li>
+                                <li><a href="#">Thiết Bị Chuyển Đổi</a></li>
+                                <li><a href="#">Bộ Chia Tín Hiệu</a></li>
+                                <li><a href="#">Linh Kiện Laptop</a></li>
+                                <li><a href="#">Phụ Kiện Khác</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="CuaHang.html"><b><i class="fas fa-phone-volume"></i><span class="sp-h-bot"> Bán hàng trực
+                                tuyến</span></b></a></li>
+                <li><a href="MuaTraGop.html"><b><i class="fas fa-money-check-alt"></i><span class="sp-h-bot"> Mua trả
+                                góp</span></b></a></li>
+                <li><a href="#"><b><i class="fas fa-cart-arrow-down"></i><span class="sp-h-bot"> Khuyến
+                                mại</span></b></a></li>
+                <li><a href="TinTuc.html"><b><i class="far fa-newspaper"></i><span class="sp-h-bot"> Tin
+                                tức</span></b></a>
+                </li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="openNav()">
+                <i class="fas fa-bars"></i>
+            </a>
+            <script src="js/hide_menu.js"></script>
+        </div>
+        <div class="sidenav" id="mySidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="far fa-window-close"></i></a>
+            <ul>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Đồ Họa - WORKSTATION</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Gaming, Streaming</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Văn Phòng, AIO, Mini PC</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Đồ Họa - WORKSTATION</a></li>
+                <li><a href="DM_Laptop.html"><i class="fas fa-laptop"></i> Laptop, Máy Tính Xách Tay</a></li>
+                <li><a href="DM_ManHinh.html"><i class="fas fa-desktop"></i> Màn Hình</a></li>
+                <li><a href="#"><i class="fas fa-memory"></i> Linh Kiện Máy Tính<span><i
+                                class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub">
+                        <li><a href="#">CPU - Bộ Vi Xử Lý</a></li>
+                        <li><a href="#">Mainboard - Bo Mạch Chủ</a></li>
+                        <li><a href="#">RAM - Bộ Nhớ Trong</a></li>
+                        <li><a href="#">Ổ Cứng HDD</a></li>
+                        <li><a href="#">Ổ Cứng SSD</a></li>
+                        <li><a href="#">ODD - Ổ đĩa quang</a></li>
+                        <li><a href="#">VGA - Card Màn Hình</a></li>
+                        <li><a href="#">Case - Vỏ Máy Tính</a></li>
+                        <li><a href="#">PSU - Nguồn Máy Tính</a></li>
+                        <li><a href="#">Tản Nhiệt PC, Cooling</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-keyboard"></i> Gaming Gear<span><i
+                                class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub">
+                        <li><a href="#">Bàn Phím, Chuột</a></li>
+                        <li><a href="#">Bộ Bàn Phím Chuột</a></li>
+                        <li><a href="#">Lót Chuột, Bàn Di Chuột</a></li>
+                        <li><a href="#">Tai Nghe</a></li>
+                        <li><a href="#">Phụ Kiện Gaming</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-headphones"></i> Phụ Kiện Laptop, PC, Khác<span><i
+                                class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub">
+                        <li><a href="#">Dây Cáp Các Loại</a></li>
+                        <li><a href="#">Thiết Bị Chuyển Đổi</a></li>
+                        <li><a href="#">Bộ Chia Tín Hiệu</a></li>
+                        <li><a href="#">Linh Kiện Laptop</a></li>
+                        <li><a href="#">Phụ Kiện Khác</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <script src="js/hide_menu.js"></script>
+    </section>
+    <section class="filter-out">
+        <div class="filter">
+            <div class="title">Bộ lọc</div>
+            <div class="box">
+                <div class="box-left">Hãng sản xuất</div>
+                <div class="box-right">
+                    <div class="name">ACER</div>
+                    <div class="name">ASUS</div>
+                    <div class="name">CONCEPTD</div>
+                    <div class="name">FUJITSU</div>
+                    <div class="name">LENOVO</div>
+                    <div class="name">MICROSOFT</div>
+                    <div class="name">SAMSUNG</div>
+                    <div class="name">APPLE</div>
+                    <div class="name">AVITA</div>
+                    <div class="name">DELL</div>
+                    <div class="name">HP</div>
+                    <div class="name">LG</div>
+                    <div class="name">MSI</div>
+                    <div class="name">VGS</div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-left">Khoảng giá</div>
+                <div class="box-right">
+                    <div class="name">Dưới 10 triệu</div>
+                    <div class="name">10 triệu - 15 triệu</div>
+                    <div class="name">15 triệu - 20 triệu</div>
+                    <div class="name">20 triệu - 25 triệu</div>
+                    <div class="name">25 triệu - 30 triệu</div>
+                    <div class="name">30 triệu - 35 triệu</div>
+                    <div class="name">35 triệu - 40 triệu</div>
+                    <div class="name">40 triệu - 45 triệu</div>
+                    <div class="name">45 triệu - 50 triệu</div>
+                    <div class="name">50 triệu - 60 triệu</div>
+                    <div class="name">60 triệu - 70 triệu</div>
+                    <div class="name">70 triệu - 80 triệu</div>
+                    <div class="name">Trên 80 triệu</div>
+                </div>
+            </div>
+            <center>
+                <button class="btnMore" id="btnHien" onclick="Hien()">Hiện thêm <i
+                        class="fas fa-angle-double-down"></i></button>
+            </center>
+            <div id="more" style="display: none;">
+                <div class="box">
+                    <div class="box-left">Nhu cầu sử dụng</div>
+                    <div class="box-right">
+                        <div class="name">Laptop gaming</div>
+                        <div class="name">Đồ họa, kiến trúc</div>
+                        <div class="name">Phổ thông, văn phòng</div>
+                        <div class="name">Mỏng nhẹ, thời trang</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">CPU</div>
+                    <div class="box-right">
+                        <div class="name">Intel Celeron / Pentium</div>
+                        <div class="name">Intel Core i3</div>
+                        <div class="name">Intel Core i5</div>
+                        <div class="name">Intel Core i7</div>
+                        <div class="name">Intel Core i9</div>
+                        <div class="name">Intel Core M3</div>
+                        <div class="name">Intel Xeon</div>
+                        <div class="name">AMD Ryzen 3</div>
+                        <div class="name">AMD Ryzen Athlon</div>
+                        <div class="name">AMD Ryzen 5</div>
+                        <div class="name">AMD Ryzen 7</div>
+                        <div class="name">AMD Ryzen 9</div>
+                        <div class="name">Microsoft SQ1</div>
+                        <div class="name">Microsoft SQ2</div>
+                        <div class="name">Apple M1</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">RAM</div>
+                    <div class="box-right">
+                        <div class="name">4GB</div>
+                        <div class="name">8GB</div>
+                        <div class="name">16GB</div>
+                        <div class="name">32GB</div>
+                        <div class="name">>32GB</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">Ổ cứng</div>
+                    <div class="box-right">
+                        <div class="name">Chỉ có SSD</div>
+                        <div class="name">Chỉ có HDD</div>
+                        <div class="name">SSD + HDD</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">VGA - Card màn hình</div>
+                    <div class="box-right">
+                        <div class="name">VGA NVIDIA</div>
+                        <div class="name">VGA AMD</div>
+                        <div class="name">VGA Onboard</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">Kích thước màn hình</div>
+                    <div class="box-right">
+                        <div class="name">12.3 inch</div>
+                        <div class="name">12.4 inch</div>
+                        <div class="name">12.5 inch</div>
+                        <div class="name">13 inch</div>
+                        <div class="name">13.3 inch</div>
+                        <div class="name">13.4 inch</div>
+                        <div class="name">13.5 inch</div>
+                        <div class="name">14 inch</div>
+                        <div class="name">15 inch</div>
+                        <div class="name">15.4 inch</div>
+                        <div class="name">15.6 inch</div>
+                        <div class="name">16 inch</div>
+                        <div class="name">17 inch</div>
+                        <div class="name">17.3 inch</div>
+                        <div class="name">Kích thước khác</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">Độ phân giải</div>
+                    <div class="box-right">
+                        <div class="name">HD (1366x768)</div>
+                        <div class="name">Surface laptop go (1536×1024)</div>
+                        <div class="name">WUXGA (1920x1200)</div>
+                        <div class="name">Full HD (1920x1080)</div>
+                        <div class="name">QHD (2560x1440)</div>
+                        <div class="name">WQXGA (2560x1600)</div>
+                        <div class="name">Retina (2880x1800)</div>
+                        <div class="name">Pixel Sense Display (2880x1920)</div>
+                        <div class="name">Pixel Sense (3000x2000)</div>
+                        <div class="name">4K (3840x2160)</div>
+                        <div class="name">Độ phân giải khác</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">Cảm ứng màn hình</div>
+                    <div class="box-right">
+                        <div class="name">Có cảm ứng</div>
+                        <div class="name">Không có</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">Tần số</div>
+                    <div class="box-right">
+                        <div class="name">60 Hz</div>
+                        <div class="name">120 Hz</div>
+                        <div class="name">144 Hz</div>
+                        <div class="name">165 Hz</div>
+                        <div class="name">240 Hz</div>
+                        <div class="name">300 Hz</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">Hệ điều hành</div>
+                    <div class="box-right">
+                        <div class="name">Windows 10</div>
+                        <div class="name">Linux</div>
+                        <div class="name">Dos</div>
+                        <div class="name">Mac OS</div>
+                    </div>
+                </div>
+            </div>
+            <center>
+                <button class="btnMore" id="btnAn" onclick="An()" style="display: none;">Ẩn bớt <i
+                        class="fas fa-angle-double-up"></i></button>
+            </center>
+        </div>
+    </section>
+    <section class="main-out">
+        <div class="main">
+            <div class="box-inner">
+                <div class="box-left">Sắp xếp theo</div>
+                <div class="box-right">
+                    <div class="name">Khuyến mại tốt nhất</div>
+                    <div class="name">Bán chạy</div>
+                    <div class="name">Mới về</div>
+                    <div class="name">Giá giảm dần</div>
+                    <div class="name">Giá tăng dần</div>
+                    <div class="price">
+                        <input type="text" id="pricedown" placeholder="Giá thấp nhất"> -
+                        <input type="text" id="priceup" placeholder="Giá cao nhất">
+                        <button>Lọc</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-bottom">
+                <div class="row">
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop Apple Macbook Air MGN93 (MGN93SA/A)/ Silver/ M1 Chip/ RAM 8GB/ 256GB SSD/ 13.3 inch Retina/ Touch ID/ Mac OS/ 1 Yr"><img
+                                src="img/LAPTOP/Laptop_Apple_Macbook_Air_MGN93.jpeg"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop Apple Macbook Air MGN93 (MGN93SA/A)/ Silver/ M1 Chip/ RAM 8GB/ 256GB SSD/ 13.3 inch Retina/ Touch ID/ Mac OS/ 1 Yr">Laptop
+                                Apple Macbook Air MGN93 (MGN93SA...</a><br>
+                            <span class="span_price_up">28.990.000₫</span><span
+                                class="span_price_down"><b>28.590.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop Asus Vivobook X515EA-EJ062T (Core i3-1115G4 | 4GB | 512GB | Intel UHD | 15.6-inch FHD | Win 10 | Bạc))"><img
+                                src="img/LAPTOP/Laptop_Asus_Vivobook_X515EA-EJ062T.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop Asus Vivobook X515EA-EJ062T (Core i3-1115G4 | 4GB | 512GB | Intel UHD | 15.6-inch FHD | Win 10 | Bạc))">Laptop
+                                Asus Vivobook X515EA-EJ062T...</a><br>
+                            <span class="span_price_up">13.490.000₫</span><span
+                                class="span_price_down"><b>11.790.000₫</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="Laptop_ASUS_ZenBook_UX325EA_EG079T.html"
+                            title="Laptop ASUS ZenBook UX325EA EG079T"><img
+                                src="img/LAPTOP/Laptop_ASUS_ZenBook_UX325EA_EG079T.jpg"></a>
+                        <div class="text_product_1"><a href="Laptop_ASUS_ZenBook_UX325EA_EG079T.html"
+                                title="Laptop ASUS ZenBook UX325EA EG079T">Laptop ASUS ZenBook UX325EA EG079T</a><br>
+                            <span class="span_price_up">21.990.000₫</span><span
+                                class="span_price_down"><b>20.390.000₫</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#" title="Laptop Acer Aspire 5 A514 54 540F"><img
+                                src="img/LAPTOP/Laptop_Acer_Aspire_5_A514_54_540F.jpg"></a>
+                        <div class="text_product_1"><a href="#" title="Laptop Acer Aspire 5 A514 54 540F">Laptop Acer
+                                Aspire 5 A514 54 540F</a><br>
+                            <span class="span_price_up">17.690.000₫</span><span
+                                class="span_price_down"><b>16.490.000₫</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop ASUS TUF Gaming F15 FX506LH-HN002T (i5-10300H | 8GB | 512GB | VGA GTX 1650 4GB | 15.6' FHD 144Hz | Win 10)"><img
+                                src="img/LAPTOP/Laptop_ASUS_TUF_Gaming_F15_FX506LH_HN002T.jpg"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop ASUS TUF Gaming F15 FX506LH-HN002T (i5-10300H | 8GB | 512GB | VGA GTX 1650 4GB | 15.6' FHD 144Hz | Win 10)">Laptop
+                                ASUS TUF Gaming F15 FX506LH-HN002T (i5...</a><br>
+                            <span class="span_price_up">20.490.000₫</span><span
+                                class="span_price_down"><b>19.490.000₫</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop Lenovo Legion Slim 7-15IMH5 (82BC005YVN) (i7 10750H/16GB RAM/512GB SSD/15.6 FHD 144hz/GTX1660TI 6G/Win/Xám)"><img
+                                src="img/LAPTOP/Lenovo_Legion_Slim_7-15IMH5.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop Lenovo Legion Slim 7-15IMH5 (82BC005YVN) (i7 10750H/16GB RAM/512GB SSD/15.6 FHD 144hz/GTX1660TI 6G/Win/Xám)">Laptop
+                                Lenovo Legion Slim 7-15IMH5 (82BC005YVN)...</a><br>
+                            <span class="span_price_up">39.999.000₫</span><span
+                                class="span_price_down"><b>37.999.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop LG Gram 15ZD90N-V.AX56A5 (i5 1035G7/8GB RAM/512GBSSD/15.6 inch FHD/FP/Trắng) (model 2020)"><img
+                                src="img/LAPTOP/LG_Gram_15ZD90N-V.AX56A5.jpg"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop LG Gram 15ZD90N-V.AX56A5 (i5 1035G7/8GB RAM/512GBSSD/15.6 inch FHD/FP/Trắng) (model 2020)">Laptop
+                                LG Gram 15ZD90N-V.AX56A5 (i5 1035G7...</a><br>
+                            <span class="span_price_up">31.989.000₫</span><span
+                                class="span_price_down"><b>27.989.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop Dell Vostro 3405 (V4R33250U501W) (R3 3250U 4GB RAM/1TB HDD/14.0 inch/Win10/Đen)"><img
+                                src="img/LAPTOP/Dell_Vostro_3405.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop Dell Vostro 3405 (V4R33250U501W) (R3 3250U 4GB RAM/1TB HDD/14.0 inch/Win10/Đen)">Laptop
+                                Dell Vostro 3405 (V4R33250U501W)...</a><br>
+                            <span class="span_price_up">9.989.000₫</span><span
+                                class="span_price_down"><b>9.899.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#" title="Laptop Asus X515MA-BR112T (Ce N4020/4G/256GB SSD/15.6 HD/Win 10/Bạc)"><img
+                                src="img/LAPTOP/Asus_X515MA-BR112T.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop Asus X515MA-BR112T (Ce N4020/4G/256GB SSD/15.6 HD/Win 10/Bạc)">Laptop Asus
+                                X515MA-BR112T (Ce N4020/4G/256GB...</a><br>
+                            <span class="span_price_up">8.099.000₫</span><span
+                                class="span_price_down"><b>7.999.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop Acer Gaming Nitro 5 AN515-44-R9JM (NH.Q9MSV.003) (Ryzen 5 4600H/8GB RAM/512GB SSD/GTX1650 4G/15.6 inch FHD 144Hz/Win 10/Đen) (2021)"><img
+                                src="img/LAPTOP/Acer_Gaming_Nitro_5_AN515-44-R9JM.jpg"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop Acer Gaming Nitro 5 AN515-44-R9JM (NH.Q9MSV.003) (Ryzen 5 4600H/8GB RAM/512GB SSD/GTX1650 4G/15.6 inch FHD 144Hz/Win 10/Đen) (2021)">Laptop
+                                Acer Gaming Nitro 5 AN515-44-R9JM (NH...</a><br>
+                            <span class="span_price_up">22.989.000₫</span><span
+                                class="span_price_down"><b>19.999.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop Acer Swift SF314-57G-53T1(NX.HJESV.001) (i5 1035G1/8GB RAM/512GB SSD/MX250 2GB/14 inch FHD/Win 10/1.19kg)"><img
+                                src="img/LAPTOP/Acer_Swift_SF314-57G-53T1.jpg"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop Acer Swift SF314-57G-53T1(NX.HJESV.001) (i5 1035G1/8GB RAM/512GB SSD/MX250 2GB/14 inch FHD/Win 10/1.19kg)">Laptop
+                                Acer Swift SF314-57G-53T1(NX.HJESV.001) (i5...</a><br>
+                            <span class="span_price_up">20.989.000₫</span><span
+                                class="span_price_down"><b>19.490.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop Asus Gaming ROG Strix G713QM-K4113T (Ryzen 7 5800H/2*8GB RAM/512GB SSD/17.3 FHD 165hz/RTX 3060 6GB/Win10/Balo/Xám)"><img
+                                src="img/LAPTOP/Asus_Gaming_ROG_Strix_G713QM-K4113T.jpg"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop Asus Gaming ROG Strix G713QM-K4113T (Ryzen 7 5800H/2*8GB RAM/512GB SSD/17.3 FHD 165hz/RTX 3060 6GB/Win10/Balo/Xám)">Laptop
+                                Asus Gaming ROG Strix G713QM-K411...</a><br>
+                            <span class="span_price_up">41.999.000₫</span><span
+                                class="span_price_down"><b>41.899.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop Lenovo Legion 5 Pro 16ACH6H (82JQ001VVN) (R7 5800H/16GB RAM/512GB SSD/16 165hz/RTX3060 6G/Win/Xám)"><img
+                                src="img/LAPTOP/Lenovo_Legion_5_Pro_16ACH6H.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop Lenovo Legion 5 Pro 16ACH6H (82JQ001VVN) (R7 5800H/16GB RAM/512GB SSD/16 165hz/RTX3060 6G/Win/Xám)">Laptop
+                                Lenovo Legion 5 Pro 16ACH6H (82JQ001V...</a><br>
+                            <span class="span_price_up">43.699.000₫</span><span
+                                class="span_price_down"><b>42.999.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop Lenovo Legion 5P 15IMH05 (82AY003EVN) (i5 10300H/8GB RAM/512GB SSD/15.6 FHD/GTX1650Ti 4G/Win/Xám)"><img
+                                src="img/LAPTOP/Lenovo_Legion_5P_15IMH05.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop Lenovo Legion 5P 15IMH05 (82AY003EVN) (i5 10300H/8GB RAM/512GB SSD/15.6 FHD/GTX1650Ti 4G/Win/Xám)">Laptop
+                                Lenovo Legion 5P 15IMH05 (82AY003EV...</a><br>
+                            <span class="span_price_up">28.499.000₫</span><span
+                                class="span_price_down"><b>25.999.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop HP Pavilion 14-dv0012TU (2D7B7PA) ( i5-1135G7/8GB RAM/512GB SSD/14 FHD/Win10/Office/Hồng)"><img
+                                src="img/LAPTOP/HP_Pavilion_14-dv0012TU.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop HP Pavilion 14-dv0012TU (2D7B7PA) ( i5-1135G7/8GB RAM/512GB SSD/14 FHD/Win10/Office/Hồng)">Laptop
+                                HP Pavilion 14-dv0012TU (2D7B7PA)...</a><br>
+                            <span class="span_price_up">18.999.000₫</span><span
+                                class="span_price_down"><b>18.499.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop MSI Modern 14 B11M-073VN (i7 1165G7/8GB RAM/512GB SSD/14.0inch FHD/ Win10/Xám) (2020)"><img
+                                src="img/LAPTOP/MSI_Modern_14_B11M-073VN.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop MSI Modern 14 B11M-073VN (i7 1165G7/8GB RAM/512GB SSD/14.0inch FHD/ Win10/Xám) (2020)">Laptop
+                                MSI Modern 14 B11M-073VN (i7 11...</a><br>
+                            <span class="span_price_up">21.989.000₫</span><span
+                                class="span_price_down"><b>21.689.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Microsoft Surface Pro 7 (QWT-00001)(i3 1005/4GB RAM/128GB SSD/12.3inch Cảm ứng/Keyboard/Win10/Bạc)"><img
+                                src="img/LAPTOP/Microsoft_Surface_Pro_7.jpg"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Microsoft Surface Pro 7 (QWT-00001)(i3 1005/4GB RAM/128GB SSD/12.3inch Cảm ứng/Keyboard/Win10/Bạc)">Microsoft
+                                Surface Pro 7 (QWT-00001)(i3...</a><br>
+                            <span class="span_price_up">19.999.000₫</span><span
+                                class="span_price_down"><b>18.499.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop MSI Gaming GF65 Thin (10UE-228VN) ( i7 10750H 16GB RAM/512GBSSD/RTX 3060 6G/15.6 inch FHD 144Hz/Win10/Đen/BA LÔ)"><img
+                                src="img/LAPTOP/MSI_Gaming_GF65_Thin.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop MSI Gaming GF65 Thin (10UE-228VN) ( i7 10750H 16GB RAM/512GBSSD/RTX 3060 6G/15.6 inch FHD 144Hz/Win10/Đen/BA LÔ)">Laptop
+                                MSI Gaming GF65 Thin (10UE-228VN)...</a><br>
+                            <span class="span_price_up">32.989.000₫</span><span
+                                class="span_price_down"><b>32.689.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop Asus Gaming ROG Zephyrus Duo GX551QS-HF103T (Ryzen 9 5900HX/2*16GB RAM/1TB+1TB SSD/15.6 UHD/RTX3080 16GB/Win10/Balo/Chuột/Ext Webcam/Đen)"><img
+                                src="img/LAPTOP/Asus_Gaming_ROG_Zephyrus_Duo_GX551QS-HF103T.jpg"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop Asus Gaming ROG Zephyrus Duo GX551QS-HF103T (Ryzen 9 5900HX/2*16GB RAM/1TB+1TB SSD/15.6 UHD/RTX3080 16GB/Win10/Balo/Chuột/Ext Webcam/Đen)">Laptop
+                                Asus Gaming ROG Zephyrus Duo GX55...</a><br>
+                            <span class="span_price_up">109.999.000₫</span><span
+                                class="span_price_down"><b>109.899.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop Asus Gaming ROG Zephyrus GA401IU-HA171T (R7 4800HS/16GB RAM/512GB SSD/14 2K/GTX 1660Ti 6GB/Win10/Xám/AnimeMatrix)"><img
+                                src="img/LAPTOP/Asus_Gaming_ROG_Zephyrus_GA401IU-HA171T.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop Asus Gaming ROG Zephyrus GA401IU-HA171T (R7 4800HS/16GB RAM/512GB SSD/14 2K/GTX 1660Ti 6GB/Win10/Xám/AnimeMatrix)">Laptop
+                                Asus Gaming ROG Zephyrus GA401IU...</a><br>
+                            <span class="span_price_up">38.999.000₫</span><span
+                                class="span_price_down"><b>36.999.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop Asus D409DA-EK152T (R5 3500U/4GB RAM/256GB SSD/14 inch FHD/Win 10/Bạc)"><img
+                                src="img/LAPTOP/Asus_D409DA-EK152T.jpeg"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop Asus D409DA-EK152T (R5 3500U/4GB RAM/256GB SSD/14 inch FHD/Win 10/Bạc)">Laptop
+                                Asus D409DA-EK152T (R5 3500U/4GB RAM/...</a><br>
+                            <span class="span_price_up">12.099.000₫</span><span
+                                class="span_price_down"><b>11.299.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop Dell Inspiron 5406 2 in 1 (70232602) (i5 1135G7/8GB RAM/ 512GB SSD/14.0 inch FHD/Win 10/Xám)"><img
+                                src="img/LAPTOP/Dell_Inspiron_5406_2_in_1.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop Dell Inspiron 5406 2 in 1 (70232602) (i5 1135G7/8GB RAM/ 512GB SSD/14.0 inch FHD/Win 10/Xám)">Laptop
+                                Dell Inspiron 5406 2 in 1 (70232602) (i5 1135G7...</a><br>
+                            <span class="span_price_up">21.989.000₫</span><span
+                                class="span_price_down"><b>21.489.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Apple Macbook Pro 16 Touch Bar (MVVJ2SA/A) (i7 2.6Ghz/16GB RAM/512GB SSD/16.0/Radeon 5300M 4G/ 16.0/Mac OS/Xám) (2019)"><img
+                                src="img/LAPTOP/Macbook_Pro_16_Touch_Bar.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Apple Macbook Pro 16 Touch Bar (MVVJ2SA/A) (i7 2.6Ghz/16GB RAM/512GB SSD/16.0/Radeon 5300M 4G/ 16.0/Mac OS/Xám) (2019)">Apple
+                                Macbook Pro 16 Touch Bar (MVVJ2SA/A) (i7...</a><br>
+                            <span class="span_price_up">59.989.000₫</span><span
+                                class="span_price_down"><b>58.989.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop Lenovo Gaming 3-15IMH05 (81Y40067VN ) (i7 10750H/8GB RAM/512GB SSD/15.6 FHD/GTX1650 4G/Win/Đen"><img
+                                src="img/LAPTOP/Lenovo_Gaming_3-15IMH05.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop Lenovo Gaming 3-15IMH05 (81Y40067VN ) (i7 10750H/8GB RAM/512GB SSD/15.6 FHD/GTX1650 4G/Win/Đen">Laptop
+                                Lenovo Gaming 3-15IMH05 (81Y40067...</a><br>
+                            <span class="span_price_up">23.999.000₫</span><span
+                                class="span_price_down"><b>22.999.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop Dell Latitude 3400 L3400I5SSD (i5 8265U/8GB RAM/256GB SSD/14 inch HD/WL+BT/Dos/Đen)"><img
+                                src="img/LAPTOP/Dell_Latitude_3400_L3400I5SSD.jpg"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop Dell Latitude 3400 L3400I5SSD (i5 8265U/8GB RAM/256GB SSD/14 inch HD/WL+BT/Dos/Đen)">Laptop
+                                Dell Latitude 3400 L3400I5SSD (i5 826...</a><br>
+                            <span class="span_price_up">18.699.000₫</span><span
+                                class="span_price_down"><b>16.389.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop MSI Gaming Stealth 15M A11SDK (061VN) (i7-1185G7/16GBRAM/512GB SSD/GTX1660Ti 6G MaxQ/15.6 inch FHD/Win 10/ Xám Đen) (2020)"><img
+                                src="img/LAPTOP/MSI_Gaming_Stealth_15M_A11SDK.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop MSI Gaming Stealth 15M A11SDK (061VN) (i7-1185G7/16GBRAM/512GB SSD/GTX1660Ti 6G MaxQ/15.6 inch FHD/Win 10/ Xám Đen) (2020)">Laptop
+                                MSI Gaming Stealth 15M A11SDK (061VN)...</a><br>
+                            <span class="span_price_up">34.489.000₫</span><span
+                                class="span_price_down"><b>33.989.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop Gaming MSI GL65 Leopard 10SDK (242VN) (i7-10750H/16GB RAM/512GB SSD/GTX 1660Ti/15.6 inch FHD/Win 10/Đen) (2020)"><img
+                                src="img/LAPTOP/MSI_GL65_Leopard_10SDK.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop Gaming MSI GL65 Leopard 10SDK (242VN) (i7-10750H/16GB RAM/512GB SSD/GTX 1660Ti/15.6 inch FHD/Win 10/Đen) (2020)">Laptop
+                                Gaming MSI GL65 Leopard 10SDK (242...</a><br>
+                            <span class="span_price_up">33.489.000₫</span><span
+                                class="span_price_down"><b>31.689.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop Lenovo Yoga Duet 7 13IML05 (82AS009BVN) (i7 10510U/8GB RAM/512GB SSD/13 WQHD Touch/Bút/Win/Tím)"><img
+                                src="img/LAPTOP/Lenovo_Yoga_Duet_7_13IML05.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop Lenovo Yoga Duet 7 13IML05 (82AS009BVN) (i7 10510U/8GB RAM/512GB SSD/13 WQHD Touch/Bút/Win/Tím)">Laptop
+                                Lenovo Yoga Duet 7 13IML05 (82AS009BV...</a><br>
+                            <span class="span_price_up">29.500.000₫</span><span
+                                class="span_price_down"><b>28.999.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Laptop Acer Swift 3 SF313-53-518Y (NX.A4JSV.003) (i5-1135G7/16GB RAM/512GB SSD/13.5 inch QHD/Win10/Bạc)"><img
+                                src="img/LAPTOP/Acer_Swift_3_SF313-53-518Y.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Laptop Acer Swift 3 SF313-53-518Y (NX.A4JSV.003) (i5-1135G7/16GB RAM/512GB SSD/13.5 inch QHD/Win10/Bạc)">Laptop
+                                Acer Swift 3 SF313-53-518Y (NX.A4JSV.003) (i5...</a><br>
+                            <span class="span_price_up">23.989.000₫</span><span
+                                class="span_price_down"><b>23.689.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Microsoft Surface Studio 2 (i7 7820HK/16GB RAM/1TB SSD/28 Cảm ứng/GTX 1060 6GB/Win10/Keyboard/Bạc)"><img
+                                src="img/LAPTOP/Surface_Studio_2.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Microsoft Surface Studio 2 (i7 7820HK/16GB RAM/1TB SSD/28 Cảm ứng/GTX 1060 6GB/Win10/Keyboard/Bạc)">Microsoft
+                                Surface Studio 2 (i7 7820HK/16GB RAM/1TB...</a><br>
+                            <span class="span_price_down"><b>Liên hệ</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="page">
+        <button><i class="fas fa-angle-left"></i></button>
+        <button onclick="T1()" class="action">1</button>
+        <button onclick="T2()">2</button>
+        <button onclick="T1()">3</button>
+        <button onclick="T2()">4</button>
+        <button><i class="fas fa-angle-right"></i></button>
+    </section>
+    <section class="footer">
+        <div class="footer-in">
+            <div class="row">
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>THÔNG TIN CHUNG</b></li>
+                        <hr>
+                        <li><a href="#">Giới thiệu về Team Computer</a></li>
+                        <li><a href="#">Thông tin liên hệ</a></li>
+                        <li><a href="#">Thông tin tuyển dụng</a></li>
+                        <li><a href="TinTuc.html">Tin tức</a></li>
+                    </ul>
+                </div>
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>CHÍNH SÁCH MUA HÀNG</b></li>
+                        <hr>
+                        <li><a href="ChinhSachBaoHanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="#">Chính sách đổi trả hàng, hoàn tiền</a></li>
+                        <li><a href="#">Phương thức thanh toán</a></li>
+                        <li><a href="#">Vận chuyển, lắp đặt</a></li>
+                    </ul>
+                </div>
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>HỖ TRỢ KHÁCH HÀNG</b></li>
+                        <hr>
+                        <li><a href="#">Hướng dẫn mua hàng online</a></li>
+                        <li><a href="#">Thông tin khuyến mại</a></li>
+                        <li><a href="#">Gửi yêu cầu bảo hành</a></li>
+                        <li><a href="#">Góp ý, khiếu nại</a></li>
+                    </ul>
+                </div>
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>CỘNG ĐỒNGTeamCOMPUTER</b></li>
+                        <hr>
+                        <li><a href="https://www.facebook.com/nguyenchien.it" target="_blank"><i
+                                    class="fab fa-facebook-square" style="color: blue;"></i>TeamComputer
+                                Fanpage</a></li>
+                        <li><a href="https://www.youtube.com/c/ChiếnNguyễn" target="_blank"><i class="fab fa-youtube"
+                                    style="color: red;"></i>TeamComputer</a></li>
+                        <li><a href="https://www.facebook.com/messages/t/nguyenchien.it" target="_blank"><i
+                                    class="fab fa-facebook-messenger" style="color: white;"></i> Chat với tư vấn
+                                viên</a></li>
+                        <li><a href="https://goo.gl/maps/xbtQDEA3cmrggSNt5" target="_blank"><i
+                                    class="fas fa-map-marked-alt" style="color: white;"></i> Vị trí cửa hàng</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        LoadUserKH();
+        LoadTaiKhoan();
+        LoadSL();
+
+        function Hien() {
+            document.getElementById('more').style.display = "block";
+            document.getElementById('btnHien').style.display = "none";
+            document.getElementById('btnAn').style.display = "block";
+        }
+
+        function An() {
+            document.getElementById('more').style.display = "none";
+            document.getElementById('btnHien').style.display = "block";
+            document.getElementById('btnAn').style.display = "none";
+        }
+
+        function T1() {
+            window.location.href = "DM_Laptop.html";
+        }
+        function T2() {
+            window.location.href = "DM_Laptop_1.html";
+        }
+    </script>
+</body>
+
+</html>

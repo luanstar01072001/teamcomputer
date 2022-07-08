@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logoCPT.png">
+    <link rel="stylesheet" href="../css/style_mainQT.css">
+    <script src="https://kit.fontawesome.com/e06076012c.js" crossorigin="anonymous"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/click.js"></script>
+    <title>Quản lý cửa hàng bán máy tính NCC</title>
+</head>
+
+<body>
+    <section class="header">
+        <a href="javascript:void(0);" class="icon" onclick="openBTN()">
+            <i class="fas fa-bars"></i>
+        </a>
+        <div class="box-login" id="box-t">
+            Xin chào, <span id="ten_nv">Admin</span> <i class="fas fa-sort-down"></i>
+            <div class="box-login-bottom" id="box-b">
+                <button onclick="TTTaiKhoan()"><i class="fas fa-user-alt"></i> Tài khoản</button>
+                <button onclick="LogOut();"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
+            </div>
+        </div>
+    </section>
+    <section class="main">
+        <div class="row">
+            <div class="col-2 col-s-12 category">
+                <div class="bgbtn"></div>
+                <button onclick="TongQuan()"><i class="fas fa-tachometer-alt"></i> Tổng quan</button>
+                <button onclick="LoaiSanPham()"><i class="fas fa-boxes"></i> Loại sản phẩm</button>
+                <button onclick="SanPham()"><i class="fas fa-barcode"></i> Sản phẩm</button>
+                <button onclick="NhaCungCap()"><i class="fas fa-truck"></i> Nhà cung cấp</button>
+                <button onclick="KhachHang()"><i class="fas fa-users"></i> Khách hàng</button>
+                <button onclick="NhanVien()"><i class="fas fa-user"></i> Nhân viên</button>
+                <button onclick="HoaDonNhap()"><i class="fas fa-file-import"></i> Hóa đơn nhập</button>
+                <button class="active" onclick="HoaDonBan()"><i class="fas fa-shopping-cart"></i> Hóa đơn bán</button>
+                <button onclick="TinTuc()"><i class="fas fa-newspaper"></i> Tin tức</button>
+                <button onclick="ThietLap()"><i class="fas fa-cogs"></i> Thiết lập</button>
+            </div>
+            <div class="bx-left" id="button-left">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeBTN()"><i
+                        class="far fa-window-close"></i></a>
+                <ul>
+                    <li onclick="TongQuan()"><i class="fas fa-tachometer-alt"></i> Tổng quan</li>
+                    <li onclick="LoaiSanPham()"><i class="fas fa-boxes"></i> Loại sản phẩm</li>
+                    <li onclick="SanPham()"><i class="fas fa-barcode"></i> Sản phẩm</li>
+                    <li onclick="NhaCungCap()"><i class="fas fa-truck"></i> Nhà cung cấp</li>
+                    <li onclick="KhachHang()"><i class="fas fa-users"></i> Khách hàng</li>
+                    <li onclick="NhanVien()"><i class="fas fa-user"></i> Nhân viên</li>
+                    <li onclick="HoaDonNhap()"><i class="fas fa-file-import"></i> Hóa đơn nhập</li>
+                    <li onclick="HoaDonBan()"><i class="fas fa-shopping-cart"></i> Hóa đơn bán</li>
+                    <li onclick="TinTuc()"><i class="fas fa-newspaper"></i> Tin tức</li>
+                    <li onclick="ThietLap()"><i class="fas fa-cogs"></i> Thiết lập</li>
+                </ul>
+            </div>
+            <div class="col-10 col-s-12 content">
+                <div class="col-12 col-s-12 content">
+                    <div class="tabcontent">
+                        <div class="title">
+                            <i class="fas fa-shopping-cart"></i> Nhập thông tin hóa đơn bán
+                            <hr>
+                        </div>
+                        <div class="row">
+                            <form>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <label for="txtright">Mã hóa đơn bán:</label>
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <input type="text" id="mahd"
+                                        placeholder="Nhập mã hóa đơn...Tự động sinh nếu không nhập...">
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <label for="txtright">Nhân viên bán:</label>
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <select name="nhanvien" id="nhanvienban">
+                                        <option value="choose">--Chọn nhân viên--</option>
+                                        <option value="Bùi Mạnh Hùng">Bùi Mạnh Hùng</option>
+                                        <option value="Trương Văn Khánh">Trương Văn Khánh</option>
+                                        <option value="Phạm Văn Giang">Phạm Văn Giang</option>
+                                        <option value="Nguyễn Việt Hưng">Nguyễn Việt Hưng</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <label for="txtright">Khách hàng:</label>
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <input type="text" id="khachhang" list="listKhachHang">
+                                    <datalist id="listKhachHang">
+                                        <option value="Nguyễn Văn Anh">
+                                        <option value="Nguyễn Thu Thủy">
+                                        <option value="Phạm Ngọc Mai">
+                                        <option value="Chu Minh Tuyết">
+                                    </datalist>
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <label for="txtright">Số điện thoại:</label>
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <input type="text" id="sdtkh" placeholder="Nhập số điện thoại...">
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <label for="txtright">Email:</label>
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <input type="email" id="emailkh" placeholder="Nhập email...">
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <label for="txtright">Địa chỉ:</label>
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <input type="tel" id="diachikh" placeholder="Nhập địa chỉ...">
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <label for="txtright">Tổng sản phẩm:</label>
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <input type="number" id="tongsanpham" value="0" readonly>
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <label for="txtright">Tổng tiền:</label>
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <input type="number" id="tongtien" value="0" readonly>
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <label for="txtright">Trạng thái:</label>
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <select name="trangthai" id="trangthai">
+                                        <option value="choose">--Chọn trạng thái--</option>
+                                        <option value="Chưa xác nhận">Chưa xác nhận</option>
+                                        <option value="Hoàn thành">Hoàn thành</option>
+                                        <option value="Xác nhận">Xác nhận</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <label for="txtright">Phương thức thanh toán:</label>
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <select name="pttt" id="pttt">
+                                        <option value="choose">--Chọn phương thức thanh toán--</option>
+                                        <option value="Trả tiền mặt khi nhận hàng">Thanh toán tiền mặt khi nhận hàng
+                                            (tiền mặt / quẹt thẻ ATM, Visa, Master)</option>
+                                        <option value="Chuyển khoản ngân hàng">Thanh toán qua chuyển khoản qua tài khoản
+                                            ngân hàng (khuyên dùng)</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <label for="txtright">Số tài khoản:</label>
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <input type="text" id="sotaikhoan" placeholder="Nhập số tài khoản...">
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <label for="txtright">Ghi chú:</label>
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <textarea id="ghichu" cols="247" rows="4"
+                                        placeholder="Nhập ghi chú (không bắt buộc)..."></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <table class="table_chitiet">
+                                <thead id="DSSanPham">
+                                    <tr>
+                                        <th>Mã sản phẩm</th>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Hình ảnh</th>
+                                        <th>Số lượng</th>
+                                        <th>Đơn giá</th>
+                                        <th>Thành tiền</th>
+                                        <th>Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="listCT"></tbody>
+                                <!-- <tbody> -->
+                                <!-- <tr> -->
+                                <!-- <td style="text-align: center;">000000</td> -->
+                                <!-- <td>aaaaaaaaaaaaaaaaaaaaaaaaaa</td> -->
+                                <!-- <td style="text-align: center;"><img src="hg"></td> -->
+                                <!-- <td style="text-align: center;">00</td> -->
+                                <!-- <td style="text-align: right;">00000000</td> -->
+                                <!-- <td style="text-align: right;">00000000</td> -->
+                                <!-- <td style="text-align: center;"><i class="fas fa-trash" title="Xóa"></i></td> -->
+                                <!-- </tr> -->
+                                <!-- </tbody> -->
+                            </table>
+                            <button class="btn-form" id="AddSanPham"
+                                style="background-color: rgba(44, 140, 15, 0.8);">Thêm sản phẩm</button>
+                        </div>
+                        <hr>
+                        <button class="btn-form" style="background-color: rgba(44, 140, 15, 0.8);"
+                            onclick="ThemHoaDon()">Thêm hóa đơn bán</button>
+                        <button class="btn-form" style="background-color: rgba(227, 32, 21, 0.8);"
+                            onclick="NhapMoi()">Nhập mới</button>
+                        <button class="btn-form" style="background-color: rgba(14, 87, 224, 0.8);" id="btnUpdate"
+                            onclick="CapNhat()">Cập nhật thông tin</button>
+                    </div>
+                </div>
+                <div class="col-12 col-s-12 content">
+                    <div class="tabcontent">
+                        <div class="title">
+                            <i class="fas fa-shopping-cart"></i> Danh sách hóa đơn bán
+                            <button onclick="XoaChon()" style="margin-right: 3px;"><i class="far fa-trash-alt"></i> Xóa
+                                chọn</button>
+                            <hr>
+                        </div>
+                        <div class="row">
+                            <div class="col-8 col-s-12 padding-box">
+                                <input type="text" id="searchExport" placeholder="Nhập mã hóa đơn bán..."
+                                    onkeyup="TimKiem()">
+                            </div>
+                            <div class="col-2 col-s-12 padding-box">
+                                <select name="trangthai" id="trangthai1" onchange="SearchTrangThai()">
+                                    <option value="choose">--Chọn trạng thái--</option>
+                                    <option value="Chưa xác nhận">Chưa xác nhận</option>
+                                    <option value="Hoàn thành">Hoàn thành</option>
+                                    <option value="Xác nhận">Xác nhận</option>
+                                </select>
+                            </div>
+                            <div class="col-2 col-s-12 padding-box">
+                                <select name="nhanvien" id="nhanvienban1" onchange="SearchNV()">
+                                    <option value="choose">--Chọn nhân viên--</option>
+                                    <option value="Bùi Mạnh Hùng">Bùi Mạnh Hùng</option>
+                                    <option value="Trương Văn Khánh">Trương Văn Khánh</option>
+                                    <option value="Phạm Văn Giang">Phạm Văn Giang</option>
+                                    <option value="Nguyễn Việt Hưng">Nguyễn Việt Hưng</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-s-12 padding-box">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th style="padding-top: 10px;"><input type="checkbox"
+                                                    onclick="CheckAll(this)"></th>
+                                            <th>Mã HDB</th>
+                                            <th>Nhân viên</th>
+                                            <th>Khách hàng</th>
+                                            <th>Số điện thoại</th>
+                                            <th>Email</th>
+                                            <th>Địa chỉ</th>
+                                            <th>Tổng sản phẩm</th>
+                                            <th>Tổng tiền</th>
+                                            <th>Ngày tạo</th>
+                                            <th>Trạng thái</th>
+                                            <th>Thao tác</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="listExport"></tbody>
+                                    <!-- <tbody> -->
+                                    <!-- <tr> -->
+                                    <!-- <td style="text-align: center;padding-top: 10px;"><input type="checkbox" -->
+                                    <!-- value="" id=""></td> -->
+                                    <!-- <td>111111</td> -->
+                                    <!-- <td>Nguyễn Văn Anh</td> -->
+                                    <!-- <td></td> -->
+                                    <!-- <td>0123456789</td> -->
+                                    <!-- <td>sbc@gmail.com</td> -->
+                                    <!-- <td>Hải Dương</td> -->
+                                    <!-- <td style="text-align: center;">20</td> -->
+                                    <!-- <td style="text-align: right;">48900000</td> -->
+                                    <!-- <td style="text-align: center;">03/06/2021 08:40:05</td> -->
+                                    <!-- <td></td> -->
+                                    <!-- <td style="text-align: center;"> -->
+                                    <!-- <i class="fas fa-plus-circle" onclick="HienCT()"></i> -->
+                                    <!-- <i class="fas fa-print" title="In"></i> -->
+                                    <!-- <i class="fas fa-edit" title="Sửa"></i> -->
+                                    <!-- <i class="fas fa-trash-alt" title="Xóa"></i> -->
+                                    <!-- </td> -->
+                                    <!-- </tr> -->
+                                    <!-- </tbody> -->
+                                </table>
+                            </div>
+                            <div class="col-12 col-s-12 padding-box">
+                                <div class="box-sum">
+                                    <div class="box-left">
+                                        Số lượng hóa đơn: <span id="soluong">0</span>
+                                        <br>
+                                        Tổng tiền: <span id="tongtienhd">0</span><span>đ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var user = JSON.parse(localStorage.getItem('user'));
+            if (!user) {
+                window.location.href = "../admin/login.html";
+            }
+
+            LoadUser();
+
+            // var sanpham = '<tr>\
+            //             <td>\<input type="text" class="" placeholder="Mã sản phẩm...">\</td>\
+            //             <td>\
+            //                 <input type="text" class="" placeholder="Tên sản phẩm...">\
+            //             </td>\
+            //             <td>\
+            //                 <input type="number" class="" placeholder="Số lượng...">\
+            //             </td>\
+            //             <td>\
+            //                 <input type="number" class="" placeholder="Đơn giá...">\
+            //             </td>\
+            //             <td>\
+            //                 <button class="" onclick="XoaSanPham(this)"><i class="fas fa-trash"></i></button>\
+            //             </td>\
+            //         </tr>';
+            // $("#AddSanPham").click(function (e) {
+            //     $("#DSSanPham").append(sanpham);
+            // });
+
+            var list = JSON.parse(localStorage.getItem('Export')) || [];
+            var lct = JSON.parse(localStorage.getItem('ChiTiet')) || [];
+
+            function ThemHoaDon() {
+                var mahd = document.getElementById("mahd").value;
+                var nhanvien = document.getElementById("nhanvienban").value;
+                var khachhang = document.getElementById("khachhang").value;
+                var sdtkh = document.getElementById("sdtkh").value;
+                var emailkh = document.getElementById("emailkh").value;
+                var diachikh = document.getElementById("diachikh").value;
+                var tongsanpham = document.getElementById("tongsanpham").value;
+                var tongtien = document.getElementById("tongtien").value;
+                var trangthai = document.getElementById("trangthai").value;
+                var pttt = document.getElementById("pttt").value;
+                var sotk = document.getElementById("sotaikhoan").value;
+                var ghichu = document.getElementById("ghichu").value;
+                var ngaytao;
+                var number = /^[0-9]+$/;
+                var atposition = emailkh.indexOf("@");
+                var dotposition = emailkh.lastIndexOf(".");
+
+                if (mahd == null || mahd == "") {
+                    var d = new Date();
+                    mahd = Number(d);
+                }
+                else if (!mahd.match(number) || mahd.length != 13) {
+                    alert("Mã hóa đơn phải là kiểu số và có độ dài là 13 ký tự! Vui lòng nhập lại!");
+                    return false;
+                }
+
+                if (nhanvien == "choose") {
+                    alert("Vui lòng chọn nhân viên bán!");
+                    return false;
+                }
+                else if (khachhang == "" || khachhang == null) {
+                    alert("Tên khách hàng không được để trống! Vui lòng nhập lại!");
+                    return false;
+                }
+                else if (sdtkh == null || sdtkh == "") {
+                    alert("Số điện thoại khách hàng không được để trống! Vui lòng nhập lại!");
+                    return false;
+                } else if (!sdtkh.match(number) || sdtkh.length != 10) {
+                    alert("Số điện thoại khách hàng phải là kiểu số và có độ dài là 10 ký tự! Vui lòng nhập lại!");
+                    return false;
+                }
+                else if (emailkh != "" && emailkh != null && (atposition < 1 || dotposition < (atposition + 2) || (dotposition + 2) >= emailkh.length)) {
+                    alert("Email khách hàng không hợp lệ! Vui lòng nhập lại!");
+                    return false;
+                }
+                else if (diachikh == null || diachikh == "") {
+                    alert("Địa chỉ khách hàng không được để trống! Vui lòng nhập lại!");
+                    return false;
+                }
+                else if (trangthai == "choose") {
+                    alert("Vui lòng trạng thái!");
+                    return false;
+                }
+                else if (pttt == "choose") {
+                    alert("Vui lòng chọn phương thức thanh toán!");
+                    return false;
+                }
+                else {
+                    for (var x of list) {
+                        if (x.mahd == mahd) {
+                            alert("Mã hóa đơn đã tồn tại! Vui lòng nhập lại!")
+                            return false;
+                        }
+                    }
+                }
+
+                if (pttt == "Chuyển khoản ngân hàng" && (sotk == null || sotk == "")) {
+                    alert("Số tài khoản không được để trống! Vui lòng nhập lại!");
+                    return false;
+                }
+                else if (!sotk.match(number)) {
+                    alert("Số tài khoản không hợp lệ! Vui lòng nhập lại!");
+                    return false;
+                }
+
+                var date = new Date().toLocaleDateString();
+                var time = new Date().toLocaleTimeString();
+                ngaytao = date + " " + time;
+
+                console.log("AddExport");
+                if (list == null) list = [];
+                var exports = {
+                    "mahd": mahd,
+                    "nhanvien": nhanvien,
+                    "khachhang": khachhang,
+                    "sdtkh": sdtkh,
+                    "emailkh": emailkh,
+                    "diachikh": diachikh,
+                    "tongsanpham": tongsanpham,
+                    "tongtien": tongtien,
+                    "ghichu": ghichu,
+                    "trangthai": trangthai,
+                    "ngaytao": ngaytao,
+                    "pttt": pttt,
+                    "sotk": sotk
+                };
+                list.push(exports);
+                localStorage.setItem("Export", JSON.stringify(list));
+                alert("Đã thêm thành công!");
+                location.reload();
+            }
+
+            function NhapMoi() {
+                document.getElementById('mahd').value = '';
+                document.getElementById('nhanvienban').value = 'choose';
+                document.getElementById('khachhang').value = '';
+                document.getElementById('sdtkh').value = '';
+                document.getElementById('emailkh').value = '';
+                document.getElementById('diachikh').value = '';
+                document.getElementById('tongsanpham').value = '0';
+                document.getElementById('tongtien').value = '0';
+                document.getElementById('ghichu').value = '';
+                document.getElementById('trangthai').value = 'choose';
+                document.getElementById('pttt').value = 'choose';
+                document.getElementById('sotaikhoan').value = '';
+                document.getElementById('listCT').remove();
+            }
+
+            function LoadData() {
+                var str = "";
+                var sl = 0;
+                var ttien = 0;
+                list.sort();
+                for (x of list) {
+                    sl++;
+                    ttien += Number(x.tongtien);
+                    str += `<tr>
+                            <td style="text-align: center;padding-top: 10px;"><input onclick="Xoa('ck`+ x.mahd + `','` + x.mahd + `')" type="checkbox" name="check_all" id="ck` + x.mahd + `"></td>
+                            <td>`+ x.mahd + `</td>
+                            <td>`+ x.nhanvien + `</td>
+                            <td>`+ x.khachhang + `</td>
+                            <td>`+ x.sdtkh + `</td>
+                            <td>`+ x.emailkh + `</td>
+                            <td>`+ x.diachikh + `</td>
+                            <td style="text-align: center;">`+ x.tongsanpham + `</td>
+                            <td style="text-align: right;">`+ x.tongtien + `</td>
+                            <td style="text-align: center;">`+ x.ngaytao + `</td>
+                            <td style="text-align: center;">`+ x.trangthai + `</td>
+                            <td style="text-align: center;">
+                                <i class="fas fa-eye" title="Xem chi tiết" onclick="HienCT(`+ x.mahd + `)"></i>
+                                <i class="fas fa-print" title="In" onclick="InHoaDon(`+ x.mahd + `)"></i>
+                                <i class="fas fa-edit" title="Sửa" onclick="SuaHoaDon(`+ x.mahd + `)"></i>
+                                <i class="fas fa-trash-alt" title="Xóa" onclick="XoaHoaDon(`+ x.mahd + `)"></i>
+                            </td>
+                        </tr>
+                    `;
+                }
+                document.getElementById("listExport").innerHTML = str;
+                $('#soluong').html(sl);
+                $('#tongtienhd').html(ttien);
+            }
+            LoadData();
+
+            function XoaHoaDon(mahd) {
+                if (confirm("Bạn chắc chắn muốn xóa!")) {
+                    var index = list.findIndex(x => x.mahd == mahd);
+                    if (index >= 0) {
+                        list.splice(index, 1);
+                    }
+                    LoadData();
+                    localStorage.setItem('Export', JSON.stringify(list));
+
+                    for (var i = 0; i < lct.length;) {
+                        if (lct[i].mact == mahd) {
+                            lct.splice(i, 1);
+                            i = 0;
+                        }
+                        else i++;
+                    }
+                    localStorage.setItem('ChiTiet', JSON.stringify(lct));
+                    location.reload();
+                }
+            }
+
+            function CheckAll(parent) {
+                var ids = document.getElementsByTagName('input');
+                for (var i = 0; i < ids.length; i++) {
+                    if (ids[i].name == "check_all") {
+                        ids[i].checked = parent.checked;
+                    }
+                }
+            }
+
+            function Xoa(id, mahd) {
+                var index = list.findIndex(x => x.mahd == mahd);
+                if (index >= 0) {
+                    list[index].isCheck = document.getElementById(id).checked;
+                }
+            }
+
+            function XoaChon() {
+                if (confirm("Bạn chắc chắn muốn xóa!")) {
+                    for (var i = 0; i < list.length;) {
+                        if (list[i].isCheck) {
+                            list.splice(i, 1);
+                            i = 0;
+                        }
+                        else i++;
+                    }
+                    LoadData();
+                    localStorage.setItem('Export', JSON.stringify(list));
+                }
+                location.reload();
+            }
+
+            function TimKiem() {
+                var textinput = document.getElementById("searchExport").value;
+                var str = "";
+                for (x of list) {
+                    if (x.mahd.toString().toLowerCase().indexOf(textinput) > -1) {
+                        str += `<tr>
+                                <td style="text-align: center;padding-top: 10px;"><input onclick="Xoa('ck`+ x.mahd + `','` + x.mahd + `')" type="checkbox" name="check_all" id="ck` + x.mahd + `"></td>
+                                <td>`+ x.mahd + `</td>
+                                <td>`+ x.nhanvien + `</td>
+                                <td>`+ x.khachhang + `</td>
+                                <td>`+ x.sdtkh + `</td>
+                                <td>`+ x.emailkh + `</td>
+                                <td>`+ x.diachikh + `</td>
+                                <td style="text-align: center;">`+ x.tongsanpham + `</td>
+                                <td style="text-align: right;">`+ x.tongtien + `</td>
+                                <td style="text-align: center;">`+ x.ngaytao + `</td>
+                                <td style="text-align: center;">`+ x.trangthai + `</td>
+                                <td style="text-align: center;">
+                                    <i class="fas fa-eye" title="Xem chi tiết"></i>
+                                    <i class="fas fa-print" title="In"></i>
+                                    <i class="fas fa-edit" title="Sửa" onclick="SuaHoaDon(`+ x.mahd + `)"></i>
+                                    <i class="fas fa-trash-alt" title="Xóa" onclick="XoaHoaDon(`+ x.mahd + `)"></i>
+                                </td>
+                            </tr>
+                        `;
+                    }
+                }
+                document.getElementById("listExport").innerHTML = str;
+            }
+
+            function SuaHoaDon(mahd) {
+                for (x of list) {
+                    if (x.mahd == mahd) {
+                        document.getElementById('mahd').value = x.mahd;
+                        document.getElementById('nhanvienban').value = x.nhanvien;
+                        document.getElementById('khachhang').value = x.khachhang;
+                        document.getElementById('sdtkh').value = x.sdtkh;
+                        document.getElementById('emailkh').value = x.emailkh;
+                        document.getElementById('diachikh').value = x.diachikh;
+                        document.getElementById('tongsanpham').value = x.tongsanpham;
+                        document.getElementById('tongtien').value = x.tongtien;
+                        document.getElementById('ghichu').value = x.ghichu;
+                        document.getElementById('trangthai').value = x.trangthai;
+                        document.getElementById("pttt").value = x.pttt;
+                        document.getElementById("sotaikhoan").value = x.sotk;
+                    }
+                }
+
+                var str = "";
+                for (x of lct) {
+                    if (x.mact == mahd) {
+                        str += `<tr>
+                                <td style="text-align: center;">`+ x.masp + `</td>
+                                <td>`+ x.tensp + `</td>
+                                <td style="text-align: center;"><img src="../`+ x.anhsp + `"></td>
+                                <td style="text-align: center;">`+ x.soluong + `</td>
+                                <td style="text-align: right;">`+ x.dongia + `</td>
+                                <td style="text-align: right;">`+ x.thanhtien + `</td>
+                                <td style="text-align: center;"><i class="fas fa-trash" title="Xóa" onclick="XoaCT(`+ x.mact + `,` + x.masp + `)"></i></td>
+                            </tr>
+                        `;
+                    }
+                }
+                document.getElementById("listCT").innerHTML = str;
+                $('body,html').animate({ scrollTop: 0 }, 800);
+
+                document.getElementById('mahd').disabled = false;
+                document.getElementById('nhanvienban').disabled = false;
+                document.getElementById('khachhang').disabled = false;
+                document.getElementById('sdtkh').disabled = false;
+                document.getElementById('emailkh').disabled = false;
+                document.getElementById('diachikh').disabled = false;
+                document.getElementById('tongsanpham').disabled = false;
+                document.getElementById('tongtien').disabled = false;
+                document.getElementById('ghichu').disabled = false;
+                document.getElementById('trangthai').disabled = false;
+                document.getElementById("pttt").disabled = false;
+                document.getElementById("sotaikhoan").disabled = false;
+            }
+
+            function CapNhat() {
+                var mahd = document.getElementById("mahd").value;
+                var nhanvien = document.getElementById("nhanvienban").value;
+                var khachhang = document.getElementById("khachhang").value;
+                var sdtkh = document.getElementById("sdtkh").value;
+                var emailkh = document.getElementById("emailkh").value;
+                var diachikh = document.getElementById("diachikh").value;
+                var tongsanpham = document.getElementById("tongsanpham").value;
+                var tongtien = document.getElementById("tongtien").value;
+                var trangthai = document.getElementById("trangthai").value;
+                var pttt = document.getElementById("pttt").value;
+                var sotk = document.getElementById("sotaikhoan").value;
+                var ghichu = document.getElementById("ghichu").value;
+                var ngaytao;
+                var number = /^[0-9]+$/;
+                var atposition = emailkh.indexOf("@");
+                var dotposition = emailkh.lastIndexOf(".");
+                var ok = true;
+
+                if (nhanvien == "choose") {
+                    alert("Vui lòng chọn nhân viên bán!");
+                    return false;
+                }
+                else if (khachhang == "" || khachhang == null) {
+                    alert("Tên khách hàng không được để trống! Vui lòng nhập lại!");
+                    return false;
+                }
+                else if (sdtkh == null || sdtkh == "") {
+                    alert("Số điện thoại khách hàng không được để trống! Vui lòng nhập lại!");
+                    return false;
+                } else if (!sdtkh.match(number) || sdtkh.length != 10) {
+                    alert("Số điện thoại khách hàng phải là kiểu số và có độ dài là 10 ký tự! Vui lòng nhập lại!");
+                    return false;
+                }
+                else if (emailkh != "" && emailkh != null && (atposition < 1 || dotposition < (atposition + 2) || (dotposition + 2) >= emailkh.length)) {
+                    alert("Email khách hàng không hợp lệ! Vui lòng nhập lại!");
+                    return false;
+                }
+                else if (diachikh == null || diachikh == "") {
+                    alert("Địa chỉ khách hàng không được để trống! Vui lòng nhập lại!");
+                    return false;
+                }
+                else if (trangthai == "choose") {
+                    alert("Vui lòng trạng thái!");
+                    return false;
+                }
+                else if (pttt == "choose") {
+                    alert("Vui lòng chọn phương thức thanh toán!");
+                    return false;
+                }
+
+                // var date = new Date().toLocaleDateString();
+                // var time = new Date().toLocaleTimeString();
+                // ngaytao = date + " " + time;
+
+                for (x of list) {
+                    if (x.mahd == mahd) {
+                        x.mahd = mahd;
+                        x.nhanvien = nhanvien;
+                        x.khachhang = khachhang;
+                        x.sdtkh = sdtkh;
+                        x.emailkh = emailkh;
+                        x.diachikh = diachikh;
+                        x.tongsanpham = tongsanpham;
+                        x.tongtien = tongtien;
+                        x.ghichu = ghichu;
+                        x.trangthai = trangthai;
+                        x.pttt = pttt;
+                        x.sotk = sotk;
+                        ok = false;
+                        break;
+                    }
+                }
+
+                if (ok == false) {
+                    alert("Cập nhật thông tin thành công!");
+                    localStorage.setItem("Export", JSON.stringify(list));
+                    location.reload();
+                }
+                else {
+                    alert("Cập nhật thông tin thất bại!");
+                }
+            }
+
+            function SearchTrangThai() {
+                var e = document.getElementById("trangthai1");
+                var strUser = e.options[e.selectedIndex].value;
+
+                var str = "";
+                for (x of list) {
+                    if (x.trangthai.toString().indexOf(strUser) > -1) {
+                        str += `<tr>
+                                <td style="text-align: center;padding-top: 10px;"><input onclick="Xoa('ck`+ x.mahd + `','` + x.mahd + `')" type="checkbox" name="check_all" id="ck` + x.mahd + `"></td>
+                                <td>`+ x.mahd + `</td>
+                                <td>`+ x.nhanvien + `</td>
+                                <td>`+ x.khachhang + `</td>
+                                <td>`+ x.sdtkh + `</td>
+                                <td>`+ x.emailkh + `</td>
+                                <td>`+ x.diachikh + `</td>
+                                <td style="text-align: center;">`+ x.tongsanpham + `</td>
+                                <td style="text-align: right;">`+ x.tongtien + `</td>
+                                <td style="text-align: center;">`+ x.ngaytao + `</td>
+                                <td style="text-align: center;">`+ x.trangthai + `</td>
+                                <td style="text-align: center;">
+                                    <i class="fas fa-eye" title="Xem chi tiết"></i>
+                                    <i class="fas fa-print" title="In"></i>
+                                    <i class="fas fa-edit" title="Sửa" onclick="SuaHoaDon(`+ x.mahd + `)"></i>
+                                    <i class="fas fa-trash-alt" title="Xóa" onclick="XoaHoaDon(`+ x.mahd + `)"></i>
+                                </td>
+                            </tr>
+                        `;
+                    }
+                }
+                document.getElementById("listExport").innerHTML = str;
+            }
+
+            function SearchNV() {
+                var e = document.getElementById("nhanvienban1");
+                var strUser = e.options[e.selectedIndex].value;
+
+                var str = "";
+                for (x of list) {
+                    if (x.nhanvien.toString().indexOf(strUser) > -1) {
+                        str += `<tr>
+                                <td style="text-align: center;padding-top: 10px;"><input onclick="Xoa('ck`+ x.mahd + `','` + x.mahd + `')" type="checkbox" name="check_all" id="ck` + x.mahd + `"></td>
+                                <td>`+ x.mahd + `</td>
+                                <td>`+ x.nhanvien + `</td>
+                                <td>`+ x.khachhang + `</td>
+                                <td>`+ x.sdtkh + `</td>
+                                <td>`+ x.emailkh + `</td>
+                                <td>`+ x.diachikh + `</td>
+                                <td style="text-align: center;">`+ x.tongsanpham + `</td>
+                                <td style="text-align: right;">`+ x.tongtien + `</td>
+                                <td style="text-align: center;">`+ x.ngaytao + `</td>
+                                <td style="text-align: center;">`+ x.trangthai + `</td>
+                                <td style="text-align: center;">
+                                    <i class="fas fa-eye" title="Xem chi tiết"></i>
+                                    <i class="fas fa-print" title="In"></i>
+                                    <i class="fas fa-edit" title="Sửa" onclick="SuaHoaDon(`+ x.mahd + `)"></i>
+                                    <i class="fas fa-trash-alt" title="Xóa" onclick="XoaHoaDon(`+ x.mahd + `)"></i>
+                                </td>
+                            </tr>
+                        `;
+                    }
+                }
+                document.getElementById("listExport").innerHTML = str;
+            }
+
+            function HienCT(mahd) {
+                for (x of list) {
+                    if (x.mahd == mahd) {
+                        document.getElementById('mahd').value = x.mahd;
+                        document.getElementById('nhanvienban').value = x.nhanvien;
+                        document.getElementById('khachhang').value = x.khachhang;
+                        document.getElementById('sdtkh').value = x.sdtkh;
+                        document.getElementById('emailkh').value = x.emailkh;
+                        document.getElementById('diachikh').value = x.diachikh;
+                        document.getElementById('tongsanpham').value = x.tongsanpham;
+                        document.getElementById('tongtien').value = x.tongtien;
+                        document.getElementById('ghichu').value = x.ghichu;
+                        document.getElementById('trangthai').value = x.trangthai;
+                        document.getElementById("pttt").value = x.pttt;
+                        document.getElementById("sotaikhoan").value = x.sotk;
+                    }
+                }
+
+                var str = "";
+                for (x of lct) {
+                    if (x.mact == mahd) {
+                        str += `<tr>
+                                <td style="text-align: center;">`+ x.masp + `</td>
+                                <td>`+ x.tensp + `</td>
+                                <td style="text-align: center;"><img src="../`+ x.anhsp + `"></td>
+                                <td style="text-align: center;">`+ x.soluong + `</td>
+                                <td style="text-align: right;">`+ x.dongia + `</td>
+                                <td style="text-align: right;">`+ x.thanhtien + `</td>
+                                <td></td>
+                            </tr>
+                        `;
+                    }
+                }
+                document.getElementById("listCT").innerHTML = str;
+                $('body,html').animate({ scrollTop: 0 }, 800);
+
+                document.getElementById('mahd').disabled = true;
+                document.getElementById('nhanvienban').disabled = true;
+                document.getElementById('khachhang').disabled = true;
+                document.getElementById('sdtkh').disabled = true;
+                document.getElementById('emailkh').disabled = true;
+                document.getElementById('diachikh').disabled = true;
+                document.getElementById('tongsanpham').disabled = true;
+                document.getElementById('tongtien').disabled = true;
+                document.getElementById('ghichu').disabled = true;
+                document.getElementById('trangthai').disabled = true;
+                document.getElementById("pttt").disabled = true;
+                document.getElementById("sotaikhoan").disabled = true;
+            }
+
+            function XoaCT(mahd, masp) {
+                if (confirm("Bạn chắc chắn muốn xóa!")) {
+                    for (var i = 0; i < lct.length;) {
+                        if ((lct[i].mact == mahd) && (lct[i].masp == masp)) {
+                            lct.splice(i, 1);
+                            i = 0;
+                        }
+                        else i++;
+                    }
+
+                    var str = "";
+                    for (x of lct) {
+                        if (x.mact == mahd) {
+                            str += `<tr>
+                                <td style="text-align: center;">`+ x.masp + `</td>
+                                <td>`+ x.tensp + `</td>
+                                <td style="text-align: center;"><img src="../`+ x.anhsp + `"></td>
+                                <td style="text-align: center;">`+ x.soluong + `</td>
+                                <td style="text-align: right;">`+ x.dongia + `</td>
+                                <td style="text-align: right;">`+ x.thanhtien + `</td>
+                                <td style="text-align: center;"><i class="fas fa-trash" title="Xóa" onclick="XoaCT(`+ x.mact + `,` + x.masp + `)"></i></td>
+                            </tr>
+                        `;
+                        }
+                    }
+                    document.getElementById("listCT").innerHTML = str;
+
+                    var tt = 0;
+                    sl = 0;
+                    for (x of lct) {
+                        if (x.mact == mahd) {
+                            tt += x.thanhtien;
+                            sl += x.soluong;
+                        }
+                    }
+
+                    for (x of list) {
+                        if (x.mahd == mahd) {
+                            x.tongtien = tt;
+                            x.tongsanpham = sl;
+                        }
+                    }
+
+                    localStorage.setItem('ChiTiet', JSON.stringify(lct));
+                    localStorage.setItem('Export', JSON.stringify(list));
+                    LoadData();
+                    SuaHoaDon(mahd);
+                }
+            }
+
+            function InHoaDon(mahd) {
+                var sl = 0;
+                var t = 0;
+                for (x of list) {
+                    if (x.mahd == mahd) {
+                        sl = x.tongsanpham;
+                        t = x.tongtien;
+                        var str = `
+                        <section style="text-align: center;">
+                            <h1>HÓA ĐƠN GIÁ TRỊ GIA TĂNG</h1>
+                            <div class="ban">(Bản thể hiện hóa đơn điện tử)</div>
+                        </section>
+                        <div class="le dam">Tên đơn vị bán hàng: Team Computer</div>
+                        <div class="le">Mã số thuế: 3269289058</div>
+                        <div class="le">Địa chỉ: 195 Nguyễn Chế Nghĩa, Gia Lộc, Hải Dương</div>
+                        <div class="le doi">Điện thoại: 0948.098.195</div>
+                        <div class="le doi">Số tài khoản: 762618652671614</div>
+                        <div class="le">Ngày tạo: `+ x.ngaytao + `</div>
+                        <div class="le dam">Mã hóa đơn: `+ x.mahd + `</div>
+                        <div class="le dam">Người mua hàng: `+ x.khachhang + `</div>
+                        <div class="le">Email: `+ x.emailkh + `</div>
+                        <div class="le">Điện thoại: `+ x.sdtkh + `</div>
+                        <div class="le">Địa chỉ: `+ x.diachikh + `</div>
+                        <div class="le doi">Hình thức thanh toán: `+ x.pttt + `</div>
+                        <div class="le doi">Số tài khoản: `+ x.sotk + `</div>
+                        <div class="le">Ghi chú: `+ x.ghichu + `</div>
+                        <table>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền</th>
+                        </tr>`;
+                        var stt = 0;
+                        for (x of lct) {
+                            if (x.mact == mahd) {
+                                str += `
+                                <tr>
+                                    <td>`+ (++stt) + `</td>
+                                    <td>`+ x.tensp + `</td>
+                                    <td>`+ x.soluong + `</td>
+                                    <td>`+ x.thanhtien + `</td>
+                                </tr>`;
+                            }
+                        }
+                        str += `
+                            <tr>
+                                <td></td>
+                                <td class="dam">Tổng</td>
+                                <td class="dam">`+ sl + `</td>
+                                <td class="dam">`+ t + `</td>
+                            </tr>
+                        </table>
+                        <div class="doi dam ky">Người mua hàng</div>
+                        <div class="doi dam ky">Người bán hàng</div>
+                        <div class="doi ky1">(Ký, ghi rõ họ tên)</div>
+                        <div class="doi ky1">(Ký, ghi rõ họ tên)</div>
+                        `;
+                    }
+                }
+
+                printHtml(str);
+            }
+
+            function printHtml(data) {
+                let popupWin = window.open('', '_blank', 'top=0,left=0,height=100%,width=auto');
+                popupWin.document.write(`
+                    <html>
+                        <head>
+                        <title>Print tab</title>
+                        <style>
+                            * {
+                                margin: 0;
+                                padding: 0;
+                            }
+
+                            table {
+                                margin-top: 15px;
+                                width: 100%;
+                            }
+
+                            body {
+                                width: 900px;
+                                margin: 0 auto;
+                            }
+
+                            tr {
+                                line-height: 27px;
+                            }
+
+                            table,
+                            th,
+                            td {
+                                border: 1px solid black;
+                                border-collapse: collapse;
+                                text-align: center;
+                            }
+
+                            .ngay {
+                                font-style: italic;
+                                font-size: 15px;
+                                margin-bottom: 5px;
+                            }
+
+                            .ban {
+                                font-style: italic;
+                                font-size: 15px;
+                                margin: 3px 0px;
+                            }
+
+                            .dam {
+                                font-weight: bold;
+                            }
+
+                            .le {
+                                margin-bottom: 4px;
+                                font-size: 15px;
+                            }
+
+                            .doi {
+                                width: 50%;
+                                float: left;
+                            }
+
+                            .ky {
+                                text-align: center;
+                                margin-top: 20px;
+                            }
+
+                            .ky1 {
+                                font-style: italic;
+                                text-align: center;
+                                margin-top: 5px;
+                            }
+                        </style>
+                        </head>
+                        <body onload="window.print();window.close()">`+ data + `</body>
+                    </html>`
+                );
+                popupWin.document.close();
+            }
+        </script>
+    </section>
+</body>
+
+</html>

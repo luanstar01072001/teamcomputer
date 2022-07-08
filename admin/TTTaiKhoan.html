@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logoCPT.png">
+    <link rel="stylesheet" href="../css/style_mainQT.css">
+    <script src="https://kit.fontawesome.com/e06076012c.js" crossorigin="anonymous"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/click.js"></script>
+    <title>Quản lý cửa hàng bán máy tính NCC</title>
+</head>
+
+<body>
+    <section class="header">
+        <a href="javascript:void(0);" class="icon" onclick="openBTN()">
+            <i class="fas fa-bars"></i>
+        </a>
+        <div class="box-login" id="box-t">
+            Xin chào, <span id="ten_nv">Admin</span> <i class="fas fa-sort-down"></i>
+            <div class="box-login-bottom" id="box-b">
+                <button onclick="TTTaiKhoan()"><i class="fas fa-user-alt"></i> Tài khoản</button>
+                <button onclick="LogOut();"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
+            </div>
+        </div>
+    </section>
+    <section class="main">
+        <div class="row">
+            <div class="col-2 col-s-12 category">
+                <div class="bgbtn"></div>
+                <button class="active" onclick="TongQuan()"><i class="fas fa-tachometer-alt"></i> Tổng quan</button>
+                <button onclick="LoaiSanPham()"><i class="fas fa-boxes"></i> Loại sản phẩm</button>
+                <button onclick="SanPham()"><i class="fas fa-barcode"></i> Sản phẩm</button>
+                <button onclick="NhaCungCap()"><i class="fas fa-truck"></i> Nhà cung cấp</button>
+                <button onclick="KhachHang()"><i class="fas fa-users"></i> Khách hàng</button>
+                <button onclick="NhanVien()"><i class="fas fa-user"></i> Nhân viên</button>
+                <button onclick="HoaDonNhap()"><i class="fas fa-file-import"></i> Hóa đơn nhập</button>
+                <button onclick="HoaDonBan()"><i class="fas fa-shopping-cart"></i> Hóa đơn bán</button>
+                <button onclick="TinTuc()"><i class="fas fa-newspaper"></i> Tin tức</button>
+                <button onclick="ThietLap()"><i class="fas fa-cogs"></i> Thiết lập</button>
+            </div>
+            <div class="bx-left" id="button-left">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeBTN()"><i
+                        class="far fa-window-close"></i></a>
+                <ul>
+                    <li onclick="TongQuan()"><i class="fas fa-tachometer-alt"></i> Tổng quan</li>
+                    <li onclick="LoaiSanPham()"><i class="fas fa-boxes"></i> Loại sản phẩm</li>
+                    <li onclick="SanPham()"><i class="fas fa-barcode"></i> Sản phẩm</li>
+                    <li onclick="NhaCungCap()"><i class="fas fa-truck"></i> Nhà cung cấp</li>
+                    <li onclick="KhachHang()"><i class="fas fa-users"></i> Khách hàng</li>
+                    <li onclick="NhanVien()"><i class="fas fa-user"></i> Nhân viên</li>
+                    <li onclick="HoaDonNhap()"><i class="fas fa-file-import"></i> Hóa đơn nhập</li>
+                    <li onclick="HoaDonBan()"><i class="fas fa-shopping-cart"></i> Hóa đơn bán</li>
+                    <li onclick="TinTuc()"><i class="fas fa-newspaper"></i> Tin tức</li>
+                    <li onclick="ThietLap()"><i class="fas fa-cogs"></i> Thiết lập</li>
+                </ul>
+            </div>
+            <div class="col-10 col-s-12 content">
+                <div class="col-12 col-s-12 content">
+                    <div class="tabcontent">
+                        <div class="title">
+                            <i class="fas fa-user-alt"></i> Thông tin tài khoản
+                            <hr>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 col-s-3 padding-box margin-bot">
+                                <label for="name">Mã nhân viên:</label>
+                            </div>
+                            <div class="col-10 col-s-9 padding-box margin-bot">
+                                <span id="manv">admin</span>
+                            </div>
+                            <div class="col-2 col-s-3 padding-box margin-bot">
+                                <label for="name">Tên nhân viên:</label>
+                            </div>
+                            <div class="col-10 col-s-9 padding-box margin-bot">
+                                <span id="tennv">Nguyễn Văn A</span>
+                            </div>
+                            <div class="col-2 col-s-3 padding-box margin-bot">
+                                <label for="name">Email:</label>
+                            </div>
+                            <div class="col-10 col-s-9 padding-box margin-bot">
+                                <span id="emailnv">vana@gmail.com</span>
+                            </div>
+                            <div class="col-2 col-s-3 padding-box margin-bot">
+                                <label for="name">Số điện thoại:</label>
+                            </div>
+                            <div class="col-10 col-s-9 padding-box margin-bot">
+                                <span id="sdtnv">0123456789</span>
+                            </div>
+                            <div class="col-2 col-s-3 padding-box margin-bot">
+                                <label for="name">Quyền:</label>
+                            </div>
+                            <div class="col-10 col-s-9 padding-box margin-bot">
+                                <span id="quyen">Quản lý</span>
+                            </div>
+                            <div class="col-2 col-s-3 padding-box margin-bot">
+                                <label for="name">Mật khẩu:</label>
+                            </div>
+                            <div class="col-10 col-s-9 padding-box margin-bot">
+                                <button class="btn-changepass" id="btnChangePass" style="float: left;"
+                                    onclick="HienForm()"><i class="fas fa-retweet"></i> Đổi mật khẩu</button>
+                                <div style="display: none;" id="chpass">
+                                    <input type="password" id="mkHienTai" placeholder="Nhập mật khẩu hiện tại..."
+                                        style="margin-bottom: 6px;">
+                                    <input type="password" id="mkMoi" placeholder="Nhập mật khẩu mới..."
+                                        style="margin-bottom: 6px;">
+                                    <input type="password" id="mkMoi1" placeholder="Nhập lại mật khẩu mới..."
+                                        style="margin-bottom: 6px;">
+                                    <button style="margin-right: 4px;" class="btn-changepass" onclick="AnForm()"><i
+                                            class="fas fa-times"></i> Hủy</button>
+                                    <button class="btn-changepass" onclick="ChangePass()"><i class="fas fa-retweet"></i>
+                                        Đổi mật khẩu</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var user = JSON.parse(localStorage.getItem('user'));
+            if (!user) {
+                window.location.href = "../admin/login.html";
+            }
+
+            LoadUser();
+
+            function HienForm() {
+                document.getElementById('chpass').style.display = "block";
+                document.getElementById('btnChangePass').style.display = "none";
+            }
+
+            function AnForm() {
+                document.getElementById('chpass').style.display = "none";
+                document.getElementById('btnChangePass').style.display = "block";
+                document.getElementById('mkHienTai').value = '';
+                document.getElementById('mkMoi').value = '';
+                document.getElementById('mkMoi1').value = '';
+            }
+
+            function ChangePass() {
+                var list = JSON.parse(localStorage.getItem('Staff')) || [];
+                var mkHienTai = document.getElementById('mkHienTai').value;
+                var mkMoi = document.getElementById('mkMoi').value;
+                var mkMoi1 = document.getElementById('mkMoi1').value;
+
+                if (mkHienTai == null || mkHienTai == "") {
+                    alert("Mật khẩu hiện tại không được để trống! Vui lòng nhập lại!");
+                    return false;
+                }
+                else if (mkMoi == null || mkMoi == "") {
+                    alert("Mật khẩu mới không được để trống! Vui lòng nhập lại!");
+                    return false;
+                }
+                else if (mkMoi1 == null || mkMoi1 == "") {
+                    alert("Mật khẩu mới không được để trống! Vui lòng nhập lại!");
+                    return false;
+                }
+
+                if (user.mknv != mkHienTai) {
+                    alert("Mật khẩu hiện tại không đúng! Vui lòng nhập lại!");
+                    return false;
+                }
+                else if (mkHienTai == mkMoi) {
+                    alert("Mật khẩu mới không được trùng với mật khẩu cũ! Vui lòng nhập lại!");
+                    return false;
+                }
+                else if (mkMoi != mkMoi1) {
+                    alert("Mật khẩu mới không khớp! Vui lòng nhập lại!");
+                    return false;
+                }
+
+                var ok = true;
+                for (x of list) {
+                    if (x.manv == user.manv) {
+                        x.mknv = mkMoi;
+                        ok = false;
+                        break;
+                    }
+                }
+
+                if (ok == false) {
+                    alert("Cập nhật thông tin thành công!");
+                    localStorage.setItem("Staff", JSON.stringify(list));
+                    location.reload();
+                }
+                else {
+                    alert("Cập nhật thông tin thất bại!");
+                }
+            }
+        </script>
+    </section>
+</body>
+
+</html>

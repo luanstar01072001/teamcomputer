@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logoCPT.png">
+    <link rel="stylesheet" href="css/style_home.css">
+    <link rel="stylesheet" href="css/stylle_policy.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/e06076012c.js" crossorigin="anonymous"></script>
+    <title>Mua trả góp</title>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn"><i class="fas fa-angle-up"></i></button>
+    <section class="header-i-out">
+        <div class="header-inner" id="hideInner">
+            <a href="#"><i class="fas fa-dollar-sign"></i> Cam kết giá tốt</a>
+            <a href="#"><i class="fas fa-truck"></i> Miễn phí vận chuyển</a>
+            <a href="#"><i class="fas fa-handshake"></i> Thanh toán khi nhận hàng</a>
+            <a href="#"><i class="fas fa-history"></i> Bảo hành tận nơi</a>
+            <span class="sp-h-in-r" id="boxrighttop">
+                <a href="login.html" id="i"><i class="fas fa-user"></i> Đăng nhập</a>
+                <a href="signup.html" id="i"><i class="fas fa-user-plus"></i> Đăng ký</a>
+            </span>
+            <div class="box-right-top-KH" id="boxrighttopKH">
+                <a id="i">Xin chào, <span id="tenkhachhang">Nguyễn Văn A</span></a>
+                <div class="box-login-bottom" id="box-b">
+                    <button onclick="TTTaiKhoan()"><i class="fas fa-user-alt"></i> Tài khoản</button>
+                    <button onclick="DSDonHang()"><i class="fas fa-file-invoice-dollar"></i> Đơn hàng</button>
+                    <button onclick="logOut()"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="header-m-out">
+        <div class="header-mid" id="hideMid">
+            <a href="index.html" id="m"><img src="img/logo.png"></a>
+            <a href="GioHang.html" class="cart" title="Giỏ hàng"><i class="fas fas fa-shopping-cart"></i><span
+                    class="count" id="soluong">0</span></a>
+            <form class="search" action="#" id="m">
+                <input type="text" placeholder="Tìm kiếm sản phẩm..." name="search_prod">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="mid-small" id="lg">
+                <a href="index.html"><img src="img/logo.png"></a>
+            </div>
+            <a href="javascript:void(0);" class="icon-mid" onclick="openNavMid()" id="lg"><i
+                    class="fas fa-bars"></i></a>
+            <script src="js/hide_menu.js"></script>
+        </div>
+        <div class="sidenavMid" id="mySidenavMid">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNavMid()"><i
+                    class="far fa-window-close"></i></a>
+            <form class="search" action="#">
+                <input type="text" placeholder="Tìm kiếm sản phẩm..." name="search_prod">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <hr>
+            <div id="boxLogin">
+                <a href="signup.html" class="text-res"><i class="far fa-user-circle"></i> Đăng ký</a>
+                <a href="login.html" class="text-res"><i class="far fa-user-circle"></i> Đăng nhập</a>
+            </div>
+            <div id="boxLoginHide">
+                <a href="javascript:TTTaiKhoan();" class="text-res"><i class="fas fa-user-alt"></i> <span
+                        id="tenkhachhang1">Nguyễn Văn A</span></a>
+                <a href="javascript:DSDonHang();" class="text-res"><i class="fas fa-file-invoice-dollar"></i> Đơn
+                    hàng</a>
+                <a href="javascript:logOut();" class="text-res"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+            </div>
+            <hr>
+            <ul>
+                <li><a href="CuaHang.html"><i class="fas fa-phone-volume"></i> Bán hàng trực tuyến</a></li>
+                <li><a href="MuaTraGop.html"><i class="fas fa-money-check-alt"></i> Mua trả góp</a></li>
+                <li><a href="#"><i class="fas fa-cart-arrow-down"></i> Khuyến mại</a></li>
+                <li><a href="TinTuc.html"><i class="far fa-newspaper"></i> Tin tức</a></li>
+            </ul>
+        </div>
+        <script src="js/hide_menu.js"></script>
+    </section>
+    <section class="header-b-out">
+        <div class="header-bottom" id="hideBottom">
+            <ul>
+                <li><a href="#"><b><span class="sp-h-bot category"><i class="fas fa-bars"></i> Danh mục sản
+                                phẩm</span></b></a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fas fa-desktop"></i> PC Đồ Họa - WORKSTATION</a></li>
+                        <li><a href="#"><i class="fas fa-desktop"></i> PC Gaming, Streaming</a></li>
+                        <li><a href="#"><i class="fas fa-desktop"></i> PC Văn Phòng, AIO, Mini PC</a></li>
+                        <li><a href="DM_Laptop.html"><i class="fas fa-laptop"></i> Laptop, Máy Tính Xách Tay</a></li>
+                        <li><a href="DM_ManHinh.html"><i class="fas fa-desktop"></i> Màn Hình</a></li>
+                        <li><a href="#"><i class="fas fa-memory"></i> Linh Kiện Máy Tính<span class="sp-right"><i
+                                        class="fas fa-caret-right"></i></span></a>
+                            <ul class="submenu1">
+                                <li><a href="#">CPU - Bộ Vi Xử Lý</a></li>
+                                <li><a href="#">Mainboard - Bo Mạch Chủ</a></li>
+                                <li><a href="#">RAM - Bộ Nhớ Trong</a></li>
+                                <li><a href="#">Ổ Cứng HDD</a></li>
+                                <li><a href="#">Ổ Cứng SSD</a></li>
+                                <li><a href="#">ODD - Ổ đĩa quang</a></li>
+                                <li><a href="#">VGA - Card Màn Hình</a></li>
+                                <li><a href="#">Case - Vỏ Máy Tính</a></li>
+                                <li><a href="#">PSU - Nguồn Máy Tính</a></li>
+                                <li><a href="#">Tản Nhiệt PC, Cooling</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fas fa-keyboard"></i> Gaming Gear<span class="sp-right"><i
+                                        class="fas fa-caret-right"></i></span></a>
+                            <ul class="submenu1">
+                                <li><a href="#">Bàn Phím, Chuột</a></li>
+                                <li><a href="#">Bộ Bàn Phím Chuột</a></li>
+                                <li><a href="#">Lót Chuột, Bàn Di Chuột</a></li>
+                                <li><a href="#">Tai Nghe</a></li>
+                                <li><a href="#">Phụ Kiện Gaming</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fas fa-headphones"></i> Phụ Kiện Laptop, PC, Khác<span
+                                    class="sp-right"><i class="fas fa-caret-right"></i></span></a>
+                            <ul class="submenu1">
+                                <li><a href="#">Dây Cáp Các Loại</a></li>
+                                <li><a href="#">Thiết Bị Chuyển Đổi</a></li>
+                                <li><a href="#">Bộ Chia Tín Hiệu</a></li>
+                                <li><a href="#">Linh Kiện Laptop</a></li>
+                                <li><a href="#">Phụ Kiện Khác</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="CuaHang.html"><b><i class="fas fa-phone-volume"></i><span class="sp-h-bot"> Bán hàng trực
+                                tuyến</span></b></a></li>
+                <li><a href="MuaTraGop.html"><b><i class="fas fa-money-check-alt"></i><span class="sp-h-bot"> Mua trả
+                                góp</span></b></a></li>
+                <li><a href="#"><b><i class="fas fa-cart-arrow-down"></i><span class="sp-h-bot"> Khuyến
+                                mại</span></b></a></li>
+                <li><a href="TinTuc.html"><b><i class="far fa-newspaper"></i><span class="sp-h-bot"> Tin
+                                tức</span></b></a>
+                </li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="openNav()">
+                <i class="fas fa-bars"></i>
+            </a>
+            <script src="js/hide_menu.js"></script>
+        </div>
+        <div class="sidenav" id="mySidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="far fa-window-close"></i></a>
+            <ul>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Đồ Họa - WORKSTATION</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Gaming, Streaming</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Văn Phòng, AIO, Mini PC</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Đồ Họa - WORKSTATION</a></li>
+                <li><a href="DM_Laptop.html"><i class="fas fa-laptop"></i> Laptop, Máy Tính Xách Tay</a></li>
+                <li><a href="DM_ManHinh.html"><i class="fas fa-desktop"></i> Màn Hình</a></li>
+                <li><a href="#"><i class="fas fa-memory"></i> Linh Kiện Máy Tính<span><i
+                                class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub">
+                        <li><a href="#">CPU - Bộ Vi Xử Lý</a></li>
+                        <li><a href="#">Mainboard - Bo Mạch Chủ</a></li>
+                        <li><a href="#">RAM - Bộ Nhớ Trong</a></li>
+                        <li><a href="#">Ổ Cứng HDD</a></li>
+                        <li><a href="#">Ổ Cứng SSD</a></li>
+                        <li><a href="#">ODD - Ổ đĩa quang</a></li>
+                        <li><a href="#">VGA - Card Màn Hình</a></li>
+                        <li><a href="#">Case - Vỏ Máy Tính</a></li>
+                        <li><a href="#">PSU - Nguồn Máy Tính</a></li>
+                        <li><a href="#">Tản Nhiệt PC, Cooling</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-keyboard"></i> Gaming Gear<span><i
+                                class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub">
+                        <li><a href="#">Bàn Phím, Chuột</a></li>
+                        <li><a href="#">Bộ Bàn Phím Chuột</a></li>
+                        <li><a href="#">Lót Chuột, Bàn Di Chuột</a></li>
+                        <li><a href="#">Tai Nghe</a></li>
+                        <li><a href="#">Phụ Kiện Gaming</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-headphones"></i> Phụ Kiện Laptop, PC, Khác<span><i
+                                class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub">
+                        <li><a href="#">Dây Cáp Các Loại</a></li>
+                        <li><a href="#">Thiết Bị Chuyển Đổi</a></li>
+                        <li><a href="#">Bộ Chia Tín Hiệu</a></li>
+                        <li><a href="#">Linh Kiện Laptop</a></li>
+                        <li><a href="#">Phụ Kiện Khác</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <script src="js/hide_menu.js"></script>
+    </section>
+    <section class="content-out">
+        <div class="title">MUA TRẢ GÓP</div>
+        <div class="content">
+            <div class="content-small">&nbsp;&nbsp;&nbsp;&nbsp;Với nhu cầu mua sắm tiện dụng, thanh toán nhanh chóng,
+                thủ tục trả góp đơn giản, lãi suất thấp. Thẻ Tín Dụng là giải pháp hiệu quả giúp khách hàng nhanh chóng
+                sở hữu sản phẩm yêu thích mà không tốn nhiều chi phí, thời gian. Khách hàng khi mua sắm bằng thẻ tín
+                dụng thông qua hệ thống thanh toán thẻ mPos sẽ có cơ hội trả góp số tiền thanh toán theo nhiều kỳ hạn
+                khác nhau với lãi suất là 0%. Giải pháp này giúp khách hàng có thể giải quyết bài toán dòng tiền, chủ
+                động hơn trong việc chi tiêu tài chính của mình.</div>
+            <div class="content-small">Điều kiện trả góp:</div>
+            <div class="content-small">- Là chủ thẻ tín dụng của 1 trong 25 bank: <b>Vietcombank, BIDV, CitiBank,
+                    VIB, TPBank, Techcombank, SHB, VPBank, Sacombank, HSBC, Maritime Bank, Shinhan Bank, Standard
+                    Chartered, OCB, SeABank, Kiên Long Bank, Eximbank, FE Credit, VietinBank, SCB, Nam A Bank, MB,
+                    ACB, Viet Capital Bank, Home Credit.</b></div>
+            <div class="content-small">- Mua sản phẩm từ 3 triệu trở lên.</div>
+            <div class="content-small">Ưu điểm trả góp bằng thẻ Tín Dụng :</div>
+            <div class="content-small">&nbsp;&nbsp;&nbsp;&nbsp;Khách hàng chỉ cần một chiếc thẻ tín dụng là có thể
+                thực hiện giao dịch trả góp bằng một động tác quẹt thẻ trong vòng 10s. Mọi thủ tục như hồ sơ, thẩm
+                định đều được bỏ qua và khách hàng cũng không phải chịu một khoản lãi suất cao ngất ngưởng như
+                chương trình trả góp của các công ty tài chính.</div>
+            <div class="img-bank">
+                <img src="img/tra_gop.jpg">
+            </div>
+            <div class="title1">Câu hỏi thường gặp khi thực hiên trả góp bằng thẻ tín dụng ngân hàng</div>
+            <div class="content-small" style="color: blue;">Hỏi: Thế nào là trả góp lãi suất 0% bằng thẻ tín dụng
+                thông qua ứng dụng quẹt thẻ MPos?</div>
+            <div class="content-small">Trả lời: Trả góp lãi suất 0% bằng thẻ tín dụng là hình thức quý khách vay
+                tiền ngân hàng thông qua thẻ tín dụng với hình thức được áp dụng hiện nay là 0% lãi suất hàng tháng.
+            </div>
+            <div class="content-small" style="color: blue;">Hỏi: Vậy có mất phí khi thực hiện trả góp tín dụng hay
+                không?</div>
+            <div class="content-small">Trả lời: Theo quy định ngân hàng là có mức phí khi thực hiện trả góp bằng thẻ
+                tín dụng (Mức phí chuyển đổi từ thẻ tín dụng qua hình thức trả góp).</div>
+            <div class="content-small" style="color: blue;">Hỏi: Vậy mức phí là bao nhiêu?</div>
+            <div class="content-small">Trả lời: Mức phí được quy định theo từng ngân hàng và theo hình thức trả góp
+                từ gói 3 tháng 6 tháng 12 tháng.</div>
+            <div class="content-small" style="color: blue;">Hỏi: Vậy mức phí được tính như thế nào?</div>
+            <div class="content-small">Trả lời: Mức phí được tính theo % số tiền quý khách vay ngân hàng bằng thẻ tín
+                dụng.</div>
+            <div class="content-small" style="color: blue;">Hỏi: Vậy có cần thủ tục gì không khi vay?</div>
+            <div class="content-small">Trả lời: Không cần bất cứ 1 giấy tờ , chữ ký, thủ tục nào. Bởi vì khi bạn được
+                ngân hàng cấp thẻ tín dụng là ngân hàng tín nhiệm và cấp bạn 1 khoảng vay hạn mức trước đó rồi. Bạn chỉ
+                việc sử dụng mua sắm trong khoảng hạn mức tín dụng được cấp.</div>
+            <div class="content-small" style="color: blue;">Hỏi: Vậy ưu điểm gì so với trả góp thông thường?</div>
+            <div class="content-small">Trả lời: Có rất nhiều ưu điểm vượt trội - Các nước phát triển điều theo xu thế
+                này.</div>
+            <div class="content-small">Ưu điểm:</div>
+            <div class="content-small">1- Không mất lãi suất cộng dồn hàng tháng. Ngân hàng sẽ tự động trừ tiền gốc hàng
+                tháng thông qua tài khoản của bạn. Bạn có thể dễ ràng kiểm soát được số tiền gốc hàng tháng.<br>2- Không
+                mất thời gian làm thủ tục và được áp dụng trên các trung tâm mua sắm toàn quốc.<br>3- Thông tin trả góp
+                rõ ràng, minh bạch và không thay đổi trong quá trình trả góp, và còn nhiều ưu điểm khác khi quý khách sử
+                dụng thẻ tín dụng.</div>
+            <div class="content-small" style="color: blue;">Hỏi: Vậy làm sao có được thẻ tín dụng?</div>
+            <div class="content-small">Trả lời: Quý khách ra ngân hàng mà quý khách chọn và hay giao dịch, chỉ việc nói
+                với nhân viên ngân hàng là mình cần làm thẻ tín dụng là sẽ có nhân viên làm việc cấp thẻ tín dụng cho
+                bạn. Rất đơn giản và nhanh chóng.</div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="footer-in">
+            <div class="row">
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>THÔNG TIN CHUNG</b></li>
+                        <hr>
+                        <li><a href="#">Giới thiệu về Team Computer</a></li>
+                        <li><a href="#">Thông tin liên hệ</a></li>
+                        <li><a href="#">Thông tin tuyển dụng</a></li>
+                        <li><a href="TinTuc.html">Tin tức</a></li>
+                    </ul>
+                </div>
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>CHÍNH SÁCH MUA HÀNG</b></li>
+                        <hr>
+                        <li><a href="ChinhSachBaoHanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="#">Chính sách đổi trả hàng, hoàn tiền</a></li>
+                        <li><a href="#">Phương thức thanh toán</a></li>
+                        <li><a href="#">Vận chuyển, lắp đặt</a></li>
+                    </ul>
+                </div>
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>HỖ TRỢ KHÁCH HÀNG</b></li>
+                        <hr>
+                        <li><a href="#">Hướng dẫn mua hàng online</a></li>
+                        <li><a href="#">Thông tin khuyến mại</a></li>
+                        <li><a href="#">Gửi yêu cầu bảo hành</a></li>
+                        <li><a href="#">Góp ý, khiếu nại</a></li>
+                    </ul>
+                </div>
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>CỘNG ĐỒNGTeamCOMPUTER</b></li>
+                        <hr>
+                        <li><a href="https://www.facebook.com/nguyenchien.it" target="_blank"><i
+                                    class="fab fa-facebook-square" style="color: blue;"></i>TeamComputer
+                                Fanpage</a></li>
+                        <li><a href="https://www.youtube.com/c/ChiếnNguyễn" target="_blank"><i class="fab fa-youtube"
+                                    style="color: red;"></i>TeamComputer</a></li>
+                        <li><a href="https://www.facebook.com/messages/t/nguyenchien.it" target="_blank"><i
+                                    class="fab fa-facebook-messenger" style="color: white;"></i> Chat với tư vấn
+                                viên</a></li>
+                        <li><a href="https://goo.gl/maps/xbtQDEA3cmrggSNt5" target="_blank"><i
+                                    class="fas fa-map-marked-alt" style="color: white;"></i> Vị trí cửa hàng</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        LoadUserKH();
+        LoadTaiKhoan();
+        LoadSL();
+    </script>
+</body>
+
+</html>

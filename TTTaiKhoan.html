@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logoCPT.png">
+    <link rel="stylesheet" href="css/style_home.css">
+    <link rel="stylesheet" href="css/style_user.css">
+    <script src="https://kit.fontawesome.com/e06076012c.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <title>Tài khoản</title>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn"><i class="fas fa-angle-up"></i></button>
+    <script src="js/hide_menu.js"></script>
+    <section class="header-i-out">
+        <div class="header-inner" id="hideInner">
+            <a href="#"><i class="fas fa-dollar-sign"></i> Cam kết giá tốt</a>
+            <a href="#"><i class="fas fa-truck"></i> Miễn phí vận chuyển</a>
+            <a href="#"><i class="fas fa-handshake"></i> Thanh toán khi nhận hàng</a>
+            <a href="#"><i class="fas fa-history"></i> Bảo hành tận nơi</a>
+            <span class="sp-h-in-r" id="boxrighttop">
+                <a href="login.html" id="i"><i class="fas fa-user"></i> Đăng nhập</a>
+                <a href="signup.html" id="i"><i class="fas fa-user-plus"></i> Đăng ký</a>
+            </span>
+            <div class="box-right-top-KH" id="boxrighttopKH">
+                <a id="i">Xin chào, <span id="tenkhachhang">Nguyễn Văn A</span></a>
+                <div class="box-login-bottom" id="box-b">
+                    <button onclick="TTTaiKhoan()"><i class="fas fa-user-alt"></i> Tài khoản</button>
+                    <button onclick="DSDonHang()"><i class="fas fa-file-invoice-dollar"></i> Đơn hàng</button>
+                    <button onclick="logOut()"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="header-m-out">
+        <div class="header-mid" id="hideMid">
+            <a href="index.html" id="m"><img src="img/logo.png"></a>
+            <a href="GioHang.html" class="cart" title="Giỏ hàng"><i class="fas fas fa-shopping-cart"></i><span
+                    class="count" id="soluong">0</span></a>
+            <form class="search" action="#" id="m">
+                <input type="text" placeholder="Tìm kiếm sản phẩm..." name="search_prod">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="mid-small" id="lg">
+                <a href="index.html"><img src="img/logo.png"></a>
+            </div>
+            <a href="javascript:void(0);" class="icon-mid" onclick="openNavMid()" id="lg"><i
+                    class="fas fa-bars"></i></a>
+            <script src="js/hide_menu.js"></script>
+        </div>
+        <div class="sidenavMid" id="mySidenavMid">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNavMid()"><i
+                    class="far fa-window-close"></i></a>
+            <form class="search" action="#">
+                <input type="text" placeholder="Tìm kiếm sản phẩm..." name="search_prod">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <hr>
+            <div id="boxLogin">
+                <a href="signup.html" class="text-res"><i class="far fa-user-circle"></i> Đăng ký</a>
+                <a href="login.html" class="text-res"><i class="far fa-user-circle"></i> Đăng nhập</a>
+            </div>
+            <div id="boxLoginHide">
+                <a href="javascript:TTTaiKhoan();" class="text-res"><i class="fas fa-user-alt"></i> <span
+                        id="tenkhachhang1">Nguyễn Văn A</span></a>
+                <a href="javascript:DSDonHang();" class="text-res"><i class="fas fa-file-invoice-dollar"></i> Đơn
+                    hàng</a>
+                <a href="javascript:logOut();" class="text-res"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+            </div>
+            <hr>
+            <ul>
+                <li><a href="CuaHang.html"><i class="fas fa-phone-volume"></i> Bán hàng trực tuyến</a></li>
+                <li><a href="MuaTraGop.html"><i class="fas fa-money-check-alt"></i> Mua trả góp</a></li>
+                <li><a href="#"><i class="fas fa-cart-arrow-down"></i> Khuyến mại</a></li>
+                <li><a href="TinTuc.html"><i class="far fa-newspaper"></i> Tin tức</a></li>
+            </ul>
+        </div>
+        <script src="js/hide_menu.js"></script>
+    </section>
+    <section class="header-b-out">
+        <div class="header-bottom" id="hideBottom">
+            <ul>
+                <li><a href="#"><b><span class="sp-h-bot category"><i class="fas fa-bars"></i> Danh mục sản
+                                phẩm</span></b></a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fas fa-desktop"></i> PC Đồ Họa - WORKSTATION</a></li>
+                        <li><a href="#"><i class="fas fa-desktop"></i> PC Gaming, Streaming</a></li>
+                        <li><a href="#"><i class="fas fa-desktop"></i> PC Văn Phòng, AIO, Mini PC</a></li>
+                        <li><a href="DM_Laptop.html"><i class="fas fa-laptop"></i> Laptop, Máy Tính Xách Tay</a></li>
+                        <li><a href="DM_ManHinh.html"><i class="fas fa-desktop"></i> Màn Hình</a></li>
+                        <li><a href="#"><i class="fas fa-memory"></i> Linh Kiện Máy Tính<span class="sp-right"><i
+                                        class="fas fa-caret-right"></i></span></a>
+                            <ul class="submenu1">
+                                <li><a href="#">CPU - Bộ Vi Xử Lý</a></li>
+                                <li><a href="#">Mainboard - Bo Mạch Chủ</a></li>
+                                <li><a href="#">RAM - Bộ Nhớ Trong</a></li>
+                                <li><a href="#">Ổ Cứng HDD</a></li>
+                                <li><a href="#">Ổ Cứng SSD</a></li>
+                                <li><a href="#">ODD - Ổ đĩa quang</a></li>
+                                <li><a href="#">VGA - Card Màn Hình</a></li>
+                                <li><a href="#">Case - Vỏ Máy Tính</a></li>
+                                <li><a href="#">PSU - Nguồn Máy Tính</a></li>
+                                <li><a href="#">Tản Nhiệt PC, Cooling</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fas fa-keyboard"></i> Gaming Gear<span class="sp-right"><i
+                                        class="fas fa-caret-right"></i></span></a>
+                            <ul class="submenu1">
+                                <li><a href="#">Bàn Phím, Chuột</a></li>
+                                <li><a href="#">Bộ Bàn Phím Chuột</a></li>
+                                <li><a href="#">Lót Chuột, Bàn Di Chuột</a></li>
+                                <li><a href="#">Tai Nghe</a></li>
+                                <li><a href="#">Phụ Kiện Gaming</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fas fa-headphones"></i> Phụ Kiện Laptop, PC, Khác<span
+                                    class="sp-right"><i class="fas fa-caret-right"></i></span></a>
+                            <ul class="submenu1">
+                                <li><a href="#">Dây Cáp Các Loại</a></li>
+                                <li><a href="#">Thiết Bị Chuyển Đổi</a></li>
+                                <li><a href="#">Bộ Chia Tín Hiệu</a></li>
+                                <li><a href="#">Linh Kiện Laptop</a></li>
+                                <li><a href="#">Phụ Kiện Khác</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="CuaHang.html"><b><i class="fas fa-phone-volume"></i><span class="sp-h-bot"> Bán hàng trực
+                                tuyến</span></b></a></li>
+                <li><a href="MuaTraGop.html"><b><i class="fas fa-money-check-alt"></i><span class="sp-h-bot"> Mua trả
+                                góp</span></b></a></li>
+                <li><a href="#"><b><i class="fas fa-cart-arrow-down"></i><span class="sp-h-bot"> Khuyến
+                                mại</span></b></a></li>
+                <li><a href="TinTuc.html"><b><i class="far fa-newspaper"></i><span class="sp-h-bot"> Tin
+                                tức</span></b></a>
+                </li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="openNav()">
+                <i class="fas fa-bars"></i>
+            </a>
+            <script src="js/hide_menu.js"></script>
+        </div>
+        <div class="sidenav" id="mySidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="far fa-window-close"></i></a>
+            <ul>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Đồ Họa - WORKSTATION</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Gaming, Streaming</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Văn Phòng, AIO, Mini PC</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Đồ Họa - WORKSTATION</a></li>
+                <li><a href="DM_Laptop.html"><i class="fas fa-laptop"></i> Laptop, Máy Tính Xách Tay</a></li>
+                <li><a href="DM_ManHinh.html"><i class="fas fa-desktop"></i> Màn Hình</a></li>
+                <li><a href="#"><i class="fas fa-memory"></i> Linh Kiện Máy Tính<span><i
+                                class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub">
+                        <li><a href="#">CPU - Bộ Vi Xử Lý</a></li>
+                        <li><a href="#">Mainboard - Bo Mạch Chủ</a></li>
+                        <li><a href="#">RAM - Bộ Nhớ Trong</a></li>
+                        <li><a href="#">Ổ Cứng HDD</a></li>
+                        <li><a href="#">Ổ Cứng SSD</a></li>
+                        <li><a href="#">ODD - Ổ đĩa quang</a></li>
+                        <li><a href="#">VGA - Card Màn Hình</a></li>
+                        <li><a href="#">Case - Vỏ Máy Tính</a></li>
+                        <li><a href="#">PSU - Nguồn Máy Tính</a></li>
+                        <li><a href="#">Tản Nhiệt PC, Cooling</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-keyboard"></i> Gaming Gear<span><i
+                                class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub">
+                        <li><a href="#">Bàn Phím, Chuột</a></li>
+                        <li><a href="#">Bộ Bàn Phím Chuột</a></li>
+                        <li><a href="#">Lót Chuột, Bàn Di Chuột</a></li>
+                        <li><a href="#">Tai Nghe</a></li>
+                        <li><a href="#">Phụ Kiện Gaming</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-headphones"></i> Phụ Kiện Laptop, PC, Khác<span><i
+                                class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub">
+                        <li><a href="#">Dây Cáp Các Loại</a></li>
+                        <li><a href="#">Thiết Bị Chuyển Đổi</a></li>
+                        <li><a href="#">Bộ Chia Tín Hiệu</a></li>
+                        <li><a href="#">Linh Kiện Laptop</a></li>
+                        <li><a href="#">Phụ Kiện Khác</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <script src="js/hide_menu.js"></script>
+    </section>
+    <section class="main">
+        <div class="title">Thông tin tài khoản</div>
+        <div class="row">
+            <div class="col-2 col-s-3 margin-bot">
+                <label class="lblTaiKhoan">Họ tên</label>
+            </div>
+            <div class="col-10 col-s-9 margin-bot">
+                <input type="text" id="tenkh" class="inpTaiKhoan">
+            </div>
+            <div class="col-2 col-s-3 margin-bot">
+                <label class="lblTaiKhoan">Số điện thoại</label>
+            </div>
+            <div class="col-10 col-s-9 margin-bot">
+                <input type="text" id="sdtkh" class="inpTaiKhoan">
+            </div>
+            <div class="col-2 col-s-3 margin-bot">
+                <label class="lblTaiKhoan">Email</label>
+            </div>
+            <div class="col-10 col-s-9 margin-bot">
+                <input type="email" id="emailkh" class="inpTaiKhoan">
+            </div>
+            <div class="col-2 col-s-3 margin-bot">
+                <label class="lblTaiKhoan">Địa chỉ</label>
+            </div>
+            <div class="col-10 col-s-9 margin-bot">
+                <input type="text" id="diachikh" class="inpTaiKhoan">
+            </div>
+            <div class="col-2 col-s-3 margin-bot">
+                <label class="lblTaiKhoan">Mật khẩu</label>
+            </div>
+            <div class="col-10 col-s-9 margin-bot">
+                <button class="btnDoiMK" id="btnChangePass" onclick="HienForm()"><i class="fas fa-retweet"></i> Đổi mật
+                    khẩu</button>
+                <div style="display: none;" id="chpass">
+                    <input type="password" id="mkHienTai" placeholder="Nhập mật khẩu hiện tại..." class="inpTaiKhoan"
+                        style="margin-bottom: 6px;">
+                    <input type="password" id="mkMoi" placeholder="Nhập mật khẩu mới..." class="inpTaiKhoan"
+                        style="margin-bottom: 6px;">
+                    <input type="password" id="mkMoi1" placeholder="Nhập lại mật khẩu mới..." class="inpTaiKhoan"
+                        style="margin-bottom: 6px;">
+                    <button style="margin-right: 4px;" class="btnHuyMK" onclick="AnForm()"><i class="fas fa-times"></i>
+                        Hủy</button>
+                    <button class="btnChangePass" onclick="ChangePass()"><i class="fas fa-retweet"></i>
+                        Đổi mật khẩu</button>
+                </div>
+            </div>
+            <div class="col-2 col-s-3 margin-bot"></div>
+            <div class="col-10 col-s-9 margin-bot">
+                <button class="btnCapNhap" id="btnCapNhat" onclick="CapNhat()">Cập nhật</button>
+                <button class="btnLuu" id="btnLuu" onclick="Luu()" style="display: none;float: left;">Lưu</button>
+                <button class="btnHuy" id="btnHuy" onclick="Huy()" style="display: none;float: left;">Hủy</button>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="footer-in">
+            <div class="row">
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>THÔNG TIN CHUNG</b></li>
+                        <hr>
+                        <li><a href="#">Giới thiệu về Team Computer</a></li>
+                        <li><a href="#">Thông tin liên hệ</a></li>
+                        <li><a href="#">Thông tin tuyển dụng</a></li>
+                        <li><a href="TinTuc.html">Tin tức</a></li>
+                    </ul>
+                </div>
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>CHÍNH SÁCH MUA HÀNG</b></li>
+                        <hr>
+                        <li><a href="ChinhSachBaoHanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="#">Chính sách đổi trả hàng, hoàn tiền</a></li>
+                        <li><a href="#">Phương thức thanh toán</a></li>
+                        <li><a href="#">Vận chuyển, lắp đặt</a></li>
+                    </ul>
+                </div>
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>HỖ TRỢ KHÁCH HÀNG</b></li>
+                        <hr>
+                        <li><a href="#">Hướng dẫn mua hàng online</a></li>
+                        <li><a href="#">Thông tin khuyến mại</a></li>
+                        <li><a href="#">Gửi yêu cầu bảo hành</a></li>
+                        <li><a href="#">Góp ý, khiếu nại</a></li>
+                    </ul>
+                </div>
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>CỘNG ĐỒNGTeamCOMPUTER</b></li>
+                        <hr>
+                        <li><a href="https://www.facebook.com/nguyenchien.it" target="_blank"><i
+                                    class="fab fa-facebook-square" style="color: blue;"></i>TeamComputer
+                                Fanpage</a></li>
+                        <li><a href="https://www.youtube.com/c/ChiếnNguyễn" target="_blank"><i class="fab fa-youtube"
+                                    style="color: red;"></i>TeamComputer</a></li>
+                        <li><a href="https://www.facebook.com/messages/t/nguyenchien.it" target="_blank"><i
+                                    class="fab fa-facebook-messenger" style="color: white;"></i> Chat với tư vấn
+                                viên</a></li>
+                        <li><a href="https://goo.gl/maps/xbtQDEA3cmrggSNt5" target="_blank"><i
+                                    class="fas fa-map-marked-alt" style="color: white;"></i> Vị trí cửa hàng</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var u = JSON.parse(localStorage.getItem('userKH')) || [];
+        document.getElementById('tenkh').value = u.tenkh;
+        document.getElementById('sdtkh').value = u.sdtkh;
+        document.getElementById('emailkh').value = u.emailkh;
+        document.getElementById('diachikh').value = u.diachikh;
+
+        document.getElementById('tenkh').disabled = true;
+        document.getElementById('sdtkh').disabled = true;
+        document.getElementById('emailkh').disabled = true;
+        document.getElementById('diachikh').disabled = true;
+
+        function CapNhat() {
+            document.getElementById('tenkh').disabled = false;
+            document.getElementById('sdtkh').disabled = false;
+            document.getElementById('emailkh').disabled = false;
+            document.getElementById('diachikh').disabled = false;
+            document.getElementById('btnLuu').style.display = "block";
+            document.getElementById('btnHuy').style.display = "block";
+            document.getElementById('btnCapNhat').style.display = "none";
+        }
+
+        function Luu() {
+            var list = JSON.parse(localStorage.getItem('Customer')) || [];
+            var tenkh = document.getElementById('tenkh').value;
+            var sdtkh = document.getElementById('sdtkh').value;
+            var emailkh = document.getElementById('emailkh').value;
+            var diachikh = document.getElementById('diachikh').value;
+            var number = /^[0-9]+$/;
+            var atposition = emailkh.indexOf("@");
+            var dotposition = emailkh.lastIndexOf(".");
+            var ok = true;
+
+            if (tenkh == null || tenkh == "") {
+                alert("Tên khách hàng không được để trống! Vui lòng nhập lại!");
+                return false;
+            }
+            else if (sdtkh == null || sdtkh == "") {
+                alert("Số điện thoại khách hàng không được để trống! Vui lòng nhập lại!");
+                return false;
+            } else if (!sdtkh.match(number) || sdtkh.length != 10) {
+                alert("Số điện thoại khách hàng phải là kiểu số và có độ dài là 10 ký tự! Vui lòng nhập lại!");
+                return false;
+            }
+            else if (emailkh != "" && emailkh != null && (atposition < 1 || dotposition < (atposition + 2) || (dotposition + 2) >= emailkh.length)) {
+                alert("Email khách hàng không hợp lệ! Vui lòng nhập lại!");
+                return false;
+            }
+
+            for (x of list) {
+                if (x.makh == u.makh) {
+                    x.tenkh = tenkh;
+                    x.sdtkh = sdtkh;
+                    x.emailkh = emailkh;
+                    x.diachikh = diachikh;
+                    ok = false;
+                    break;
+                }
+            }
+
+            var user = {
+                makh: u.makh,
+                tenkh: tenkh,
+                sdtkh: sdtkh,
+                emailkh: emailkh,
+                diachikh: diachikh,
+                mkkh: u.mkkh
+            };
+            localStorage.setItem('userKH', JSON.stringify(user));
+
+            if (ok == false) {
+                alert("Cập nhật thông tin thành công!");
+                localStorage.setItem("Customer", JSON.stringify(list));
+                location.reload();
+            }
+            else {
+                alert("Cập nhật thông tin thất bại!");
+            }
+        }
+
+        function Huy() {
+            location.reload();
+        }
+
+        function HienForm() {
+            document.getElementById('chpass').style.display = "block";
+            document.getElementById('btnChangePass').style.display = "none";
+            document.getElementById('btnCapNhat').style.display = "none";
+        }
+
+        function AnForm() {
+            document.getElementById('chpass').style.display = "none";
+            document.getElementById('btnChangePass').style.display = "block";
+            document.getElementById('btnCapNhat').style.display = "block";
+            document.getElementById('mkHienTai').value = '';
+            document.getElementById('mkMoi').value = '';
+            document.getElementById('mkMoi1').value = '';
+        }
+
+        function ChangePass() {
+            var list = JSON.parse(localStorage.getItem('Customer')) || [];
+            var mkHienTai = document.getElementById('mkHienTai').value;
+            var mkMoi = document.getElementById('mkMoi').value;
+            var mkMoi1 = document.getElementById('mkMoi1').value;
+
+            if (mkHienTai == null || mkHienTai == "") {
+                alert("Mật khẩu hiện tại không được để trống! Vui lòng nhập lại!");
+                return false;
+            }
+            else if (mkMoi == null || mkMoi == "") {
+                alert("Mật khẩu mới không được để trống! Vui lòng nhập lại!");
+                return false;
+            }
+            else if (mkMoi1 == null || mkMoi1 == "") {
+                alert("Mật khẩu mới không được để trống! Vui lòng nhập lại!");
+                return false;
+            }
+
+            if (u.mkkh != mkHienTai) {
+                alert("Mật khẩu hiện tại không đúng! Vui lòng nhập lại!");
+                return false;
+            }
+            else if (mkHienTai == mkMoi) {
+                alert("Mật khẩu mới không được trùng với mật khẩu cũ! Vui lòng nhập lại!");
+                return false;
+            }
+            else if (mkMoi != mkMoi1) {
+                alert("Mật khẩu mới không khớp! Vui lòng nhập lại!");
+                return false;
+            }
+
+            var ok = true;
+            for (x of list) {
+                if (x.makh == u.makh) {
+                    x.mkkh = mkMoi;
+                    ok = false;
+                    break;
+                }
+            }
+
+            var user = {
+                makh: u.makh,
+                tenkh: u.tenkh,
+                sdtkh: u.sdtkh,
+                emailkh: u.emailkh,
+                diachikh: u.diachikh,
+                mkkh: mkMoi
+            };
+            localStorage.setItem('userKH', JSON.stringify(user));
+
+            if (ok == false) {
+                alert("Cập nhật thông tin thành công!");
+                localStorage.setItem("Customer", JSON.stringify(list));
+                location.reload();
+            }
+            else {
+                alert("Cập nhật thông tin thất bại!");
+            }
+        }
+
+        LoadUserKH();
+        LoadTaiKhoan();
+        LoadSL();
+    </script>
+</body>
+
+</html>

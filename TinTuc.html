@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logoCPT.png">
+    <link rel="stylesheet" href="css/style_home.css">
+    <link rel="stylesheet" href="css/style_new.css">
+    <script src="https://kit.fontawesome.com/e06076012c.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <title>Tin tức</title>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn"><i class="fas fa-angle-up"></i></button>
+    <script src="js/hide_menu.js"></script>
+    <section class="header-i-out">
+        <div class="header-inner" id="hideInner">
+            <a href="#"><i class="fas fa-dollar-sign"></i> Cam kết giá tốt</a>
+            <a href="#"><i class="fas fa-truck"></i> Miễn phí vận chuyển</a>
+            <a href="#"><i class="fas fa-handshake"></i> Thanh toán khi nhận hàng</a>
+            <a href="#"><i class="fas fa-history"></i> Bảo hành tận nơi</a>
+            <span class="sp-h-in-r" id="boxrighttop">
+                <a href="login.html" id="i"><i class="fas fa-user"></i> Đăng nhập</a>
+                <a href="signup.html" id="i"><i class="fas fa-user-plus"></i> Đăng ký</a>
+            </span>
+            <div class="box-right-top-KH" id="boxrighttopKH">
+                <a id="i">Xin chào, <span id="tenkhachhang">Nguyễn Văn A</span></a>
+                <div class="box-login-bottom" id="box-b">
+                    <button onclick="TTTaiKhoan()"><i class="fas fa-user-alt"></i> Tài khoản</button>
+                    <button onclick="DSDonHang()"><i class="fas fa-file-invoice-dollar"></i> Đơn hàng</button>
+                    <button onclick="logOut()"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="header-m-out">
+        <div class="header-mid" id="hideMid">
+            <a href="index.html" id="m"><img src="img/logo.png"></a>
+            <a href="GioHang.html" class="cart" title="Giỏ hàng"><i class="fas fas fa-shopping-cart"></i><span
+                    class="count" id="soluong">0</span></a>
+            <form class="search" action="#" id="m">
+                <input type="text" placeholder="Tìm kiếm sản phẩm..." name="search_prod">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="mid-small" id="lg">
+                <a href="index.html"><img src="img/logo.png"></a>
+            </div>
+            <a href="javascript:void(0);" class="icon-mid" onclick="openNavMid()" id="lg"><i
+                    class="fas fa-bars"></i></a>
+            <script src="js/hide_menu.js"></script>
+        </div>
+        <div class="sidenavMid" id="mySidenavMid">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNavMid()"><i
+                    class="far fa-window-close"></i></a>
+            <form class="search" action="#">
+                <input type="text" placeholder="Tìm kiếm sản phẩm..." name="search_prod">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <hr>
+            <div id="boxLogin">
+                <a href="signup.html" class="text-res"><i class="far fa-user-circle"></i> Đăng ký</a>
+                <a href="login.html" class="text-res"><i class="far fa-user-circle"></i> Đăng nhập</a>
+            </div>
+            <div id="boxLoginHide">
+                <a href="javascript:TTTaiKhoan();" class="text-res"><i class="fas fa-user-alt"></i> <span
+                        id="tenkhachhang1">Nguyễn Văn A</span></a>
+                <a href="javascript:DSDonHang();" class="text-res"><i class="fas fa-file-invoice-dollar"></i> Đơn
+                    hàng</a>
+                <a href="javascript:logOut();" class="text-res"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+            </div>
+            <hr>
+            <ul>
+                <li><a href="CuaHang.html"><i class="fas fa-phone-volume"></i> Bán hàng trực tuyến</a></li>
+                <li><a href="MuaTraGop.html"><i class="fas fa-money-check-alt"></i> Mua trả góp</a></li>
+                <li><a href="#"><i class="fas fa-cart-arrow-down"></i> Khuyến mại</a></li>
+                <li><a href="TinTuc.html"><i class="far fa-newspaper"></i> Tin tức</a></li>
+            </ul>
+        </div>
+        <script src="js/hide_menu.js"></script>
+    </section>
+    <section class="header-b-out">
+        <div class="header-bottom" id="hideBottom">
+            <ul>
+                <li><a href="#"><b><span class="sp-h-bot category"><i class="fas fa-bars"></i> Danh mục sản
+                                phẩm</span></b></a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fas fa-desktop"></i> PC Đồ Họa - WORKSTATION</a></li>
+                        <li><a href="#"><i class="fas fa-desktop"></i> PC Gaming, Streaming</a></li>
+                        <li><a href="#"><i class="fas fa-desktop"></i> PC Văn Phòng, AIO, Mini PC</a></li>
+                        <li><a href="DM_Laptop.html"><i class="fas fa-laptop"></i> Laptop, Máy Tính Xách Tay</a></li>
+                        <li><a href="DM_ManHinh.html"><i class="fas fa-desktop"></i> Màn Hình</a></li>
+                        <li><a href="#"><i class="fas fa-memory"></i> Linh Kiện Máy Tính<span class="sp-right"><i
+                                        class="fas fa-caret-right"></i></span></a>
+                            <ul class="submenu1">
+                                <li><a href="#">CPU - Bộ Vi Xử Lý</a></li>
+                                <li><a href="#">Mainboard - Bo Mạch Chủ</a></li>
+                                <li><a href="#">RAM - Bộ Nhớ Trong</a></li>
+                                <li><a href="#">Ổ Cứng HDD</a></li>
+                                <li><a href="#">Ổ Cứng SSD</a></li>
+                                <li><a href="#">ODD - Ổ đĩa quang</a></li>
+                                <li><a href="#">VGA - Card Màn Hình</a></li>
+                                <li><a href="#">Case - Vỏ Máy Tính</a></li>
+                                <li><a href="#">PSU - Nguồn Máy Tính</a></li>
+                                <li><a href="#">Tản Nhiệt PC, Cooling</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fas fa-keyboard"></i> Gaming Gear<span class="sp-right"><i
+                                        class="fas fa-caret-right"></i></span></a>
+                            <ul class="submenu1">
+                                <li><a href="#">Bàn Phím, Chuột</a></li>
+                                <li><a href="#">Bộ Bàn Phím Chuột</a></li>
+                                <li><a href="#">Lót Chuột, Bàn Di Chuột</a></li>
+                                <li><a href="#">Tai Nghe</a></li>
+                                <li><a href="#">Phụ Kiện Gaming</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fas fa-headphones"></i> Phụ Kiện Laptop, PC, Khác<span
+                                    class="sp-right"><i class="fas fa-caret-right"></i></span></a>
+                            <ul class="submenu1">
+                                <li><a href="#">Dây Cáp Các Loại</a></li>
+                                <li><a href="#">Thiết Bị Chuyển Đổi</a></li>
+                                <li><a href="#">Bộ Chia Tín Hiệu</a></li>
+                                <li><a href="#">Linh Kiện Laptop</a></li>
+                                <li><a href="#">Phụ Kiện Khác</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="CuaHang.html"><b><i class="fas fa-phone-volume"></i><span class="sp-h-bot"> Bán hàng trực
+                                tuyến</span></b></a></li>
+                <li><a href="MuaTraGop.html"><b><i class="fas fa-money-check-alt"></i><span class="sp-h-bot"> Mua trả
+                                góp</span></b></a></li>
+                <li><a href="#"><b><i class="fas fa-cart-arrow-down"></i><span class="sp-h-bot"> Khuyến
+                                mại</span></b></a></li>
+                <li><a href="TinTuc.html"><b><i class="far fa-newspaper"></i><span class="sp-h-bot"> Tin
+                                tức</span></b></a>
+                </li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="openNav()">
+                <i class="fas fa-bars"></i>
+            </a>
+            <script src="js/hide_menu.js"></script>
+        </div>
+        <div class="sidenav" id="mySidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="far fa-window-close"></i></a>
+            <ul>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Đồ Họa - WORKSTATION</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Gaming, Streaming</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Văn Phòng, AIO, Mini PC</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Đồ Họa - WORKSTATION</a></li>
+                <li><a href="DM_Laptop.html"><i class="fas fa-laptop"></i> Laptop, Máy Tính Xách Tay</a></li>
+                <li><a href="DM_ManHinh.html"><i class="fas fa-desktop"></i> Màn Hình</a></li>
+                <li><a href="#"><i class="fas fa-memory"></i> Linh Kiện Máy Tính<span><i
+                                class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub">
+                        <li><a href="#">CPU - Bộ Vi Xử Lý</a></li>
+                        <li><a href="#">Mainboard - Bo Mạch Chủ</a></li>
+                        <li><a href="#">RAM - Bộ Nhớ Trong</a></li>
+                        <li><a href="#">Ổ Cứng HDD</a></li>
+                        <li><a href="#">Ổ Cứng SSD</a></li>
+                        <li><a href="#">ODD - Ổ đĩa quang</a></li>
+                        <li><a href="#">VGA - Card Màn Hình</a></li>
+                        <li><a href="#">Case - Vỏ Máy Tính</a></li>
+                        <li><a href="#">PSU - Nguồn Máy Tính</a></li>
+                        <li><a href="#">Tản Nhiệt PC, Cooling</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-keyboard"></i> Gaming Gear<span><i
+                                class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub">
+                        <li><a href="#">Bàn Phím, Chuột</a></li>
+                        <li><a href="#">Bộ Bàn Phím Chuột</a></li>
+                        <li><a href="#">Lót Chuột, Bàn Di Chuột</a></li>
+                        <li><a href="#">Tai Nghe</a></li>
+                        <li><a href="#">Phụ Kiện Gaming</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-headphones"></i> Phụ Kiện Laptop, PC, Khác<span><i
+                                class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub">
+                        <li><a href="#">Dây Cáp Các Loại</a></li>
+                        <li><a href="#">Thiết Bị Chuyển Đổi</a></li>
+                        <li><a href="#">Bộ Chia Tín Hiệu</a></li>
+                        <li><a href="#">Linh Kiện Laptop</a></li>
+                        <li><a href="#">Phụ Kiện Khác</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <script src="js/hide_menu.js"></script>
+    </section>
+    <div class="link-out">
+        <div class="link">
+            <a href="index.html">Trang chủ</a> <i class="fas fa-caret-right"></i> Tin tức
+        </div>
+    </div>
+    <section class="content-in">
+        <div class="row">
+            <div class="col-8 col-s-12 content">
+                <div class="row1">
+                    <div class="col-3 col-s-3">
+                        <a href="#"><img src="img/TINTUC/l1.jpg" class="img-new-left"></a>
+                    </div>
+                    <div class="col-9 col-s-9">
+                        <div class="title-new">
+                            <a href="#">{Top} 6+ Laptop chơi CSGO max setting giá rẻ không nên bỏ qua</a>
+                            <p>CSGO là từ viết tắt của tựa game Counter-Strike: Global Offensive, đây là một trò chơi
+                                bắn súng dưới góc nhìn thứ nhất đang được cộng đồng game thủ cực yêu thích. Trò chơi lần
+                                đầu ra mắt vào năm 2012, đến nay nó vẫn duy trì được độ hót, nhận được sự đánh giá cao
+                                của nhiều người chơi. Bạn cũng đang muốn khám phá tựa game này nhưng không biết chọn cấu
+                                hình laptop chơi csgo như thế nào cho phù hợp.</p>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row1">
+                    <div class="col-3 col-s-3">
+                        <a href="#"><img src="img/TINTUC/l2.jpg" class="img-new-left"></a>
+                    </div>
+                    <div class="col-9 col-s-9">
+                        <div class="title-new">
+                            <a href="#">{Top} 5+ Laptop chơi GTA 5 max setting mượt giá rẻ đáng mua nhất hiện nay</a>
+                            <p>GTA 5 là một trong những tựa game được nhiều game thủ hiện nay ưa chuộng và yêu thích.
+                                Trò chơi với tính chiến cấu cao, đồ họa hấp dẫn, lối chơi đa dạng phong phú khiến người
+                                luôn đắm chìm trong không gian game. Để chơi được mượt mà tựa game này thì người dùng
+                                cần chọn được cho mình chiếc laptop có cấu hình phù hợp. Vì thế các game thủ trước khi
+                                cài đặt trò chơi này cần tìm hiểu kỹ lưỡng về cấu hình chơi được GTA 5 laptop.</p>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row1">
+                    <div class="col-3 col-s-3">
+                        <a href="#"><img src="img/TINTUC/l3.jpg" class="img-new-left"></a>
+                    </div>
+                    <div class="col-9 col-s-9">
+                        <div class="title-new">
+                            <a href="#">Render là gì? TOP 5+ Phần mềm rendering tốt nhất hiện nay</a>
+                            <p>Render là một thuật ngữ dường như khá thân quen với những người dùng chuyên làm các công
+                                việc về thiết kế hoặc liên quan đến đồ họa máy tính. Với một người cần xử lý các công
+                                việc về đô họa chuyên nghiệp thì hiểu biết và nghiên cứu về render là rất quan trọng.
+                            </p>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row1">
+                    <div class="col-3 col-s-3">
+                        <a href="#"><img src="img/TINTUC/l4.jpg" class="img-new-left"></a>
+                    </div>
+                    <div class="col-9 col-s-9">
+                        <div class="title-new">
+                            <a href="#">{Top} 4+ Máy tính để bàn dưới 10 triệu cấu hình cao chơi game tốt nên mua</a>
+                            <p>Hiện nay, khi thị trường công nghệ ngày càng phát triển thì các thiết bị điện tử nhỏ gọn
+                                lại càng phổ biến hơn. Tuy nhiên, sự ưa chuộng của người dùng công nghệ với sản phẩm máy
+                                tính để bàn cũng không hề giảm sút. Trong đó các thiết bị máy tính giá rẻ ở phân khúc 10
+                                triệu đồng được yêu thích và quan tâm hơn cả.</p>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row1">
+                    <div class="col-3 col-s-3">
+                        <a href="TT_SoSanhLTvsPC.html"><img src="img/TINTUC/l5.jpg" class="img-new-left"></a>
+                    </div>
+                    <div class="col-9 col-s-9">
+                        <div class="title-new">
+                            <a href="TT_SoSanhLTvsPC.html">So sánh nên mua laptop hay PC để bàn dùng cái nào tốt
+                                nhất</a>
+                            <p>Trong cuộc sống hiện đại ngày nay, việc sử dụng laptop hay máy tính bàn đã không còn xa
+                                lạ gì với mỗi chúng ta. Những thiết bị này được xem là trợ thủ đắc lực để phục vụ cho
+                                mọi người trong các hoạt động làm việc, học tập và giải trí… Nhưng nên mua máy tính bàn
+                                hay laptop thì tốt hơn, loại nào tối ưu và tiết kiệm chi phí hơn?</p>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row1">
+                    <div class="col-3 col-s-3">
+                        <a href="#"><img src="img/TINTUC/l6.jpg" class="img-new-left"></a>
+                    </div>
+                    <div class="col-9 col-s-9">
+                        <div class="title-new">
+                            <a href="#">So sánh nên mua laptop hay PC để bàn dùng cái nào tốt nhất</a>
+                            <p>Có thể thấy, các mô hình Autodesk Revit thường lưu trữ và xử lý một số lượng tương đối
+                                lớn. Một trong những băn khoăn của người dùng khi làm việc với dữ liệu này chính là phải
+                                chắc chắn hệ thống máy tính của mình có thể đáp ứng được yêu cầu của revit để cho hiệu
+                                suất tốt nhất.</p>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row1">
+                    <div class="col-3 col-s-3">
+                        <a href="#"><img src="img/TINTUC/l7.jpg" class="img-new-left"></a>
+                    </div>
+                    <div class="col-9 col-s-9">
+                        <div class="title-new">
+                            <a href="#">{Top} 5+ Laptop cho dân xây dựng cấu hình mạnh giá rẻ đáng mua nhất</a>
+                            <p>Laptop dành cho dân xây dựng nên chọn sản phẩm nào, cấu hình máy như thế nào cho phù hợp
+                                là điều mà rất nhiều người dùng quan tâm. Với đặc thù công việc cần xử lý nhiều tác vụ
+                                nặng nề nên việc lựa chọn sản phẩm cần thực sự cẩn thận, kỹ lưỡng.</p>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row1">
+                    <div class="col-3 col-s-3">
+                        <a href="#"><img src="img/TINTUC/l8.jpg" class="img-new-left"></a>
+                    </div>
+                    <div class="col-9 col-s-9">
+                        <div class="title-new">
+                            <a href="#">{Top} 5+ Cấu hình laptop chạy giả lập Nox tốt đáng mua nhất hiện nay</a>
+                            <p>Giải pháp chạy NoxPlayer trình giả lập Android trên hệ thống máy tính sẽ đáp ứng được nhu
+                                cầu mở cùng lúc nhiều giả lập. Thiết bị máy tính đáp ứng được yêu cầu chạy giả lập cần
+                                có trang bị cấu hình đủ mạnh, cụ thể là CPU nhiều nhân, Ram dung lượng lớn, card đồ họa
+                                bộ nhớ từ 4GB…</p>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="seemore">
+                    <button id="btnThem" onclick="Them()">XEM THÊM</button>
+                </div>
+                <div id="more" style="display: none;">
+                    <div class="row1">
+                        <div class="col-3 col-s-3">
+                            <a href="#"><img src="img/TINTUC/l9.jpg" class="img-new-left"></a>
+                        </div>
+                        <div class="col-9 col-s-9">
+                            <div class="title-new">
+                                <a href="#">{Top} 5+ Laptop chạy Autocad cấu hình mạnh giá rẻ tốt đáng mua nhất hiện
+                                    nay</a>
+                                <p>Một trong những phần mềm vẽ kỹ thuật thông dụng và phổ biến nhất trên laptop hiện nay
+                                    chính là Autocad. Hiện nay có khá nhiều laptop vẽ autocad được trang bị cấu hình
+                                    mạnh mẽ
+                                    để có thể xử lý mượt mà các tác vụ trên phần mềm này.</p>
+                                <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row1">
+                        <div class="col-3 col-s-3">
+                            <a href="#"><img src="img/TINTUC/l10.jpg" class="img-new-left"></a>
+                        </div>
+                        <div class="col-9 col-s-9">
+                            <div class="title-new">
+                                <a href="#">Hướng dẫn chi tiết cách kiểm tra laptop HP cũ chính hãng chuẩn nhất</a>
+                                <p>Khi bỏ ra một số tiền lớn để có thể sở hữu một chiếc laptop HP ai cũng mong muốn đó
+                                    là
+                                    hàng chính hãng với chất lượng tốt. Nhưng thị trường máy tính nhiễu loạn khiến cho
+                                    người
+                                    dùng khá mơ hồ về chiếc laptop mình lựa chọn liệu có thực sự là hàng chuẩn hay chưa.
+                                    Vì
+                                    thế ngay khi quyết định chọn mua laptop HP thì bạn cần nắm được những cách kiểm tra
+                                    laptop HP chính hãng cơ bản nhất để xác định, đánh giá sản phẩm của mình.</p>
+                                <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row1">
+                        <div class="col-3 col-s-3">
+                            <a href="#"><img src="img/TINTUC/l11.jpg" class="img-new-left"></a>
+                        </div>
+                        <div class="col-9 col-s-9">
+                            <div class="title-new">
+                                <a href="#">{TOP} 5+ Laptop 7 triệu cấu hình mạnh cho sinh viên tốt đáng mua nhất</a>
+                                <p>Với các bạn học sinh – sinh viên hay người mới đi làm, chọn mua được cho mình một
+                                    chiếc
+                                    chiếc laptop có cấu hình vừa đủ, giá thành hợp lý là mong muốn lớn nhất của họ. Phân
+                                    khúc laptop 7 triệu chính là một gợi ý rất đáng để bạn tham khảo và lựa chọn cho nhu
+                                    cầu
+                                    sử dụng của mình.</p>
+                                <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row1">
+                        <div class="col-3 col-s-3">
+                            <a href="#"><img src="img/TINTUC/l12.jpg" class="img-new-left"></a>
+                        </div>
+                        <div class="col-9 col-s-9">
+                            <div class="title-new">
+                                <a href="#">Hướng dẫn cách chụp màn hình máy tính laptop HP trên win 7 10 nhanh đơn
+                                    giản</a>
+                                <p>Chụp ảnh màn hình laptop HP là một trong những thủ thuật khá đơn giản mà người dùng
+                                    nên
+                                    biết để có thể sử dụng máy tính laptop một cách tiện lợi và nahnh chóng hơn. Tuy
+                                    nhiên
+                                    với nhiều người dùng mới sử dụng công nghệ, họ còn chưa nắm được cách thức thực hiện
+                                    những thao tác tiện ích này.</p>
+                                <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row1">
+                        <div class="col-3 col-s-3">
+                            <a href="#"><img src="img/TINTUC/l13.jpg" class="img-new-left"></a>
+                        </div>
+                        <div class="col-9 col-s-9">
+                            <div class="title-new">
+                                <a href="#">{TOP} 5+ Laptop 5 triệu cũ chơi game giá rẻ cấu hình mạnh tốt đáng mua
+                                    nhất</a>
+                                <p>Với nhu cầu công việc, học tập như hiện nay thì sở hữu một chiếc laptop là điều tất
+                                    yếu.
+                                    Nhưng kinh tế hạn chế hoặc dựa trên mục đích công việc mà không phải ai cũng cần đến
+                                    những chiếc laptop đắt đỏ, cấu hình cao. Nhiều người dùng chỉ cần chọn mua cho mình
+                                    những chiếc laptop dưới 5 triệu giá rẻ cho các tác vụ như xem phim, đọc báo, bán
+                                    hàng
+                                    online, chơi game nhẹ nhàng...</p>
+                                <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row1">
+                        <div class="col-3 col-s-3">
+                            <a href="#"><img src="img/TINTUC/l14.jpg" class="img-new-left"></a>
+                        </div>
+                        <div class="col-9 col-s-9">
+                            <div class="title-new">
+                                <a href="#">CPU là gì? Các loại CPU phổ biến thông dụng nhất hiện nay</a>
+                                <p>CPU là một thành phần nhỏ bé trong toàn bộ hệ thống máy tính nhưng lại là bộ phận đắt
+                                    giá
+                                    nhất của thiết bị này. Vậy khi chọn mua máy tính cho mình bạn đã tìm hiểu được những
+                                    gì
+                                    về bộ phận này, nó có chức năng gì, vai trò như thế nào trong chiếc máy tính, hay cơ
+                                    chế
+                                    hoạt động như thế nào…?</p>
+                                <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row1">
+                        <div class="col-3 col-s-3">
+                            <a href="#"><img src="img/TINTUC/l15.jpg" class="img-new-left"></a>
+                        </div>
+                        <div class="col-9 col-s-9">
+                            <div class="title-new">
+                                <a href="#">Hướng dẫn chọn mua và nâng cấp ram máy tính laptop nhanh chóng đơn giản</a>
+                                <p>Sau một thời gian sử dụng, bạn nhận thấy rằng laptop của bạn ngày càng hoạt động chậm
+                                    chạp hơn, thậm chí xuất hiện tình trạng đứng máy. Có rất nhiều nguyên nhân gây nên
+                                    tình
+                                    trạng này trong đó thiếu dungh lượng RAM là một trong những lý do phổ biến nhất. Lúc
+                                    này
+                                    chắc hẳn nâng cấp ram máy tính chính là giải pháp nhanh chóng và lại đem đến hiệu
+                                    quả
+                                    cao.</p>
+                                <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row1">
+                        <div class="col-3 col-s-3">
+                            <a href="#"><img src="img/TINTUC/l16.jpg" class="img-new-left"></a>
+                        </div>
+                        <div class="col-9 col-s-9">
+                            <div class="title-new">
+                                <a href="#">{Hướng Dẫn} Cách chụp màn hình máy tính laptop Dell win 7 10 nhanh đơn
+                                    giản</a>
+                                <p>Chụp ảnh màn hình máy tính là một tính năng cơ bản của laptop Dell chạy hệ điều hành
+                                    Windows 10. Thao tác này cũng rất hữu ích để người dùng có thể lưu giữ được những
+                                    khoảnh
+                                    khắc thú vị trong quá trình dùng laptop. Có khá nhiều cách chụp màn hình máy tính
+                                    Dell
+                                    đơn giản mà bạn có thể lựa chọn và sử dụng , có thể chỉ cần sử dụng một vài phím bấm
+                                    mà
+                                    không cần thao tác quá nhiều.</p>
+                                <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seemore">
+                        <button>XEM THÊM</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 content1">
+                <div class="box-right">
+                    <p class="title">XEM NHIỀU NHẤT</p>
+                    <div class="box-right-small">
+                        <div class="img-small"><a href="#"><img src="img/TINTUC/r1.jpg"></a></div>
+                        <div class="txt-small">
+                            <a href="#">Hướng dẫn cách tắt bật touchpad cảm ứng của laptop HP</a>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                    <div class="box-right-small">
+                        <div class="img-small"><a href="#"><img src="img/TINTUC/r2.jpg"></a></div>
+                        <div class="txt-small">
+                            <a href="#">Kế toán nên dùng nên mua laptop loại nào là phù hợp</a>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                    <div class="box-right-small">
+                        <div class="img-small"><a href="#"><img src="img/TINTUC/r3.jpg"></a></div>
+                        <div class="txt-small">
+                            <a href="#">Cách chuyển thanh công cụ taskbar trên màn hình xuống dưới</a>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                    <div class="box-right-small">
+                        <div class="img-small"><a href="#"><img src="img/TINTUC/r4.jpg"></a></div>
+                        <div class="txt-small">
+                            <a href="#">Nên mua laptop máy tính xách tay nào dành cho học sinh cấp 2 3</a>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                    <div class="box-right-small">
+                        <div class="img-small"><a href="#"><img src="img/TINTUC/r5.jpg"></a></div>
+                        <div class="txt-small">
+                            <a href="#">Cách sử dụng laptop máy tính xách tay Dell win 7 win 10</a>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                    <div class="box-right-small">
+                        <div class="img-small"><a href="#"><img src="img/TINTUC/r6.jpg"></a></div>
+                        <div class="txt-small">
+                            <a href="#">{Top} 10+ Laptop chơi Fifa Online 4 cấu hình mạnh giá rẻ nên mua</a>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                    <div class="box-right-small">
+                        <div class="img-small"><a href="#"><img src="img/TINTUC/r7.jpg"></a></div>
+                        <div class="txt-small">
+                            <a href="#">Cách khôi phục máy tính win 7 về trạng thái như ban đầu</a>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                    <div class="box-right-small">
+                        <div class="img-small"><a href="#"><img src="img/TINTUC/r8.jpg"></a></div>
+                        <div class="txt-small">
+                            <a href="#">Sửa lỗi bàn phím laptop gõ chữ ra số và gõ số ra chữ trên laptop</a>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                    <div class="box-right-small">
+                        <div class="img-small"><a href="#"><img src="img/TINTUC/r9.jpg"></a></div>
+                        <div class="txt-small">
+                            <a href="#">{Top} 10+ Laptop 12.5 Inch nhỏ gọn mỏng nhẹ giá tốt nhất</a>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                    <div class="box-right-small">
+                        <div class="img-small"><a href="#"><img src="img/TINTUC/r10.jpg"></a></div>
+                        <div class="txt-small">
+                            <a href="#">Hướng dẫn cài đặt win 7 cho laptop Dell mới mua</a>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                    <div class="box-right-small">
+                        <div class="img-small"><a href="#"><img src="img/TINTUC/r11.jpg"></a></div>
+                        <div class="txt-small">
+                            <a href="#">Model máy tính là gì - Cách kiểm tra model máy tính laptop</a>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                    <div class="box-right-small">
+                        <div class="img-small"><a href="#"><img src="img/TINTUC/r12.jpg"></a></div>
+                        <div class="txt-small">
+                            <a href="#">{Top} 10+ cấu hình laptop edit chỉnh sửa video giá rẻ tốt nhất</a>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                    <div class="box-right-small">
+                        <div class="img-small"><a href="#"><img src="img/TINTUC/r13.jpg"></a></div>
+                        <div class="txt-small">
+                            <a href="#">Cách sử dụng laptop HP win 7 win 10</a>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                    <div class="box-right-small">
+                        <div class="img-small"><a href="#"><img src="img/TINTUC/r14.jpg"></a></div>
+                        <div class="txt-small">
+                            <a href="#">Các dòng Thinkpad của Lenovo loại nào tốt nhất và nên mua</a>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                    <div class="box-right-small">
+                        <div class="img-small"><a href="#"><img src="img/TINTUC/r15.jpg"></a></div>
+                        <div class="txt-small">
+                            <a href="#">So sánh các dòng Laptop Dell Latitude và Inspiron XPS Vostro</a>
+                            <span><i class="fas far fa-calendar-alt"></i> 07/05/2021</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="footer-in">
+            <div class="row">
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>THÔNG TIN CHUNG</b></li>
+                        <hr>
+                        <li><a href="#">Giới thiệu về Team Computer</a></li>
+                        <li><a href="#">Thông tin liên hệ</a></li>
+                        <li><a href="#">Thông tin tuyển dụng</a></li>
+                        <li><a href="TinTuc.html">Tin tức</a></li>
+                    </ul>
+                </div>
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>CHÍNH SÁCH MUA HÀNG</b></li>
+                        <hr>
+                        <li><a href="ChinhSachBaoHanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="#">Chính sách đổi trả hàng, hoàn tiền</a></li>
+                        <li><a href="#">Phương thức thanh toán</a></li>
+                        <li><a href="#">Vận chuyển, lắp đặt</a></li>
+                    </ul>
+                </div>
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>HỖ TRỢ KHÁCH HÀNG</b></li>
+                        <hr>
+                        <li><a href="#">Hướng dẫn mua hàng online</a></li>
+                        <li><a href="#">Thông tin khuyến mại</a></li>
+                        <li><a href="#">Gửi yêu cầu bảo hành</a></li>
+                        <li><a href="#">Góp ý, khiếu nại</a></li>
+                    </ul>
+                </div>
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>CỘNG ĐỒNGTeamCOMPUTER</b></li>
+                        <hr>
+                        <li><a href="https://www.facebook.com/nguyenchien.it" target="_blank"><i
+                                    class="fab fa-facebook-square" style="color: blue;"></i>TeamComputer
+                                Fanpage</a></li>
+                        <li><a href="https://www.youtube.com/c/ChiếnNguyễn" target="_blank"><i class="fab fa-youtube"
+                                    style="color: red;"></i>TeamComputer</a></li>
+                        <li><a href="https://www.facebook.com/messages/t/nguyenchien.it" target="_blank"><i
+                                    class="fab fa-facebook-messenger" style="color: white;"></i> Chat với tư vấn
+                                viên</a></li>
+                        <li><a href="https://goo.gl/maps/xbtQDEA3cmrggSNt5" target="_blank"><i
+                                    class="fas fa-map-marked-alt" style="color: white;"></i> Vị trí cửa hàng</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        LoadUserKH();
+        LoadTaiKhoan();
+        LoadSL();
+
+        function Them() {
+            document.getElementById('more').style.display = "block";
+            document.getElementById('btnThem').style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

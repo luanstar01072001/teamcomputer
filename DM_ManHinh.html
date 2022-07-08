@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logoCPT.png">
+    <link rel="stylesheet" href="css/style_home.css">
+    <link rel="stylesheet" href="css/style_category.css">
+    <script src="https://kit.fontawesome.com/e06076012c.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <title>Màn hình</title>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn"><i class="fas fa-angle-up"></i></button>
+    <script src="js/hide_menu.js"></script>
+    <section class="header-i-out">
+        <div class="header-inner" id="hideInner">
+            <a href="#"><i class="fas fa-dollar-sign"></i> Cam kết giá tốt</a>
+            <a href="#"><i class="fas fa-truck"></i> Miễn phí vận chuyển</a>
+            <a href="#"><i class="fas fa-handshake"></i> Thanh toán khi nhận hàng</a>
+            <a href="#"><i class="fas fa-history"></i> Bảo hành tận nơi</a>
+            <span class="sp-h-in-r" id="boxrighttop">
+                <a href="login.html" id="i"><i class="fas fa-user"></i> Đăng nhập</a>
+                <a href="signup.html" id="i"><i class="fas fa-user-plus"></i> Đăng ký</a>
+            </span>
+            <div class="box-right-top-KH" id="boxrighttopKH">
+                <a id="i">Xin chào, <span id="tenkhachhang">Nguyễn Văn A</span></a>
+                <div class="box-login-bottom" id="box-b">
+                    <button onclick="TTTaiKhoan()"><i class="fas fa-user-alt"></i> Tài khoản</button>
+                    <button onclick="DSDonHang()"><i class="fas fa-file-invoice-dollar"></i> Đơn hàng</button>
+                    <button onclick="logOut()"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="header-m-out">
+        <div class="header-mid" id="hideMid">
+            <a href="index.html" id="m"><img src="img/logo.png"></a>
+            <a href="GioHang.html" class="cart" title="Giỏ hàng"><i class="fas fas fa-shopping-cart"></i><span
+                    class="count" id="soluong">0</span></a>
+            <form class="search" action="#" id="m">
+                <input type="text" placeholder="Tìm kiếm sản phẩm..." name="search_prod">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="mid-small" id="lg">
+                <a href="index.html"><img src="img/logo.png"></a>
+            </div>
+            <a href="javascript:void(0);" class="icon-mid" onclick="openNavMid()" id="lg"><i
+                    class="fas fa-bars"></i></a>
+            <script src="js/hide_menu.js"></script>
+        </div>
+        <div class="sidenavMid" id="mySidenavMid">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNavMid()"><i
+                    class="far fa-window-close"></i></a>
+            <form class="search" action="#">
+                <input type="text" placeholder="Tìm kiếm sản phẩm..." name="search_prod">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <hr>
+            <div id="boxLogin">
+                <a href="signup.html" class="text-res"><i class="far fa-user-circle"></i> Đăng ký</a>
+                <a href="login.html" class="text-res"><i class="far fa-user-circle"></i> Đăng nhập</a>
+            </div>
+            <div id="boxLoginHide">
+                <a href="javascript:TTTaiKhoan();" class="text-res"><i class="fas fa-user-alt"></i> <span
+                        id="tenkhachhang1">Nguyễn Văn A</span></a>
+                <a href="javascript:DSDonHang();" class="text-res"><i class="fas fa-file-invoice-dollar"></i> Đơn
+                    hàng</a>
+                <a href="javascript:logOut();" class="text-res"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+            </div>
+            <hr>
+            <ul>
+                <li><a href="CuaHang.html"><i class="fas fa-phone-volume"></i> Bán hàng trực tuyến</a></li>
+                <li><a href="MuaTraGop.html"><i class="fas fa-money-check-alt"></i> Mua trả góp</a></li>
+                <li><a href="#"><i class="fas fa-cart-arrow-down"></i> Khuyến mại</a></li>
+                <li><a href="TinTuc.html"><i class="far fa-newspaper"></i> Tin tức</a></li>
+            </ul>
+        </div>
+        <script src="js/hide_menu.js"></script>
+    </section>
+    <section class="header-b-out">
+        <div class="header-bottom" id="hideBottom">
+            <ul>
+                <li><a href="#"><b><span class="sp-h-bot category"><i class="fas fa-bars"></i> Danh mục sản
+                                phẩm</span></b></a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fas fa-desktop"></i> PC Đồ Họa - WORKSTATION</a></li>
+                        <li><a href="#"><i class="fas fa-desktop"></i> PC Gaming, Streaming</a></li>
+                        <li><a href="#"><i class="fas fa-desktop"></i> PC Văn Phòng, AIO, Mini PC</a></li>
+                        <li><a href="DM_Laptop.html"><i class="fas fa-laptop"></i> Laptop, Máy Tính Xách Tay</a></li>
+                        <li><a href="DM_ManHinh.html"><i class="fas fa-desktop"></i> Màn Hình</a></li>
+                        <li><a href="#"><i class="fas fa-memory"></i> Linh Kiện Máy Tính<span class="sp-right"><i
+                                        class="fas fa-caret-right"></i></span></a>
+                            <ul class="submenu1">
+                                <li><a href="#">CPU - Bộ Vi Xử Lý</a></li>
+                                <li><a href="#">Mainboard - Bo Mạch Chủ</a></li>
+                                <li><a href="#">RAM - Bộ Nhớ Trong</a></li>
+                                <li><a href="#">Ổ Cứng HDD</a></li>
+                                <li><a href="#">Ổ Cứng SSD</a></li>
+                                <li><a href="#">ODD - Ổ đĩa quang</a></li>
+                                <li><a href="#">VGA - Card Màn Hình</a></li>
+                                <li><a href="#">Case - Vỏ Máy Tính</a></li>
+                                <li><a href="#">PSU - Nguồn Máy Tính</a></li>
+                                <li><a href="#">Tản Nhiệt PC, Cooling</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fas fa-keyboard"></i> Gaming Gear<span class="sp-right"><i
+                                        class="fas fa-caret-right"></i></span></a>
+                            <ul class="submenu1">
+                                <li><a href="#">Bàn Phím, Chuột</a></li>
+                                <li><a href="#">Bộ Bàn Phím Chuột</a></li>
+                                <li><a href="#">Lót Chuột, Bàn Di Chuột</a></li>
+                                <li><a href="#">Tai Nghe</a></li>
+                                <li><a href="#">Phụ Kiện Gaming</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fas fa-headphones"></i> Phụ Kiện Laptop, PC, Khác<span
+                                    class="sp-right"><i class="fas fa-caret-right"></i></span></a>
+                            <ul class="submenu1">
+                                <li><a href="#">Dây Cáp Các Loại</a></li>
+                                <li><a href="#">Thiết Bị Chuyển Đổi</a></li>
+                                <li><a href="#">Bộ Chia Tín Hiệu</a></li>
+                                <li><a href="#">Linh Kiện Laptop</a></li>
+                                <li><a href="#">Phụ Kiện Khác</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="CuaHang.html"><b><i class="fas fa-phone-volume"></i><span class="sp-h-bot"> Bán hàng trực
+                                tuyến</span></b></a></li>
+                <li><a href="MuaTraGop.html"><b><i class="fas fa-money-check-alt"></i><span class="sp-h-bot"> Mua trả
+                                góp</span></b></a></li>
+                <li><a href="#"><b><i class="fas fa-cart-arrow-down"></i><span class="sp-h-bot"> Khuyến
+                                mại</span></b></a></li>
+                <li><a href="TinTuc.html"><b><i class="far fa-newspaper"></i><span class="sp-h-bot"> Tin
+                                tức</span></b></a>
+                </li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="openNav()">
+                <i class="fas fa-bars"></i>
+            </a>
+            <script src="js/hide_menu.js"></script>
+        </div>
+        <div class="sidenav" id="mySidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="far fa-window-close"></i></a>
+            <ul>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Đồ Họa - WORKSTATION</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Gaming, Streaming</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Văn Phòng, AIO, Mini PC</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i> PC Đồ Họa - WORKSTATION</a></li>
+                <li><a href="DM_Laptop.html"><i class="fas fa-laptop"></i> Laptop, Máy Tính Xách Tay</a></li>
+                <li><a href="DM_ManHinh.html"><i class="fas fa-desktop"></i> Màn Hình</a></li>
+                <li><a href="#"><i class="fas fa-memory"></i> Linh Kiện Máy Tính<span><i
+                                class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub">
+                        <li><a href="#">CPU - Bộ Vi Xử Lý</a></li>
+                        <li><a href="#">Mainboard - Bo Mạch Chủ</a></li>
+                        <li><a href="#">RAM - Bộ Nhớ Trong</a></li>
+                        <li><a href="#">Ổ Cứng HDD</a></li>
+                        <li><a href="#">Ổ Cứng SSD</a></li>
+                        <li><a href="#">ODD - Ổ đĩa quang</a></li>
+                        <li><a href="#">VGA - Card Màn Hình</a></li>
+                        <li><a href="#">Case - Vỏ Máy Tính</a></li>
+                        <li><a href="#">PSU - Nguồn Máy Tính</a></li>
+                        <li><a href="#">Tản Nhiệt PC, Cooling</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-keyboard"></i> Gaming Gear<span><i
+                                class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub">
+                        <li><a href="#">Bàn Phím, Chuột</a></li>
+                        <li><a href="#">Bộ Bàn Phím Chuột</a></li>
+                        <li><a href="#">Lót Chuột, Bàn Di Chuột</a></li>
+                        <li><a href="#">Tai Nghe</a></li>
+                        <li><a href="#">Phụ Kiện Gaming</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-headphones"></i> Phụ Kiện Laptop, PC, Khác<span><i
+                                class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub">
+                        <li><a href="#">Dây Cáp Các Loại</a></li>
+                        <li><a href="#">Thiết Bị Chuyển Đổi</a></li>
+                        <li><a href="#">Bộ Chia Tín Hiệu</a></li>
+                        <li><a href="#">Linh Kiện Laptop</a></li>
+                        <li><a href="#">Phụ Kiện Khác</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <script src="js/hide_menu.js"></script>
+    </section>
+    <section class="filter-out">
+        <div class="filter">
+            <div class="title">Bộ lọc</div>
+            <div class="box">
+                <div class="box-left">Hãng sản xuất</div>
+                <div class="box-right">
+                    <div class="name">SAMSUNG</div>
+                    <div class="name">LG</div>
+                    <div class="name">DELL</div>
+                    <div class="name">ASUS</div>
+                    <div class="name">HP</div>
+                    <div class="name">ACER</div>
+                    <div class="name">VIEWSONIC</div>
+                    <div class="name">PHILIPS</div>
+                    <div class="name">AOC</div>
+                    <div class="name">MSI</div>
+                    <div class="name">GIGABYTE</div>
+                    <div class="name">BENQ</div>
+                    <div class="name">HKC</div>
+                    <div class="name">LENOVO</div>
+                    <div class="name">BJX</div>
+                    <div class="name">COOLER MASTER</div>
+                    <div class="name">KHÁC</div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-left">Khoảng giá</div>
+                <div class="box-right">
+                    <div class="name">Dưới 2 triệu</div>
+                    <div class="name">2 triệu - 3 triệu</div>
+                    <div class="name">3 triệu - 5 triệu</div>
+                    <div class="name">5 triệu - 7 triệu</div>
+                    <div class="name">7 triệu - 9 triệu</div>
+                    <div class="name">9 triệu - 12 triệu</div>
+                    <div class="name">12 triệu - 15 triệu</div>
+                    <div class="name">15 triệu - 18 triệu</div>
+                    <div class="name">18 triệu - 20 triệu</div>
+                    <div class="name">20 triệu - 30 triệu</div>
+                    <div class="name">Trên 30 triệu</div>
+                </div>
+            </div>
+            <center>
+                <button class="btnMore" id="btnHien" onclick="Hien()">Hiện thêm <i
+                        class="fas fa-angle-double-down"></i></button>
+            </center>
+            <div id="more" style="display: none;">
+                <div class="box">
+                    <div class="box-left">Mục đích sử dụng</div>
+                    <div class="box-right">
+                        <div class="name">Thiết kế đồ họa</div>
+                        <div class="name">Gaming</div>
+                        <div class="name">Phổ thông, văn phòng</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">Kích thước màn hình</div>
+                    <div class="box-right">
+                        <div class="name">15 inch</div>
+                        <div class="name">15.6 inch</div>
+                        <div class="name">17 inch</div>
+                        <div class="name">18.5 inch</div>
+                        <div class="name">19 inch</div>
+                        <div class="name">19.5 inch</div>
+                        <div class="name">20.7 inch</div>
+                        <div class="name">21.5 inch</div>
+                        <div class="name">23 inch</div>
+                        <div class="name">23.6 inch</div>
+                        <div class="name">23.8 inch</div>
+                        <div class="name">24 inch</div>
+                        <div class="name">24.5 inch</div>
+                        <div class="name">25 inch</div>
+                        <div class="name">27 inch</div>
+                        <div class="name">28 inch</div>
+                        <div class="name">29 inch</div>
+                        <div class="name">30 inch</div>
+                        <div class="name">31.5 inch</div>
+                        <div class="name">32 inch</div>
+                        <div class="name">34 inch</div>
+                        <div class="name">35 inch</div>
+                        <div class="name">38 inch</div>
+                        <div class="name">43 inch</div>
+                        <div class="name">49 inch</div>
+                        <div class="name">65 inch</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">Độ phân giải</div>
+                    <div class="box-right">
+                        <div class="name">HD (1366x768)</div>
+                        <div class="name">HD+ (1600x900)</div>
+                        <div class="name">WUXGA (1920x1200)</div>
+                        <div class="name">Full HD (1920x1080)</div>
+                        <div class="name">UWHD (2560x1080)</div>
+                        <div class="name">WUXGA (1920x1200)</div>
+                        <div class="name">QHD (2560x1440)</div>
+                        <div class="name">WQHD (3440x1440)</div>
+                        <div class="name">WQHD+ (3840 x 1600)</div>
+                        <div class="name">DualQHD (5120x1440)</div>
+                        <div class="name">4K (3840x2160)</div>
+                        <div class="name">Khác</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">Tấm nền</div>
+                    <div class="box-right">
+                        <div class="name">IPS</div>
+                        <div class="name">PLS</div>
+                        <div class="name">VA</div>
+                        <div class="name">TN</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">Tần số</div>
+                    <div class="box-right">
+                        <div class="name">60 Hz</div>
+                        <div class="name">75 Hz</div>
+                        <div class="name">100 Hz</div>
+                        <div class="name">120 Hz</div>
+                        <div class="name">144 Hz</div>
+                        <div class="name">165 Hz</div>
+                        <div class="name">200 Hz</div>
+                        <div class="name">240 Hz</div>
+                        <div class="name">280 Hz</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">Thời gian đáp ứng</div>
+                    <div class="box-right">
+                        <div class="name">0.5ms</div>
+                        <div class="name">1ms</div>
+                        <div class="name">4ms</div>
+                        <div class="name">5ms</div>
+                        <div class="name">6ms</div>
+                        <div class="name">7ms</div>
+                        <div class="name">8ms</div>
+                        <div class="name">12ms</div>
+                        <div class="name">Khác</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">Độ sáng</div>
+                    <div class="box-right">
+                        <div class="name">200 cd/m²</div>
+                        <div class="name">220 cd/m²</div>
+                        <div class="name">240 cd/m²</div>
+                        <div class="name">250 cd/m²</div>
+                        <div class="name">280 cd/m²</div>
+                        <div class="name">300 cd/m²</div>
+                        <div class="name">330 cd/m²</div>
+                        <div class="name">350 cd/m²</div>
+                        <div class="name">370 cd/m²</div>
+                        <div class="name">400 cd/m²</div>
+                        <div class="name">450 cd/m²</div>
+                        <div class="name">500 cd/m²</div>
+                        <div class="name">600 cd/m²</div>
+                        <div class="name">750 cd/m²</div>
+                        <div class="name">1000 cd/m²</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">Kết nối</div>
+                    <div class="box-right">
+                        <div class="name">HDMI</div>
+                        <div class="name">DisplayPort</div>
+                        <div class="name">DVI</div>
+                        <div class="name">VGA</div>
+                        <div class="name">USB</div>
+                        <div class="name">USB-C</div>
+                        <div class="name">Thunder bolt 3</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">Bề mặt</div>
+                    <div class="box-right">
+                        <div class="name">Màn hình phẳng</div>
+                        <div class="name">Màn hình cong</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">Màu sắc hiển thị</div>
+                    <div class="box-right">
+                        <div class="name">16.7 triệu màu</div>
+                        <div class="name">1.07 tỉ màu</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">Công nghệ đồng bộ</div>
+                    <div class="box-right">
+                        <div class="name">AMD FreeSync</div>
+                        <div class="name">AMD FreeSync</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">Cảm ứng</div>
+                    <div class="box-right">
+                        <div class="name">Có</div>
+                        <div class="name">Không</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">Đặc điểm khác</div>
+                    <div class="box-right">
+                        <div class="name">Dưới 99% sRGB</div>
+                        <div class="name">99% sRGB</div>
+                        <div class="name">Trên 100% sRGB</div>
+                        <div class="name">Có tích hợp loa</div>
+                    </div>
+                </div>
+            </div>
+            <center>
+                <button class="btnMore" id="btnAn" onclick="An()" style="display: none;">Ẩn bớt <i
+                        class="fas fa-angle-double-up"></i></button>
+            </center>
+        </div>
+    </section>
+    <section class="main-out">
+        <div class="main">
+            <div class="box-inner">
+                <div class="box-left">Sắp xếp theo</div>
+                <div class="box-right">
+                    <div class="name">Khuyến mại tốt nhất</div>
+                    <div class="name">Bán chạy</div>
+                    <div class="name">Mới về</div>
+                    <div class="name">Giá giảm dần</div>
+                    <div class="name">Giá tăng dần</div>
+                    <div class="price">
+                        <input type="text" id="pricedown" placeholder="Giá thấp nhất"> -
+                        <input type="text" id="priceup" placeholder="Giá cao nhất">
+                        <button>Lọc</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-bottom">
+                <div class="row">
+                    <div class="col-2 col-s-3 content">
+                        <a href="#" title="Màn hình thông minh Samsung LS32AM700UEXXV 32 inch 4K"><img
+                                src="img/MANHINH/Samsung_LS32AM700UEXXV_32.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình thông minh Samsung LS32AM700UEXXV 32 inch 4K">Màn hình thông minh
+                                Samsung LS32AM700UEX...</a><br>
+                            <span class="span_price_up">10.990.000₫</span><span
+                                class="span_price_down"><b>10.888.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="Dell_Monitor_S2421HN.html"
+                            title="Màn hình máy tính Dell Monitor S2421HN 23.8 Wide LED, Full HD 1920 x 1080, 2 x HDMI 1.4, 1 x 3.5mm Audio Out"><img
+                                src="img/MANHINH/Dell_Monitor_S2421HN_23.8_Wide_LED.png"></a>
+                        <div class="text_product_1"><a href="Dell_Monitor_S2421HN.html"
+                                title="Màn hình máy tính Dell Monitor S2421HN 23.8 Wide LED, Full HD 1920 x 1080, 2 x HDMI 1.4, 1 x 3.5mm Audio Out">Màn
+                                hình máy tính Dell Monitor S2421HN 23.8...</a><br>
+                            <span class="span_price_up">3.908.000₫</span><span
+                                class="span_price_down"><b>3.750.000₫</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#" title="Màn hình LCD LG 29 inch Ultrawide 29WN600-W.ATV (2560 x 1080/IPS/75Hz"><img
+                                src="img/MANHINH/LG_29_inch_Ultrawide_29WN600-W.ATV.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình LCD LG 29 inch Ultrawide 29WN600-W.ATV (2560 x 1080/IPS/75Hz">Màn hình
+                                LCD LG 29 inch Ultrawide 29WN600-W...</a><br>
+                            <span class="span_price_up">6.490.000₫</span><span
+                                class="span_price_down"><b>6.190.000₫</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#" title="Màn hình máy tính ASUS ProArt PA278QV 27 inch 2K IPS - Chuyên đồ họa"><img
+                                src="img/MANHINH/ASUS_ProArt_PA278QV_27.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình máy tính ASUS ProArt PA278QV 27 inch 2K IPS - Chuyên đồ họa">Màn hình
+                                ASUS ProArt PA278QV 27 inch 2K IPS</a><br>
+                            <span class="span_price_up">9.490.000₫</span><span
+                                class="span_price_down"><b>8.990.000₫</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="MSI_Optix_MAG322CQRV.html"
+                            title="Màn hình máy tính MSI Optix MAG322CQRV Cong 2K 144Hz"><img
+                                src="img/MANHINH/MSI_Optix_MAG322CQRV.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình máy tính MSI Optix MAG322CQRV Cong 2K 144Hz">Màn
+                                hình máy tính MSI Optix MAG322CQRV Cong 2K...</a><br>
+                            <span class="span_price_up">12.500.000₫</span><span
+                                class="span_price_down"><b>12.150.000₫</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Màn hình Asus ROG Strix XG279Q-G Gundam Limited edition (27inch/2K/IPS/170Hz/1ms/400nits/HDMI+DP+USB/GSync)"><img
+                                src="img/MANHINH/Asus_ROG_Strix_XG279Q-G.jpg"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Asus ROG Strix XG279Q-G Gundam Limited edition (27inch/2K/IPS/170Hz/1ms/400nits/HDMI+DP+USB/GSync)">Màn
+                                hình Asus ROG Strix XG279Q-G Gundam Li...</a><br>
+                            <span class="span_price_up">10.990.000₫</span><span
+                                class="span_price_down"><b>10.888.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Màn hình Asus ProArt PA279CV (27inch/4k/IPS/60hz/5ms/HDMI+DP+USB-C+Audio/Loa)"><img
+                                src="img/MANHINH/Asus_ProArt_PA279CV.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Asus ProArt PA279CV (27inch/4k/IPS/60hz/5ms/HDMI+DP+USB-C+Audio/Loa)">Màn
+                                hình Asus ProArt PA279CV (27inch/4k...</a><br>
+                            <span class="span_price_up">23.299.000₫</span><span
+                                class="span_price_down"><b>19.989.000</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Màn hình Asus VG259Q (24.5inch/FHD/IPS/144Hz/1ms/400nits/HDMI+DP+Audio/GSync/Loa)"><img
+                                src="img/MANHINH/Asus_VG259Q.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Asus VG259Q (24.5inch/FHD/IPS/144Hz/1ms/400nits/HDMI+DP+Audio/GSync/Loa)">Màn
+                                hình Asus VG259Q (24.5inch/FHD/IPS/...</a><br>
+                            <span class="span_price_up">6.879.000₫</span><span
+                                class="span_price_down"><b>6.489.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#" title="Màn hình LG 27MP59G (27 inch/FHD/LED/IPS/250cd/m²/DP+HDMI+VGA/75Hz/1ms)"><img
+                                src="img/MANHINH/LG_24GL600F-B.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình LG 27MP59G (27 inch/FHD/LED/IPS/250cd/m²/DP+HDMI+VGA/75Hz/1ms)">Màn hình
+                                LG 27MP59G (27 inch/FHD/LED/IPS/...</a><br>
+                            <span class="span_price_up">5.999.000₫</span><span
+                                class="span_price_down"><b>4.999.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Màn hình Viewsonic XG2705 (27 inch/ FHD/LED/IPS/144Hz/1ms/250 nits/HDMI+DP/FreeSync)"><img
+                                src="img/MANHINH/Viewsonic_XG2705.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Viewsonic XG2705 (27 inch/ FHD/LED/IPS/144Hz/1ms/250 nits/HDMI+DP/FreeSync)">Màn
+                                hình Viewsonic XG2705 (27 inch/ FHD/LED/IPS/144...</a><br>
+                            <span class="span_price_up">8.199.000₫</span><span
+                                class="span_price_down"><b>7.249.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Màn hình Viewsonic VX2776-SMHD (27 inch/FHD/LED/IPS/60Hz/5ms/250 nits/DP+HDMI+VGA)"><img
+                                src="img/MANHINH/Viewsonic_VX2776-SMHD.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Viewsonic VX2776-SMHD (27 inch/FHD/LED/IPS/60Hz/5ms/250 nits/DP+HDMI+VGA)">Màn
+                                hình Viewsonic VX2776-SMHD (27 inch/FHD/LED...</a><br>
+                            <span class="span_price_up">4.990.000₫</span><span
+                                class="span_price_down"><b>4.599.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#" title="Màn hình AOC E2270SWN (21.5 inch/FHD/LED/TN/VGA/200cd/m²/60hz)"><img
+                                src="img/MANHINH/AOC_E2270SWN.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình AOC E2270SWN (21.5 inch/FHD/LED/TN/VGA/200cd/m²/60hz)">Màn hình AOC
+                                E2270SWN (21.5 inch/FHD/LED/TN/...</a><br>
+                            <span class="span_price_up">2.099.000₫</span><span
+                                class="span_price_down"><b>1.949.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Màn hình Dell P2719H (27 inch/FHD/LED/IPS/DP/HDMI+VGA/250cd/m²/60Hz/5ms)"><img
+                                src="img/MANHINH/Dell_P2719H.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Dell P2719H (27 inch/FHD/LED/IPS/DP/HDMI+VGA/250cd/m²/60Hz/5ms)">Màn
+                                hình Dell P2719H (27 inch/FHD/LED/IPS/DP...</a><br>
+                            <span class="span_price_up">5.999.000₫</span><span
+                                class="span_price_down"><b>5.579.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Màn hình Samsung LC27F397FHEXXV (27 inch/FHD/PLS/60Hz/5ms/250 nits/HDMI+DSub/Cong)"><img
+                                src="img/MANHINH/Samsung_LC27F397FHEXXV.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Samsung LC27F397FHEXXV (27 inch/FHD/PLS/60Hz/5ms/250 nits/HDMI+DSub/Cong)">Màn
+                                hình Samsung LC27F397FHEXXV...</a><br>
+                            <span class="span_price_up">4.929.000₫</span><span
+                                class="span_price_down"><b>4.829.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#" title="Màn hình HP N220H (21.5 inch/FHD/LED/IPS/250cd/m²/HDMI+VGA/60Hz/5ms)"><img
+                                src="img/MANHINH/HP_N220H.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình HP N220H (21.5 inch/FHD/LED/IPS/250cd/m²/HDMI+VGA/60Hz/5ms)">Màn hình HP
+                                N220H (21.5 inch/FHD/LED/IPS/...</a><br>
+                            <span class="span_price_up">2.999.000₫</span><span
+                                class="span_price_down"><b>2.699.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Màn hình Gigabyte Aorus KD25F (25 inch/FHD/VA/240Hz/0.5ms/350cd/m²/DP+HDMI)"><img
+                                src="img/MANHINH/Gigabyte_Aorus_KD25F.jpg"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Gigabyte Aorus KD25F (25 inch/FHD/VA/240Hz/0.5ms/350cd/m²/DP+HDMI)">Màn
+                                hình Gigabyte Aorus KD25F (25 inch/FHD/...</a><br>
+                            <span class="span_price_up">12.899.000₫</span><span
+                                class="span_price_down"><b>11.379.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Màn hình Samsung LU28H750UQEXXV (28 inch/4K/IPS/350cd/m²/DP+HDMI/60Hz/5ms)"><img
+                                src="img/MANHINH/Samsung_LU28H750UQEXXV.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Samsung LU28H750UQEXXV (28 inch/4K/IPS/350cd/m²/DP+HDMI/60Hz/5ms)">Màn
+                                hình Samsung LU28H750UQEXXV...</a><br>
+                            <span class="span_price_up">22.999.000₫</span><span
+                                class="span_price_down"><b>10.999.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Màn hình Dell U2719DC (27inch/QHD/IPS/60Hz/8ms/350nits/HDMI+DP+USBTypeC)"><img
+                                src="img/MANHINH/Dell_U2719DC.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Dell U2719DC (27inch/QHD/IPS/60Hz/8ms/350nits/HDMI+DP+USBTypeC)">Màn
+                                hình Dell U2719DC (27inch/QHD/IPS/...</a><br>
+                            <span class="span_price_up">11.489.000₫</span><span
+                                class="span_price_down"><b>10.589.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#" title="Màn hình HKC M25G6F (25 inch/FHD/IPS/144Hz/1ms/400 nits/HDMI+DP)"><img
+                                src="img/MANHINH/HKC_M25G6F.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình HKC M25G6F (25 inch/FHD/IPS/144Hz/1ms/400 nits/HDMI+DP)">Màn hình HKC
+                                M25G6F (25 inch/FHD/IPS/144Hz/...</a><br>
+                            <span class="span_price_up">6.899.000₫</span><span
+                                class="span_price_down"><b>6.199.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Màn hình Samsung LF24T350FHEXXV (24inch/FHD/IPS/75Hz/5ms/250nits/HDMI+DSub/Freesync)"><img
+                                src="img/MANHINH/Samsung_LF24T350FHEXXV.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Samsung LF24T350FHEXXV (24inch/FHD/IPS/75Hz/5ms/250nits/HDMI+DSub/Freesync)">Màn
+                                hình Samsung LF24T350FHEXXV (24...</a><br>
+                            <span class="span_price_up">3.999.000₫</span><span
+                                class="span_price_down"><b>3.539.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#" title="Màn hình LG 27QN880-B (27 inch/2K/IPS/75Hz/5ms/350nits/HDMI+DP+TypeC)"><img
+                                src="img/MANHINH/LG_27QN880-B.jpg"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình LG 27QN880-B (27 inch/2K/IPS/75Hz/5ms/350nits/HDMI+DP+TypeC)">Màn hình
+                                LG 27QN880-B (27 inch/2K/IPS/75Hz...</a><br>
+                            <span class="span_price_up">13.088.900₫</span><span
+                                class="span_price_down"><b>11.899.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#" title="Màn hình Acer EK241Y (23.8 inch/FHD/IPS/75Hz/4ms/250 nits/HDMI+DSub)"><img
+                                src="img/MANHINH/Acer_EK241Y.jpg"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Acer EK241Y (23.8 inch/FHD/IPS/75Hz/4ms/250 nits/HDMI+DSub)">Màn hình
+                                Acer EK241Y (23.8 inch/FHD/IPS/75Hz...</a><br>
+                            <span class="span_price_up">3.999.000₫</span><span
+                                class="span_price_down"><b>3.489.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Màn hình LG 24MK430H-B (23.8 inch/FHD/LED/IPS/250cd/m²/HDMI+VGA/75Hz/5ms)"><img
+                                src="img/MANHINH/LG_24MK430H-B.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình LG 24MK430H-B (23.8 inch/FHD/LED/IPS/250cd/m²/HDMI+VGA/75Hz/5ms)">Màn
+                                hình LG 24MK430H-B (23.8 inch/FHD/LED/...</a><br>
+                            <span class="span_price_up">3.329.000₫</span><span
+                                class="span_price_down"><b>3.049.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#" title="Màn hình HP P244 (23.8 inch/FHD/LED/IPS/250cd/m²/HDMI+VGA/60Hz/5ms)"><img
+                                src="img/MANHINH/HP_P244.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình HP P244 (23.8 inch/FHD/LED/IPS/250cd/m²/HDMI+VGA/60Hz/5ms)">Màn hình HP
+                                P244 (23.8 inch/FHD/LED/IPS/...</a><br>
+                            <span class="span_price_up">3.449.000₫</span><span
+                                class="span_price_down"><b>2.979.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Màn hình LG 34WN80C-B (34inch/WQHD/IPS/60Hz/5ms/240nits/HDMI+DP+USBC+Audio/Loa/Cong)"><img
+                                src="img/MANHINH/LG_34WN80C-B.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình LG 34WN80C-B (34inch/WQHD/IPS/60Hz/5ms/240nits/HDMI+DP+USBC+Audio/Loa/Cong)">Màn
+                                hình LG 34WN80C-B (34inch/WQHD/IPS...</a><br>
+                            <span class="span_price_up">16.899.000₫</span><span
+                                class="span_price_down"><b>18.999.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Màn hình Samsung LC43J890DKEXXV (43.4inch/4K/VA/120Hz/5ms/300nits/HDMI+DP+Audio+USB-C/Cong)"><img
+                                src="img/MANHINH/Samsung_LC43J890DKEXXV.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Samsung LC43J890DKEXXV (43.4inch/4K/VA/120Hz/5ms/300nits/HDMI+DP+Audio+USB-C/Cong)">Màn
+                                hình Samsung LC43J890DKEXXV (43...</a><br>
+                            <span class="span_price_up">16.899.000₫</span><span
+                                class="span_price_down"><b>22.949.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Màn hình BenQ EX2510 (24.5inch/FHD/IPS/144Hz/1ms/400nits/HDMI+DP+Audio/FreeSync/Loa)"><img
+                                src="img/MANHINH/BenQ_EX2510.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình BenQ EX2510 (24.5inch/FHD/IPS/144Hz/1ms/400nits/HDMI+DP+Audio/FreeSync/Loa)">Màn
+                                hình BenQ EX2510 (24.5inch/FHD/IPS/...</a><br>
+                            <span class="span_price_up">7.029.000₫</span><span
+                                class="span_price_down"><b>6.389.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#" title="Màn hình Acer ED272 A (27inch/FHD/IPS/75Hz/4ms/250nits/HDMI+VGA+Audio)"><img
+                                src="img/MANHINH/Acer_ED272_A.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Acer ED272 A (27inch/FHD/IPS/75Hz/4ms/250nits/HDMI+VGA+Audio)">Màn hình
+                                Acer ED272 A (27inch/FHD/IPS/...</a><br>
+                            <span class="span_price_up">4.599.000₫</span><span
+                                class="span_price_down"><b>4.289.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#" title="Màn hình Dell S2419HGF (23.8 inch/FHD/LED/350cd/m²/DP+HDMI/144Hz/1ms)"><img
+                                src="img/MANHINH/Dell_S2419HGF.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Dell S2419HGF (23.8 inch/FHD/LED/350cd/m²/DP+HDMI/144Hz/1ms)">Màn hình
+                                Dell S2419HGF (23.8 inch/FHD/LED...</a><br>
+                            <span class="span_price_up">6.019.000₫</span><span
+                                class="span_price_down"><b>4.949.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Màn hình Samsung LF27T450FQEXXV (27inch/FHD/IPS/75Hz/5ms/250nits/HDMI+DP/FreeSync/MadeinVietnam)"><img
+                                src="img/MANHINH/Samsung_LF27T450FQEXXV.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Samsung LF27T450FQEXXV (27inch/FHD/IPS/75Hz/5ms/250nits/HDMI+DP/FreeSync/MadeinVietnam)">Màn
+                                hình Samsung LF27T450FQEXXV (27...</a><br>
+                            <span class="span_price_up">5.999.000₫</span><span
+                                class="span_price_down"><b>5.349.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Màn hình HKC MB27T1Q (27inch/QHD/IPS/60Hz/8ms/350nits/VGA+HDMI+DP+Audio)"><img
+                                src="img/MANHINH/HKC_MB27T1Q.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình HKC MB27T1Q (27inch/QHD/IPS/60Hz/8ms/350nits/VGA+HDMI+DP+Audio)">Màn
+                                hình HKC MB27T1Q (27inch/QHD/IPS/...</a><br>
+                            <span class="span_price_up">6.249.000₫</span><span
+                                class="span_price_down"><b>5.999.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Màn hình Cooler Master GM27-CF (27 inch/FHD/VA/165Hz/3ms/300 nits/HDMI+DP/Loa/FreeSync)"><img
+                                src="img/MANHINH/Cooler_Master_GM27-CF.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Cooler Master GM27-CF (27 inch/FHD/VA/165Hz/3ms/300 nits/HDMI+DP/Loa/FreeSync)">Màn
+                                hình Cooler Master GM27-CF (27 inch...</a><br>
+                            <span class="span_price_up">6.999.000₫</span><span
+                                class="span_price_down"><b>5.599.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#"
+                            title="Màn hình Samsung LU32R590CWEXXV (31.5 inch/UHD4K/LED/350cd/m²/DP+HDMI+VGA/60Hz/5ms)"><img
+                                src="img/MANHINH/Samsung_LS32AM700UEXXV_32.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Samsung LU32R590CWEXXV (31.5 inch/UHD4K/LED/350cd/m²/DP+HDMI+VGA/60Hz/5ms)">Màn
+                                hình Samsung LU32R590CWEXXV...</a><br>
+                            <span class="span_price_up">17.499.000₫</span><span
+                                class="span_price_down"><b>16.789.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#" title="Màn hình Lenovo L24i-10 (23.8 inch/FHD/IPS/4ms/250 nits/HDMI+VGA)"><img
+                                src="img/MANHINH/Lenovo_L24i-10.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Lenovo L24i-10 (23.8 inch/FHD/IPS/4ms/250 nits/HDMI+VGA)">Màn hình
+                                Lenovo L24i-10 (23.8 inch/FHD/IPS/4ms...</a><br>
+                            <span class="span_price_up">3.899.000₫</span><span
+                                class="span_price_down"><b>3.389.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#" title="Màn hình Gigabyte G27F (27inch/FHD/IPS/144Hz/1ms/300nits/HDMI+DP+USB)"><img
+                                src="img/MANHINH/Gigabyte_G27F.png"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình Gigabyte G27F (27inch/FHD/IPS/144Hz/1ms/300nits/HDMI+DP+USB)">Màn hình
+                                Gigabyte G27F (27inch/FHD/IPS/...</a><br>
+                            <span class="span_price_up">7.399.000₫</span><span
+                                class="span_price_down"><b>5.629.000đ</b></span>
+                        </div>
+                    </div>
+                    <div class="col-2 col-s-3 content">
+                        <a href="#" title="Màn hình di động Lenovo M14 (14 inch/ FHD/IPS/300 nits/USB-C)"><img
+                                src="img/MANHINH/Lenovo_M14.jpg"></a>
+                        <div class="text_product_1"><a href="#"
+                                title="Màn hình di động Lenovo M14 (14 inch/ FHD/IPS/300 nits/USB-C)">Màn hình di động
+                                Lenovo M14 (14 inch/ FHD/...</a><br>
+                            <span class="span_price_up">5.799.000₫</span><span
+                                class="span_price_down"><b>5.489.000đ</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page">
+        <button><i class="fas fa-angle-left"></i></button>
+        <button onclick="T1()" class="action">1</button>
+        <button onclick="T2()">2</button>
+        <button onclick="T1()">3</button>
+        <button onclick="T2()">4</button>
+        <button><i class="fas fa-angle-right"></i></button>
+    </section>
+    <section class="footer">
+        <div class="footer-in">
+            <div class="row">
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>THÔNG TIN CHUNG</b></li>
+                        <hr>
+                        <li><a href="#">Giới thiệu về Team Computer</a></li>
+                        <li><a href="#">Thông tin liên hệ</a></li>
+                        <li><a href="#">Thông tin tuyển dụng</a></li>
+                        <li><a href="TinTuc.html">Tin tức</a></li>
+                    </ul>
+                </div>
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>CHÍNH SÁCH MUA HÀNG</b></li>
+                        <hr>
+                        <li><a href="ChinhSachBaoHanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="#">Chính sách đổi trả hàng, hoàn tiền</a></li>
+                        <li><a href="#">Phương thức thanh toán</a></li>
+                        <li><a href="#">Vận chuyển, lắp đặt</a></li>
+                    </ul>
+                </div>
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>HỖ TRỢ KHÁCH HÀNG</b></li>
+                        <hr>
+                        <li><a href="#">Hướng dẫn mua hàng online</a></li>
+                        <li><a href="#">Thông tin khuyến mại</a></li>
+                        <li><a href="#">Gửi yêu cầu bảo hành</a></li>
+                        <li><a href="#">Góp ý, khiếu nại</a></li>
+                    </ul>
+                </div>
+                <div class="colf-3 colf-s-6">
+                    <ul>
+                        <li><b>CỘNG ĐỒNGTeamCOMPUTER</b></li>
+                        <hr>
+                        <li><a href="https://www.facebook.com/nguyenchien.it" target="_blank"><i
+                                    class="fab fa-facebook-square" style="color: blue;"></i>TeamComputer
+                                Fanpage</a></li>
+                        <li><a href="https://www.youtube.com/c/ChiếnNguyễn" target="_blank"><i class="fab fa-youtube"
+                                    style="color: red;"></i>TeamComputer</a></li>
+                        <li><a href="https://www.facebook.com/messages/t/nguyenchien.it" target="_blank"><i
+                                    class="fab fa-facebook-messenger" style="color: white;"></i> Chat với tư vấn
+                                viên</a></li>
+                        <li><a href="https://goo.gl/maps/xbtQDEA3cmrggSNt5" target="_blank"><i
+                                    class="fas fa-map-marked-alt" style="color: white;"></i> Vị trí cửa hàng</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        LoadUserKH();
+        LoadTaiKhoan();
+        LoadSL();
+
+        function Hien() {
+            document.getElementById('more').style.display = "block";
+            document.getElementById('btnHien').style.display = "none";
+            document.getElementById('btnAn').style.display = "block";
+        }
+
+        function An() {
+            document.getElementById('more').style.display = "none";
+            document.getElementById('btnHien').style.display = "block";
+            document.getElementById('btnAn').style.display = "none";
+        }
+
+        function T1() {
+            window.location.href = "DM_ManHinh.html";
+        }
+        function T2() {
+            window.location.href = "DM_ManHinh_1.html";
+        }
+    </script>
+</body>
+
+</html>
